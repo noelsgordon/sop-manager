@@ -1,4 +1,3 @@
-// Wizard.jsx
 import React, { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowUp, ArrowDown, Trash2 } from "lucide-react";
@@ -77,7 +76,6 @@ export default function Wizard({
             <input
               type="file"
               accept="image/*"
-              capture="environment"
               onChange={(e) => {
                 onUpload(index, e.target.files[0]);
                 e.target.value = null;

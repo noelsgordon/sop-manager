@@ -1,4 +1,3 @@
-// App.jsx
 import React, { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient.js";
 import { Button } from "@/components/ui/button";
@@ -15,7 +14,7 @@ import SOPDetail from "./components/SOPDetail.jsx";
 
 export default function App() {
   const [userRole, setUserRole] = useState("Viewer");
-  const [activePanel, setActivePanel] = useState("home");
+  const [activePanel, setActivePanel] = useState("library");
   const [activeSop, setActiveSop] = useState(null);
   const [processName, setProcessName] = useState("");
   const [description, setDescription] = useState("");
