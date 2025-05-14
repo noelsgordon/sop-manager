@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowUp, ArrowDown, Trash2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import TagInput from "./TagInput";
 
 export default function Wizard({
   processName, description, tags, steps,
@@ -17,7 +18,7 @@ export default function Wizard({
     if (isUpdateMode && selectedSop) {
       setProcessName(selectedSop.name || "");
       setDescription(selectedSop.description || "");
-      setTags(selectedSop.tags || "");
+      setTags(selectedSop.tags ? selectedSop.tags.split(",") : []);
     }
   }, [isUpdateMode, selectedSop]);
 
@@ -35,12 +36,7 @@ export default function Wizard({
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <input
-        className="border p-2 w-full mb-4"
-        placeholder="Tags (comma separated)"
-        value={tags}
-        onChange={(e) => setTags(e.target.value)}
-      />
+      <TagInput tags={tags} setTags={setTags} />
       <AnimatePresence>
         {steps.map((step, index) => (
           <motion.div
@@ -81,18 +77,23 @@ export default function Wizard({
             <input
               type="file"
               accept="image/*"
+              capture="environment"
               onChange={(e) => {
                 onUpload(index, e.target.files[0]);
                 e.target.value = null;
               }}
             />
-            {step.photo && step.photo.includes("http") && (
+            {step.photo && step.photo.includes("http") ? (
               <img
                 src={step.photo}
                 onClick={() => onImageClick(step.photo)}
                 className="w-24 h-24 object-cover rounded mx-auto cursor-pointer mt-2"
                 alt="uploaded"
               />
+            ) : (
+              <div className="w-24 h-24 bg-gray-200 flex items-center justify-center mx-auto rounded mt-2">
+                <span className="text-gray-500 text-sm">No Image</span>
+              </div>
             )}
           </motion.div>
         ))}

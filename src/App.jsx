@@ -1,4 +1,4 @@
-// App.jsx - complete file with onDeleteStep handler included
+// App.jsx
 import React, { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient.js";
 import { Button } from "@/components/ui/button";
@@ -19,8 +19,8 @@ export default function App() {
   const [activeSop, setActiveSop] = useState(null);
   const [processName, setProcessName] = useState("");
   const [description, setDescription] = useState("");
-  const [tags, setTags] = useState("");
-  const [steps, setSteps] = useState([{ id: uuidv4(), step_number: 1, instruction: "", tools: "", parts: "", photo: "" }]);
+  const [tags, setTags] = useState([]);
+  const [steps, setSteps] = useState([{ step_number: 1, instruction: "", tools: "", parts: "", photo: "" }]);
   const [searchTerm, setSearchTerm] = useState("");
   const [sops, setSops] = useState([]);
   const [sopThumbnails, setSopThumbnails] = useState({});
@@ -29,6 +29,32 @@ export default function App() {
   const [isEditing, setIsEditing] = useState(false);
   const [editSopId, setEditSopId] = useState(null);
 
+  const highlightMatch = (text, term) => {
+    if (!term) return text;
+    const regex = new RegExp(`(${term})`, "gi");
+    return text?.replace(regex, '<mark class="bg-yellow-200">$1</mark>');
+  };
+
+  const filteredSops = searchTerm
+    ? sops.map((sop) => {
+        const lower = searchTerm.toLowerCase();
+        const nameMatch = sop.name?.toLowerCase().includes(lower);
+        const descMatch = sop.description?.toLowerCase().includes(lower);
+        const tagMatch = sop.tags?.toLowerCase().includes(lower);
+
+        if (nameMatch || descMatch || tagMatch) {
+          return {
+            ...sop,
+            _highlighted: {
+              name: highlightMatch(sop.name, searchTerm),
+              description: highlightMatch(sop.description, searchTerm),
+            },
+          };
+        }
+        return null;
+      }).filter(Boolean)
+    : [];
+
   const handleStepChange = (index, field, value) => {
     const updated = [...steps];
     updated[index][field] = value;
@@ -36,13 +62,7 @@ export default function App() {
   };
 
   const handleAddStep = () => {
-    setSteps([...steps, { id: uuidv4(), step_number: steps.length + 1, instruction: "", tools: "", parts: "", photo: "" }]);
-  };
-
-  const handleDeleteStep = (index) => {
-    const updated = [...steps];
-    updated.splice(index, 1);
-    setSteps(updated.map((step, i) => ({ ...step, step_number: i + 1 })));
+    setSteps([...steps, { step_number: steps.length + 1, instruction: "", tools: "", parts: "", photo: "" }]);
   };
 
   const handleFileUpload = async (index, file) => {
@@ -59,66 +79,36 @@ export default function App() {
     handleStepChange(index, "photo", data.publicUrl);
   };
 
-  const handleMoveStepUp = (index) => {
-    if (index === 0) return;
-    const updated = [...steps];
-    [updated[index - 1], updated[index]] = [updated[index], updated[index - 1]];
-    setSteps(updated.map((step, i) => ({ ...step, step_number: i + 1 })));
-  };
-
-  const handleMoveStepDown = (index) => {
-    if (index === steps.length - 1) return;
-    const updated = [...steps];
-    [updated[index + 1], updated[index]] = [updated[index], updated[index + 1]];
-    setSteps(updated.map((step, i) => ({ ...step, step_number: i + 1 })));
-  };
-
   const handleSaveSop = async () => {
+    const tagString = Array.isArray(tags) ? tags.join(",") : tags;
+
     if (isEditing && editSopId) {
-      await supabase.from("sops").update({ name: processName, description, tags }).eq("id", editSopId);
-      const { data: existingSteps } = await supabase.from("sop_steps").select("id").eq("sop_id", editSopId);
-      const existingIds = new Set((existingSteps || []).map(s => s.id));
-      const currentIds = new Set(steps.map(s => s.id));
-
+      await supabase.from("sops").update({ name: processName, description, tags: tagString }).eq("id", editSopId);
+      await supabase.from("sop_steps").delete().eq("sop_id", editSopId);
       for (const step of steps) {
-        if (existingIds.has(step.id)) {
-          await supabase.from("sop_steps").update({
-            step_number: step.step_number,
-            instruction: step.instruction,
-            tools: step.tools,
-            parts: step.parts,
-            photo: step.photo
-          }).eq("id", step.id);
-        } else {
-          await supabase.from("sop_steps").insert({
-            id: step.id,
-            sop_id: editSopId,
-            step_number: step.step_number,
-            instruction: step.instruction,
-            tools: step.tools,
-            parts: step.parts,
-            photo: step.photo
-          });
-        }
-      }
-
-      for (const id of [...existingIds]) {
-        if (!currentIds.has(id)) {
-          const { error } = await supabase.from("sop_steps").delete().eq("id", id);
-          if (error) console.error("Failed to delete step:", error);
-        }
+        await supabase.from("sop_steps").insert({
+          sop_id: editSopId,
+          step_number: step.step_number,
+          instruction: step.instruction,
+          tools: step.tools,
+          parts: step.parts,
+          photo: step.photo
+        });
       }
     } else {
       const sopId = uuidv4();
-      await supabase.from("sops").insert({
+      const { error: sopError } = await supabase.from("sops").insert({
         id: sopId,
         name: processName || "Untitled SOP",
         description,
-        tags
+        tags: tagString
       });
+      if (sopError) {
+        alert("Failed to save SOP");
+        return;
+      }
       for (const step of steps) {
         await supabase.from("sop_steps").insert({
-          id: step.id,
           sop_id: sopId,
           step_number: step.step_number,
           instruction: step.instruction,
@@ -130,8 +120,8 @@ export default function App() {
     }
     setProcessName("");
     setDescription("");
-    setTags("");
-    setSteps([{ id: uuidv4(), step_number: 1, instruction: "", tools: "", parts: "", photo: "" }]);
+    setTags([]);
+    setSteps([{ step_number: 1, instruction: "", tools: "", parts: "", photo: "" }]);
     setIsEditing(false);
     setEditSopId(null);
     setActivePanel("library");
@@ -152,11 +142,11 @@ export default function App() {
   const handleSopSelect = async (sop) => {
     setPrevPanel(activePanel);
     setActiveSop(sop);
-    const { data: loadedSteps } = await supabase.from("sop_steps").select("*").eq("sop_id", sop.id).order("step_number");
-    setSteps((loadedSteps || []).map((step) => ({ ...step })));
+    const { data: steps } = await supabase.from("sop_steps").select("*").eq("sop_id", sop.id).order("step_number");
+    setSteps(steps || []);
     setProcessName(sop.name);
     setDescription(sop.description);
-    setTags(sop.tags);
+    setTags(sop.tags ? sop.tags.split(",") : []);
     setActivePanel("detail");
   };
 
@@ -171,7 +161,7 @@ export default function App() {
     setSteps([]);
     setProcessName("");
     setDescription("");
-    setTags("");
+    setTags([]);
     setActivePanel(prevPanel);
   };
 
@@ -188,13 +178,6 @@ export default function App() {
   useEffect(() => {
     fetchSops();
   }, []);
-
-  const filteredSops = searchTerm
-    ? sops.filter(sop => {
-        const lower = searchTerm.toLowerCase();
-        return sop.name.toLowerCase().includes(lower) || (sop.tags || "").toLowerCase().includes(lower);
-      })
-    : [];
 
   return (
     <Layout
@@ -258,15 +241,29 @@ export default function App() {
           steps={steps}
           onChangeStep={handleStepChange}
           onAddStep={handleAddStep}
-          onDeleteStep={handleDeleteStep}
           onUpload={handleFileUpload}
           onSave={handleSaveSop}
           setProcessName={setProcessName}
           setDescription={setDescription}
           setTags={setTags}
           onImageClick={handleImageClick}
-          onMoveStepUp={handleMoveStepUp}
-          onMoveStepDown={handleMoveStepDown}
+          isUpdateMode={isEditing}
+          selectedSop={activeSop}
+          onDeleteStep={(i) => setSteps(steps.filter((_, idx) => idx !== i))}
+          onMoveStepUp={(i) => {
+            if (i > 0) {
+              const newSteps = [...steps];
+              [newSteps[i - 1], newSteps[i]] = [newSteps[i], newSteps[i - 1]];
+              setSteps(newSteps);
+            }
+          }}
+          onMoveStepDown={(i) => {
+            if (i < steps.length - 1) {
+              const newSteps = [...steps];
+              [newSteps[i], newSteps[i + 1]] = [newSteps[i + 1], newSteps[i]];
+              setSteps(newSteps);
+            }
+          }}
         />
       )}
 

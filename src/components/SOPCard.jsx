@@ -1,6 +1,9 @@
+// SOPCard.jsx
 import React from "react";
 
 export default function SOPCard({ sop, thumbnail, onClick, onImageClick }) {
+  const hasHighlight = sop._highlighted;
+
   return (
     <div
       className="border rounded-lg p-2 shadow cursor-pointer hover:shadow-md transition duration-150 bg-white"
@@ -21,9 +24,21 @@ export default function SOPCard({ sop, thumbnail, onClick, onImageClick }) {
           <span className="text-gray-500 text-sm">No Image</span>
         </div>
       )}
-      <h2 className="font-semibold text-center text-gray-800 text-sm">{sop.name}</h2>
+
+      <h2
+        className="font-semibold text-center text-gray-800 text-sm"
+        dangerouslySetInnerHTML={{
+          __html: hasHighlight ? sop._highlighted.name : sop.name,
+        }}
+      />
+
       {sop.description && (
-        <p className="text-xs text-gray-500 text-center mt-1">{sop.description}</p>
+        <p
+          className="text-xs text-gray-500 text-center mt-1"
+          dangerouslySetInnerHTML={{
+            __html: hasHighlight ? sop._highlighted.description : sop.description,
+          }}
+        />
       )}
     </div>
   );
