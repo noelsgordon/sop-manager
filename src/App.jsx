@@ -1,3 +1,4 @@
+// App.jsx (Updated with onUpdate in Wizard)
 import React, { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient.js";
 import { Button } from "@/components/ui/button";
@@ -242,6 +243,7 @@ export default function App() {
           onAddStep={handleAddStep}
           onUpload={handleFileUpload}
           onSave={handleSaveSop}
+          onUpdate={handleSaveSop}
           setProcessName={setProcessName}
           setDescription={setDescription}
           setTags={setTags}
