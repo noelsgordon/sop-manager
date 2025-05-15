@@ -1,12 +1,17 @@
-// Header.jsx - updated with spacing and separator
+// Header.jsx
 import React from "react";
+import version from "../../version.json";
 
 export default function Header({ userRole, setUserRole, setViewMode }) {
   return (
     <header className="mb-4">
-      <h1 className="text-2xl font-bold hidden md:block">Computer SOPs</h1>
-      <hr className="my-4 border-gray-300 hidden md:block" />
-      <div className="flex flex-row sm:flex-col sm:space-y-2 space-x-2 sm:space-x-0 mt-4">
+      <div className="flex items-end justify-between">
+        <h1 className="text-2xl font-bold hidden md:block">
+          Computer SOPs
+          <span className="ml-2 text-xs italic text-gray-400 align-baseline">v{version.version}</span>
+        </h1>
+      </div>
+      <div className="flex flex-row sm:flex-col sm:space-y-2 space-x-2 sm:space-x-0">
         {["Viewer", "Updater", "Creator"].map((role) => (
           <button
             key={role}

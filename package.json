@@ -4,13 +4,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "bump:minor": "node scripts/bumpVersion.js",
+    "bump:major": "node scripts/bumpVersion.js major"
+    "prepare": "husky install"
+}
+
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.2",
     "@shadcn/ui": "^0.0.4",
     "@supabase/supabase-js": "^2.39.5",
-    "framer-motion": "^12.11.0",
     "lucide-react": "^0.510.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -20,6 +24,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.4.1",
     "autoprefixer": "^10.4.21",
+    "husky": "^9.1.7",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
     "vite": "^5.4.19"
