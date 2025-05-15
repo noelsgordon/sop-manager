@@ -1,7 +1,7 @@
 // Layout.jsx
 import React, { useState } from "react";
 import { Menu } from "lucide-react";
-import version from "../../version.json";
+import version from "../version.json";
 
 export default function Layout({ sidebar, topbar, children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -11,7 +11,7 @@ export default function Layout({ sidebar, topbar, children }) {
       {/* Mobile Header */}
       <div className="md:hidden p-2 border-b shadow flex justify-between items-center bg-gray-100">
         <h1 className="font-bold text-lg">
-          SOP Platform
+          Malibu SOPs
           <span className="ml-2 text-[10px] italic text-gray-400">v{version.version}</span>
         </h1>
         <button
