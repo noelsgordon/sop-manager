@@ -1,7 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
-const versionPath = path.join(__dirname, "../version.json");
+// ✔ version.json is inside /src
+const versionPath = path.join(__dirname, "../src/version.json");
 const isMajor = process.argv.includes("major");
 
 if (!fs.existsSync(versionPath)) {
