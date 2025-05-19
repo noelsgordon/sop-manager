@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-export default function TagInput({ tags, setTags }) {
+export default function TagInput({ tags, setTags, placeholder = "Add a tag...", disabled = false }) {
   const [input, setInput] = useState("");
   const inputRef = useRef();
 
@@ -22,7 +22,9 @@ export default function TagInput({ tags, setTags }) {
   };
 
   const removeTag = (index) => {
-    setTags(tags.filter((_, i) => i !== index));
+    if (!disabled) {
+      setTags(tags.filter((_, i) => i !== index));
+    }
   };
 
   return (
@@ -33,13 +35,15 @@ export default function TagInput({ tags, setTags }) {
           className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full flex items-center text-sm"
         >
           #{tag}
-          <button
-            type="button"
-            onClick={() => removeTag(index)}
-            className="ml-1 text-blue-500 hover:text-red-500"
-          >
-            ×
-          </button>
+          {!disabled && (
+            <button
+              type="button"
+              onClick={() => removeTag(index)}
+              className="ml-1 text-blue-500 hover:text-red-500"
+            >
+              ×
+            </button>
+          )}
         </span>
       ))}
       <input
@@ -48,7 +52,8 @@ export default function TagInput({ tags, setTags }) {
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={handleKeyDown}
         className="flex-grow min-w-[100px] outline-none text-sm p-1"
-        placeholder="Add a tag..."
+        placeholder={placeholder}
+        disabled={disabled}
       />
     </div>
   );

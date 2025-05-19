@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+// Wizard.jsx
+import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowUp, ArrowDown, Trash2 } from "lucide-react";
+import { ArrowUp, ArrowDown, Trash2, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import TagInput from "./TagInput";
 
@@ -13,13 +14,35 @@ export default function Wizard({
   isUpdateMode,
   selectedSop
 }) {
+  const bottomRef = useRef();
+  const initializedRef = useRef(false);
+  const previousStepCount = useRef(steps.length);
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
-    if (isUpdateMode && selectedSop) {
+    if (isUpdateMode && selectedSop && !initializedRef.current) {
       setProcessName(selectedSop.name || "");
       setDescription(selectedSop.description || "");
       setTags(selectedSop.tags ? selectedSop.tags.split(",") : []);
+      initializedRef.current = true;
     }
   }, [isUpdateMode, selectedSop]);
+
+  useEffect(() => {
+    if (steps.length > previousStepCount.current && bottomRef.current) {
+      bottomRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    previousStepCount.current = steps.length;
+  }, [steps.length]);
+
+  const handleSave = async () => {
+    setLoading(true);
+    try {
+      await (isUpdateMode ? onUpdate() : onSave());
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div>
@@ -35,7 +58,7 @@ export default function Wizard({
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <TagInput tags={tags} setTags={setTags} />
+      <TagInput tags={tags} setTags={setTags} placeholder="Add tags here... e.g. department, boat model, alternate part/product names, etc" />
       <AnimatePresence>
         {steps.map((step, index) => (
           <motion.div
@@ -96,12 +119,18 @@ export default function Wizard({
           </motion.div>
         ))}
       </AnimatePresence>
+      <div ref={bottomRef} />
       <button onClick={onAddStep} className="bg-gray-600 text-white px-3 py-1 rounded mr-2">Add Step</button>
-      {isUpdateMode ? (
-        <button onClick={onUpdate} className="bg-yellow-600 text-white px-3 py-1 rounded">Update SOP</button>
-      ) : (
-        <button onClick={onSave} className="bg-blue-700 text-white px-3 py-1 rounded">Save SOP</button>
-      )}
+      <button onClick={handleSave} className={`px-3 py-1 rounded text-white ${isUpdateMode ? "bg-yellow-600" : "bg-blue-700"}`}>
+        {loading ? (
+          <span className="flex items-center">
+            <Loader2 className="animate-spin mr-2" size={16} />
+            {isUpdateMode ? "Updating..." : "Saving..."}
+          </span>
+        ) : (
+          isUpdateMode ? "Update SOP" : "Save SOP"
+        )}
+      </button>
     </div>
   );
 }

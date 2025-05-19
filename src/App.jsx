@@ -1,4 +1,4 @@
-// App.jsx (Updated with onUpdate in Wizard)
+// App.jsx (Updated to compress image before upload)
 import React, { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient.js";
 import { Button } from "@/components/ui/button";
@@ -12,22 +12,45 @@ import Controls from "./components/Controls.jsx";
 import SOPCard from "./components/SOPCard.jsx";
 import Wizard from "./components/Wizard.jsx";
 import SOPDetail from "./components/SOPDetail.jsx";
+import { compressImage } from "./utils/imageCompression.js";
 
 export default function App() {
   const [userRole, setUserRole] = useState("Viewer");
-  const [activePanel, setActivePanel] = useState("library");
-  const [activeSop, setActiveSop] = useState(null);
-  const [processName, setProcessName] = useState("");
-  const [description, setDescription] = useState("");
-  const [tags, setTags] = useState([]);
-  const [steps, setSteps] = useState([{ step_number: 1, instruction: "", tools: "", parts: "", photo: "" }]);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [sops, setSops] = useState([]);
-  const [sopThumbnails, setSopThumbnails] = useState({});
-  const [enlargedImage, setEnlargedImage] = useState(null);
-  const [prevPanel, setPrevPanel] = useState("library");
-  const [isEditing, setIsEditing] = useState(false);
-  const [editSopId, setEditSopId] = useState(null);
+const [activePanel, setActivePanel] = useState("library");
+const [activeSop, setActiveSop] = useState(null);
+const [processName, setProcessName] = useState("");
+const [description, setDescription] = useState("");
+const [tags, setTags] = useState([]);
+const [steps, setSteps] = useState([{ step_number: 1, instruction: "", tools: "", parts: "", photo: "" }]);
+const [searchTerm, setSearchTerm] = useState("");
+const [sops, setSops] = useState([]);
+const [sopThumbnails, setSopThumbnails] = useState({});
+const [enlargedImage, setEnlargedImage] = useState(null);
+const [prevPanel, setPrevPanel] = useState("library");
+const [isEditing, setIsEditing] = useState(false);
+const [editSopId, setEditSopId] = useState(null);
+
+  const handleFileUpload = async (index, file) => {
+    if (!file) return;
+
+    try {
+      const compressedFile = await compressImage(file);
+      const fileExt = file.name.split('.').pop();
+      const fileName = `${uuidv4()}.${fileExt}`;
+      const filePath = `${fileName}`;
+
+      const { error: uploadError } = await supabase.storage.from('sop-images').upload(filePath, compressedFile);
+      if (uploadError) {
+        alert("Image upload failed");
+        return;
+      }
+
+      const { data } = supabase.storage.from('sop-images').getPublicUrl(filePath);
+      handleStepChange(index, "photo", data.publicUrl);
+    } catch (err) {
+      console.error("Error compressing or uploading image:", err);
+    }
+  };
 
   const highlightMatch = (text, term) => {
     if (!term) return text;
@@ -63,20 +86,6 @@ export default function App() {
 
   const handleAddStep = () => {
     setSteps([...steps, { step_number: steps.length + 1, instruction: "", tools: "", parts: "", photo: "" }]);
-  };
-
-  const handleFileUpload = async (index, file) => {
-    if (!file) return;
-    const fileExt = file.name.split('.').pop();
-    const fileName = `${uuidv4()}.${fileExt}`;
-    const filePath = `${fileName}`;
-    const { error: uploadError } = await supabase.storage.from('sop-images').upload(filePath, file);
-    if (uploadError) {
-      alert("Image upload failed");
-      return;
-    }
-    const { data } = supabase.storage.from('sop-images').getPublicUrl(filePath);
-    handleStepChange(index, "photo", data.publicUrl);
   };
 
   const handleSaveSop = async () => {
@@ -182,7 +191,7 @@ export default function App() {
   return (
     <Layout
       sidebar={<Header userRole={userRole} setUserRole={setUserRole} setViewMode={handleSetViewMode} />}
-      topbar={<Controls userRole={userRole} setViewMode={handleSetViewMode} />}
+      topbar={<Controls userRole={userRole} setViewMode={handleSetViewMode} setProcessName={setProcessName} setDescription={setDescription} setTags={setTags} setSteps={setSteps} setIsEditing={setIsEditing} setEditSopId={setEditSopId} />}
     >
       {activePanel === "library" && !activeSop && (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
