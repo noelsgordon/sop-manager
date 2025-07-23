@@ -25,7 +25,8 @@ const Header = React.memo(({
   setShowDeletedSOPs,
   activePanel,
   onNewSop,
-  canCreateSop
+  canCreateSop,
+  onSidebarNav // <-- add this prop
 }) => {
   // Remove visual confirmation and excessive debug logs to prevent render loop
   // document.body.style.background = '#ffeedd';
@@ -60,6 +61,7 @@ const Header = React.memo(({
     if (key === "superadmin" && !isSuperAdminProp) return;
     if (key === "admin" && !canShowFeature(FEATURE_PERMISSIONS.VIEW_ADMIN_PANEL)) return;
     setViewMode(key);
+    if (typeof onSidebarNav === 'function') onSidebarNav(); // <-- auto-hide sidebar on mobile
   };
 
   // Role change handler

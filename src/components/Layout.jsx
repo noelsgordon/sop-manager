@@ -6,6 +6,14 @@ import version from "../version.json";
 export default function Layout({ sidebar, topbar, children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  // Helper to determine if we're in mobile mode
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
+  // Callback to close sidebar after navigation (only on mobile)
+  const handleSidebarNav = () => {
+    if (isMobile && sidebarOpen) setSidebarOpen(false);
+  };
+
   return (
     <div className="flex flex-col min-h-screen md:flex-row">
       {/* Mobile Header */}
@@ -29,7 +37,7 @@ export default function Layout({ sidebar, topbar, children }) {
           sidebarOpen ? "block" : "hidden"
         } md:block md:w-64 bg-gray-100 p-4 border-r shadow-lg md:shadow-none`}
       >
-        {sidebar}
+        {React.cloneElement(sidebar, { onSidebarNav: handleSidebarNav })}
       </aside>
 
       {/* Main Content */}

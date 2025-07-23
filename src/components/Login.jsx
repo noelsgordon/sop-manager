@@ -6,7 +6,8 @@ import { Loader2 } from "lucide-react";
 export default function Login({ onLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [fullName, setFullName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [isSignup, setIsSignup] = useState(false);
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -15,7 +16,8 @@ export default function Login({ onLogin }) {
   const resetForm = () => {
     setEmail("");
     setPassword("");
-    setFullName("");
+    setFirstName("");
+    setLastName("");
     setIsSignup(false);
   };
 
@@ -26,7 +28,11 @@ export default function Login({ onLogin }) {
 
     try {
       const { data, error } = isSignup
-        ? await supabase.auth.signUp({ email, password })
+        ? await supabase.auth.signUp({ 
+            email, 
+            password,
+            options: { emailRedirectTo: 'https://sop-manager.vercel.app/' }
+          })
         : await supabase.auth.signInWithPassword({ email, password });
 
       if (error) {
@@ -47,9 +53,11 @@ export default function Login({ onLogin }) {
       if (isSignup) {
         const profilePayload = {
           user_id: user.id,
-          display_name: fullName || "",
+          display_name: `${firstName} ${lastName}`.trim(),
           email: user.email,
           is_superadmin: false,
+          first_name: firstName,
+          last_name: lastName,
         };
         await supabase.from("user_profiles").insert(profilePayload);
         setShowConfirmationModal(true);
@@ -92,14 +100,26 @@ export default function Login({ onLogin }) {
         />
 
         {isSignup && (
-          <input
-            className="border w-full p-2 mb-2 rounded"
-            placeholder="Full Name"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
-            type="text"
-            disabled={loading}
-          />
+          <>
+            <input
+              className="border w-full p-2 mb-2 rounded"
+              placeholder="First Name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              type="text"
+              required
+              disabled={loading}
+            />
+            <input
+              className="border w-full p-2 mb-2 rounded"
+              placeholder="Last Name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              type="text"
+              required
+              disabled={loading}
+            />
+          </>
         )}
 
         <Button type="submit" className="w-full flex items-center justify-center" disabled={loading}>

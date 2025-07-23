@@ -74,6 +74,7 @@ export function CreateUserModal({ departments, onClose, onSuccess }) {
       const { data: authData, error: authError } = await supabase.auth.signUp({
         email: formData.email,
         password: Math.random().toString(36).slice(-12), // Random password that will be reset
+        options: { emailRedirectTo: 'https://sop-manager.vercel.app/' }
       });
 
       if (authError) throw authError;
