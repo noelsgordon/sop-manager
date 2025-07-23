@@ -32,7 +32,8 @@ export function useUserState(session) {
         setError(null);
 
         // Fetch user profile
-        const { data: profile, error: profileError } = await supabase
+        let profile;
+        const { data: profileData, error: profileError } = await supabase
           .from('user_profiles')
           .select('*')
           .eq('user_id', session.user.id)
@@ -64,6 +65,8 @@ export function useUserState(session) {
           } else {
             throw profileError;
           }
+        } else {
+          profile = profileData;
         }
 
         // Fetch user's departments and permissions
