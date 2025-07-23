@@ -44,14 +44,21 @@ export function useUserState(session) {
           // If profile doesn't exist, create a default one
           if (profileError.code === 'PGRST116') {
             console.log('Creating default user profile...');
+            const newProfilePayload = {
+              user_id: session.user.id,
+              email: session.user.email,
+              display_name: session.user.email?.split('@')[0] || 'User',
+              is_superadmin: false,
+              company_id: null,
+              created_at: null,
+              updated_at: null,
+              first_name: session.user.user_metadata?.first_name || '',
+              last_name: session.user.user_metadata?.last_name || ''
+            };
+            console.log('User profile payload:', newProfilePayload);
             const { data: newProfile, error: createError } = await supabase
               .from('user_profiles')
-              .insert({
-                user_id: session.user.id,
-                email: session.user.email,
-                display_name: session.user.email?.split('@')[0] || 'User',
-                is_superadmin: false
-              })
+              .insert(newProfilePayload)
               .select()
               .single();
             
