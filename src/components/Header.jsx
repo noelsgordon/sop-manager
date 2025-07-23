@@ -1,9 +1,10 @@
 // Header.jsx
 import React, { useCallback, useEffect, useState } from "react";
-import { Loader2, Archive, Home, Search as SearchIcon, Shield, UserCog } from "lucide-react";
+import { Loader2, Archive, Home, Search as SearchIcon, Shield, UserCog, LogOut } from "lucide-react";
 import version from "../version.json";
 import { useRoleBasedUI } from "../utils/hooks/useRoleBasedUI";
 import { Checkbox } from "./ui/checkbox";
+import { supabase } from '../supabaseClient';
 
 const NAV_ITEMS = [
   { key: "library", label: "Library", icon: Home },
@@ -69,6 +70,21 @@ const Header = React.memo(({
     if (roleLoading || isLoading) return;
           await changeViewRole(role);
     setViewMode("library");
+  };
+
+  // Logout handler
+  const handleLogout = async () => {
+    try {
+      await supabase.auth.signOut();
+    } catch (error) {
+      console.log('Logout error (non-critical):', error?.message);
+    }
+    // Remove all keys that start with 'sb-' (Supabase session tokens)
+    Object.keys(localStorage).forEach(key => {
+      if (key.startsWith('sb-')) localStorage.removeItem(key);
+    });
+    sessionStorage.clear();
+    window.location.href = '/';
   };
 
   if (isLoading) {
@@ -138,9 +154,17 @@ const Header = React.memo(({
         </div>
       </div>
       </div>
-      {/* Bottom: Version Info */}
-      <div className="text-xs text-gray-400 text-center mt-auto">
-        Version {version.version}
+      {/* Bottom: Version Info and Logout */}
+      <div className="mt-auto">
+        <div className="text-xs text-gray-400 text-center mb-2">
+          Version {version.version}
+        </div>
+        <button
+          onClick={handleLogout}
+          className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded bg-red-50 hover:bg-red-100 text-red-700 font-semibold border border-red-200 transition"
+        >
+          <LogOut className="h-4 w-4" /> Log Out
+        </button>
       </div>
     </aside>
   );

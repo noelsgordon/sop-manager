@@ -17,11 +17,6 @@ export default function AdminPanel({
 }) {
   const { canShowFeature, getFeatureProps } = useRoleBasedUI({ ...userProfile, role: userRole }, departments[0]?.department_id);
 
-  const handleLogout = async () => {
-    await supabase.auth.signOut();
-    window.location.reload();
-  };
-
   const toggleDepartment = (departmentId) => {
     if (visibleDepartmentIds.includes(departmentId)) {
       setVisibleDepartmentIds(visibleDepartmentIds.filter(id => id !== departmentId));
@@ -67,14 +62,6 @@ export default function AdminPanel({
           ))}
         </div>
 
-
-                  <Button 
-            onClick={handleLogout} 
-            variant="destructive" 
-            className="w-full"
-          >
-          Log Out
-        </Button>
       </div>
 
       {/* Admin Features Section */}
