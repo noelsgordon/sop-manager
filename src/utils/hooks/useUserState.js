@@ -118,6 +118,14 @@ export function useUserState(session) {
         // Set initial department if none selected
         if (deptList.length > 0) {
           setSelectedDepartmentId(deptList[0].department_id);
+        } else {
+          // No departments assigned: show short friendly message
+          setError('Waiting for admin to grant access.');
+          toast({
+            title: "Access Pending",
+            description: "Waiting for admin to grant access.",
+            variant: "destructive"
+          });
         }
       } catch (err) {
         console.error('Error fetching user data:', err);
