@@ -73,8 +73,8 @@ export default function AdminPanel({
             variant="destructive" 
             className="w-full"
           >
-            Log Out
-          </Button>
+          Log Out
+        </Button>
       </div>
 
       {/* Admin Features Section */}

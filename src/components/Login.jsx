@@ -110,15 +110,15 @@ export default function Login({ onLogin }) {
               required
               disabled={loading}
             />
-            <input
-              className="border w-full p-2 mb-2 rounded"
+          <input
+            className="border w-full p-2 mb-2 rounded"
               placeholder="Last Name"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              type="text"
+            type="text"
               required
-              disabled={loading}
-            />
+            disabled={loading}
+          />
           </>
         )}
 

@@ -12,12 +12,12 @@ const NAV_ITEMS = [
   { key: "superadmin", label: "SuperAdmin Panel", icon: UserCog, feature: "VIEW_ADMIN_PANEL", superOnly: true },
 ];
 
-const Header = React.memo(({
+const Header = React.memo(({ 
   userRole,
   viewRole,
   changeViewRole,
   getActualRole,
-  setViewMode,
+  setViewMode, 
   isSuperAdmin: isSuperAdminProp,
   isLoading = false,
   roleLoading = false,
@@ -41,7 +41,7 @@ const Header = React.memo(({
     canShowFeature,
     FEATURE_PERMISSIONS,
     switchableRoles,
-  } = useRoleBasedUI({
+  } = useRoleBasedUI({ 
     is_superadmin: isSuperAdminProp,
     role: viewRole || userRole
   }, null);
@@ -67,7 +67,7 @@ const Header = React.memo(({
   // Role change handler
   const handleRoleChange = async (role) => {
     if (roleLoading || isLoading) return;
-    await changeViewRole(role);
+          await changeViewRole(role);
     setViewMode("library");
   };
 
@@ -75,7 +75,7 @@ const Header = React.memo(({
     return (
       <aside className="flex flex-col h-full p-4 bg-white border-r items-center justify-center">
         <Loader2 className="w-6 h-6 animate-spin mb-2" />
-        <span>Loading...</span>
+          <span>Loading...</span>
       </aside>
     );
   }
@@ -115,28 +115,28 @@ const Header = React.memo(({
         {/* Role Switcher & Toggles */}
         <div className="mb-8">
           <label className="block text-xs text-gray-500 mb-1">View Role</label>
-          <select
-            value={viewRole || userRole}
+        <select
+          value={viewRole || userRole}
             onChange={e => handleRoleChange(e.target.value)}
-            disabled={roleLoading}
+          disabled={roleLoading}
             className="w-full border rounded px-2 py-1 mb-2"
-          >
+        >
             {actualSwitchableRoles.map(role => (
               <option key={role} value={role}>{role}</option>
-            ))}
-          </select>
+          ))}
+        </select>
           <div className="flex items-center gap-2 mt-2">
-            <Checkbox
-              id="showDeleted"
-              checked={showDeletedSOPs}
-              onCheckedChange={setShowDeletedSOPs}
-            />
-            <label htmlFor="showDeleted" className="text-sm cursor-pointer">
-              Show Deleted SOPs
-            </label>
-            <Archive className="w-4 h-4" />
-          </div>
+          <Checkbox
+            id="showDeleted"
+            checked={showDeletedSOPs}
+            onCheckedChange={setShowDeletedSOPs}
+          />
+          <label htmlFor="showDeleted" className="text-sm cursor-pointer">
+            Show Deleted SOPs
+          </label>
+          <Archive className="w-4 h-4" />
         </div>
+      </div>
       </div>
       {/* Bottom: Version Info */}
       <div className="text-xs text-gray-400 text-center mt-auto">

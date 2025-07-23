@@ -30,6 +30,7 @@ import { SupabaseProvider } from './utils/supabaseContext';
 import { Toaster } from './components/ui/toaster';
 import { useRoleBasedUI } from './utils/hooks/useRoleBasedUI';
 import { toast } from './components/ui/use-toast';
+import RlsTestPage from "./components/admin/RlsTestPage.jsx";
 
 function MainApp({ session, setSession }) {
   // 📄 Initialize all state first
@@ -497,7 +498,7 @@ function MainApp({ session, setSession }) {
         for (const oldId of existingStepIds) {
           if (!draftStepIds.has(oldId)) {
             await supabase
-              .from("sop_steps")
+            .from("sop_steps")
               .update({ deleted_at: new Date().toISOString() })
               .eq("id", oldId);
           }
@@ -517,7 +518,7 @@ function MainApp({ session, setSession }) {
               .eq("id", step.id);
             if (updateStepError) {
               alert("Failed to update a SOP step");
-              return;
+            return;
             }
           } else {
             // Insert new step
@@ -603,7 +604,7 @@ function MainApp({ session, setSession }) {
       } else {
         console.log('[App Debug] Fetched SOP steps:', steps);
       }
-      setActiveSop({ ...sop, steps: steps || [] });
+    setActiveSop({ ...sop, steps: steps || [] });
     } catch (err) {
       console.error('[App Debug] Exception in handleSopSelect:', err);
     }
@@ -823,9 +824,9 @@ function MainApp({ session, setSession }) {
             showDeletedSOPs={showDeletedSOPs}
             setShowDeletedSOPs={setShowDeletedSOPs}
             activePanel={activePanel}
-            onNewSop={handleNewSop}
+              onNewSop={handleNewSop}
             canCreateSop={canShowFeature(FEATURE_PERMISSIONS.CREATE_SOP)}
-          />
+            />
         }
         topbar={null}
       >
@@ -902,15 +903,15 @@ function MainApp({ session, setSession }) {
         {activePanel === "admin" && (
           <div style={{ gridColumn: '1 / -1', width: '100%' }}>
             {!adminViewMode ? (
-              <AdminPanel
-                userProfile={userProfile}
-                departments={departments}
-                visibleDepartmentIds={[selectedDepartmentId]}
-                setVisibleDepartmentIds={setSelectedDepartmentId}
+            <AdminPanel
+              userProfile={userProfile}
+              departments={departments}
+              visibleDepartmentIds={[selectedDepartmentId]}
+              setVisibleDepartmentIds={setSelectedDepartmentId}
                 setViewMode={setAdminViewMode}
-                currentUserId={session.user.id}
-                userRole={getCurrentRole()}
-              />
+              currentUserId={session.user.id}
+              userRole={getCurrentRole()}
+            />
             ) : adminViewMode === 'users' ? (
               <div className="space-y-4">
 
@@ -964,6 +965,16 @@ function MainApp({ session, setSession }) {
               }}
               departments={departments}
               setViewMode={setViewMode}
+            />
+          </div>
+        )}
+
+        {/* RLS Test Page for Superadmins */}
+        {activePanel === "rlsTest" && userIsSuperAdmin && (
+          <div className="w-full" style={{ gridColumn: '1 / -1', width: '100%' }}>
+            <RlsTestPage
+              userProfile={userProfile}
+              onBack={() => setViewMode("superadmin")}
             />
           </div>
         )}
