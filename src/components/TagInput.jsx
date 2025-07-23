@@ -4,6 +4,12 @@ export default function TagInput({ tags, setTags, placeholder = "Add a tag...", 
   const [input, setInput] = useState("");
   const inputRef = useRef();
 
+  // Prop validation for tags
+  if (!Array.isArray(tags)) {
+    console.warn("TagInput received invalid or undefined tags data.", tags);
+    return <div>Loading tags...</div>;
+  }
+
   const handleAddTag = (value) => {
     const cleaned = value.trim().replace(/,$/, "");
     if (cleaned && !tags.includes(cleaned)) {

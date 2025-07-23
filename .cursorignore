@@ -1,0 +1,17 @@
+# Always include these files in conversation context
+!*.md
+
+# Exclude common large/unnecessary files
+node_modules/
+dist/
+build/
+.git/
+*.log
+.env
+.env.*
+*.lock
+coverage/
+.next/
+.cache/
+tmp/
+temp/ 
