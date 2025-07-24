@@ -650,3 +650,12 @@ src/
 - Break up App.jsx into smaller containers (SOPManager, AdminManager, etc.).
 - Add error boundaries and a debug panel for state inspection.
 - Add E2E and unit tests for all critical flows. 
+
+## Backup Restore: Future Improvements
+- Add dry run/preview mode before import
+- Allow selective import of SOPs, steps, or departments
+- Implement image/media restore from backup ZIP
+- Add per-record conflict resolution (overwrite/skip/duplicate)
+- Show detailed import summary and error reporting
+- Add audit log of all import actions
+- Support rollback/undo of last import 

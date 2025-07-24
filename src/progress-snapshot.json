@@ -1,15 +1,15 @@
 {
-  "version": "2.3.0",
-  "timestamp": "2025-07-24T02:57:10.127Z",
+  "version": "2.4.0",
+  "timestamp": "2025-07-24T06:10:54.571Z",
   "bumpType": "minor",
-  "previousVersion": "2.2.0",
+  "previousVersion": "2.3.0",
   "gitBranch": "main",
   "gitCommits": [
+    "bdd4362|Noel Gordon|2025-07-24 12:57:20 +1000|chore: bump version to 2.3.0 and enhance snapshot/audit metadata",
     "c7c63a1|Noel Gordon|2025-07-24 12:43:50 +1000|v2.2.0: Ensure audit and snapshot use new version immediately after bump\\n\\n- Fix: version.json is now updated before audit and snapshot\\n- All generated notes and audit files now reference the correct version\\n- Minor version bump for verification",
     "b8d5ca2|Noel Gordon|2025-07-24 11:50:07 +1000|v2.1.0: Clipboard fallback and reliability improvements\\n\\n- Added fallback clipboard copy for production\\n- Improved async handling and error feedback\\n- Updated project snapshot and audit logic\\n- Minor version bump for deployment",
     "5a396d9|Noel Gordon|2025-07-24 11:46:57 +1000|Fix clipboard functionality with debugging and fallback methods",
-    "c2432c1|Noel Gordon|2025-07-24 11:38:21 +1000|v2.0.0: Enhanced Project Snapshot System with Comprehensive Auditing",
-    "33562c9|Noel Gordon|2025-07-24 08:31:14 +1000|v1.11: Fix logout error handling and bump version"
+    "c2432c1|Noel Gordon|2025-07-24 11:38:21 +1000|v2.0.0: Enhanced Project Snapshot System with Comprehensive Auditing"
   ],
   "nodeEnv": "development",
   "lastBackup": null,
@@ -19,8 +19,8 @@
     "src/production_rls_implementation.sql": "1ec6437409769235d3813775a4a9acda4b82d11b35d12dc57aeb1b8ffd8a181f",
     "src/rls_implementation_plan.sql": "f522278f9219aedd8d97a8104dc16dc7f3bb01b2d62b36b4ff5a185d8079432d"
   },
-  "packageLockHash": "7a4135c11ffcfa771d6710871e0243aac4f148d12127ab34606e4c6612af2cd2",
-  "frontendBuildHash": "0bb88a648ea4cf8c268a0a12e4bca5638c09a869a2c9a78d0f7ec7f733aecde0",
+  "packageLockHash": "befbec9c6576dc91fb505b55dceeacb5a991f9c8591d819b64e1384577609ef7",
+  "frontendBuildHash": "fc891fdbf43332b8b060e6235a176a697a42131339297f1f2ae920c7563f000e",
   "projectStatus": {
     "rlsImplementation": "COMPLETE",
     "userManagement": "FUNCTIONAL",
@@ -59,22 +59,22 @@
     ]
   },
   "auditResults": {
-    "timestamp": "2025-07-24T02:57:02.736Z",
+    "timestamp": "2025-07-24T06:10:47.815Z",
     "versionCheck": {
-      "packageJson": "2.3.0",
-      "versionJson": "2.3.0",
+      "packageJson": "2.4.0",
+      "versionJson": "2.4.0",
       "otherFiles": [
         {
           "file": "src\\version.json",
-          "version": "2.3.0"
+          "version": "2.4.0"
         }
       ],
       "isConsistent": true,
       "inconsistencies": [],
       "allVersions": [
-        "2.3.0",
-        "2.3.0",
-        "2.3.0"
+        "2.4.0",
+        "2.4.0",
+        "2.4.0"
       ]
     },
     "duplicateFiles": [
@@ -384,37 +384,37 @@
           {
             "type": "BUG",
             "message": "Info - Only visible in development */}",
-            "line": 1094,
+            "line": 1101,
             "context": "{/* Debug Info - Only visible in development */}"
           },
           {
             "type": "BUG",
             "message": "log",
-            "line": 1127,
+            "line": 1134,
             "context": "// Wrap every setActivePanel call with a debug log"
           },
           {
             "type": "BUG",
             "message": "SetActivePanel = (panel) => {",
-            "line": 1128,
+            "line": 1135,
             "context": "const debugSetActivePanel = (panel) => {"
           },
           {
             "type": "BUG",
             "message": "setActivePanel] Setting panel to', panel, 'hash:', window.location.hash);",
-            "line": 1129,
+            "line": 1136,
             "context": "console.log('[App Debug setActivePanel] Setting panel to', panel, 'hash:', window.location.hash);"
           },
           {
             "type": "BUG",
             "message": "SetActivePanel(panel)",
-            "line": 1133,
+            "line": 1140,
             "context": "// Replace all setActivePanel(panel) with debugSetActivePanel(panel)"
           },
           {
             "type": "NOTE",
             "message": "This function is not used in the root App component",
-            "line": 1130,
+            "line": 1137,
             "context": "// Note: This function is not used in the root App component"
           }
         ]
@@ -497,6 +497,23 @@
             "message": "ging",
             "line": 58,
             "context": "// Log the current user's email for debugging"
+          }
+        ]
+      },
+      {
+        "file": "src\\components\\admin\\BackupManager\\index.jsx",
+        "todos": [
+          {
+            "type": "BUG",
+            "message": "confirm file is loaded",
+            "line": 1,
+            "context": "// Debug: confirm file is loaded"
+          },
+          {
+            "type": "BUG",
+            "message": "log for permissions",
+            "line": 23,
+            "context": "// Debug log for permissions"
           }
         ]
       },
@@ -1141,6 +1158,28 @@
             "context": "{ type: 'NOTE', regex: /NOTE[:\\s]*([^\\n]*)/gi }"
           }
         ]
+      },
+      {
+        "file": "src\\services\\backup\\backupImportService.ts",
+        "todos": [
+          {
+            "type": "TODO",
+            "message": "Implement image restore logic",
+            "line": 104,
+            "context": "// TODO: Implement image restore logic"
+          }
+        ]
+      },
+      {
+        "file": "src\\services\\backup\\backupImportService.js",
+        "todos": [
+          {
+            "type": "TODO",
+            "message": "Implement image restore logic",
+            "line": 97,
+            "context": "// TODO: Implement image restore logic"
+          }
+        ]
       }
     ],
     "buildWarnings": [
@@ -1161,7 +1200,7 @@
       }
     ],
     "fileStructure": {
-      "totalFiles": 198,
+      "totalFiles": 201,
       "directories": {
         "name": "src",
         "path": "src",
@@ -1169,8 +1208,8 @@
         "files": [
           {
             "name": "App.jsx",
-            "size": 39658,
-            "modified": "2025-07-24T01:12:02.000Z",
+            "size": 39959,
+            "modified": "2025-07-24T06:06:58.000Z",
             "path": "src\\App.jsx"
           },
           {
@@ -1194,7 +1233,7 @@
           {
             "name": "version.json",
             "size": 24,
-            "modified": "2025-07-24T02:57:04.000Z",
+            "modified": "2025-07-24T06:10:48.000Z",
             "path": "src\\version.json"
           },
           {
@@ -2039,14 +2078,14 @@
           },
           {
             "name": "progress-snapshot.json",
-            "size": 158005,
-            "modified": "2025-07-24T02:43:44.000Z",
+            "size": 158717,
+            "modified": "2025-07-24T02:57:12.000Z",
             "path": "src\\progress-snapshot.json"
           },
           {
             "name": "audit-results.json",
-            "size": 147337,
-            "modified": "2025-07-24T02:43:44.000Z",
+            "size": 148136,
+            "modified": "2025-07-24T03:06:22.000Z",
             "path": "src\\audit-results.json"
           }
         ],
@@ -2284,8 +2323,8 @@
                       },
                       {
                         "name": "index.jsx",
-                        "size": 3403,
-                        "modified": "2025-07-23T00:31:48.000Z",
+                        "size": 6110,
+                        "modified": "2025-07-24T06:05:06.000Z",
                         "path": "src\\components\\admin\\BackupManager\\index.jsx"
                       }
                     ],
@@ -2434,6 +2473,24 @@
                     "size": 5332,
                     "modified": "2025-06-05T01:26:44.000Z",
                     "path": "src\\services\\backup\\backupService.ts"
+                  },
+                  {
+                    "name": "backupImportService.ts",
+                    "size": 4388,
+                    "modified": "2025-07-24T05:46:52.000Z",
+                    "path": "src\\services\\backup\\backupImportService.ts"
+                  },
+                  {
+                    "name": "testImportBackup.js",
+                    "size": 1092,
+                    "modified": "2025-07-24T05:46:40.000Z",
+                    "path": "src\\services\\backup\\testImportBackup.js"
+                  },
+                  {
+                    "name": "backupImportService.js",
+                    "size": 4123,
+                    "modified": "2025-07-24T05:50:26.000Z",
+                    "path": "src\\services\\backup\\backupImportService.js"
                   }
                 ],
                 "subdirs": []
@@ -2444,10 +2501,10 @@
       },
       "fileTypes": {
         ".jsx": 31,
-        ".js": 71,
+        ".js": 73,
         ".css": 1,
         ".txt": 1,
-        ".ts": 4,
+        ".ts": 5,
         ".tsx": 5,
         ".md": 3,
         ".json": 3,
@@ -2457,19 +2514,19 @@
         {
           "name": "progress-snapshot.json",
           "path": "src\\progress-snapshot.json",
-          "size": 158005,
-          "sizeKB": 154
+          "size": 158717,
+          "sizeKB": 155
         },
         {
           "name": "audit-results.json",
           "path": "src\\audit-results.json",
-          "size": 147337,
-          "sizeKB": 144
+          "size": 148136,
+          "sizeKB": 145
         },
         {
           "name": "App.jsx",
           "path": "src\\App.jsx",
-          "size": 39658,
+          "size": 39959,
           "sizeKB": 39
         },
         {
@@ -2519,17 +2576,42 @@
         {
           "name": "version.json",
           "path": "src\\version.json",
-          "modified": "2025-07-24T02:57:04.000Z"
+          "modified": "2025-07-24T06:10:48.000Z"
         },
         {
-          "name": "progress-snapshot.json",
-          "path": "src\\progress-snapshot.json",
-          "modified": "2025-07-24T02:43:44.000Z"
+          "name": "App.jsx",
+          "path": "src\\App.jsx",
+          "modified": "2025-07-24T06:06:58.000Z"
+        },
+        {
+          "name": "index.jsx",
+          "path": "src\\components\\admin\\BackupManager\\index.jsx",
+          "modified": "2025-07-24T06:05:06.000Z"
+        },
+        {
+          "name": "backupImportService.js",
+          "path": "src\\services\\backup\\backupImportService.js",
+          "modified": "2025-07-24T05:50:26.000Z"
+        },
+        {
+          "name": "backupImportService.ts",
+          "path": "src\\services\\backup\\backupImportService.ts",
+          "modified": "2025-07-24T05:46:52.000Z"
+        },
+        {
+          "name": "testImportBackup.js",
+          "path": "src\\services\\backup\\testImportBackup.js",
+          "modified": "2025-07-24T05:46:40.000Z"
         },
         {
           "name": "audit-results.json",
           "path": "src\\audit-results.json",
-          "modified": "2025-07-24T02:43:44.000Z"
+          "modified": "2025-07-24T03:06:22.000Z"
+        },
+        {
+          "name": "progress-snapshot.json",
+          "path": "src\\progress-snapshot.json",
+          "modified": "2025-07-24T02:57:12.000Z"
         },
         {
           "name": "projectSnapshot.js",
@@ -2540,31 +2622,6 @@
           "name": "SuperAdminPanel.jsx",
           "path": "src\\components\\admin\\SuperAdminPanel.jsx",
           "modified": "2025-07-24T01:45:28.000Z"
-        },
-        {
-          "name": "projectAuditor.js",
-          "path": "src\\utils\\projectAuditor.js",
-          "modified": "2025-07-24T01:26:02.000Z"
-        },
-        {
-          "name": "App.jsx",
-          "path": "src\\App.jsx",
-          "modified": "2025-07-24T01:12:02.000Z"
-        },
-        {
-          "name": "RlsTestEnvironment.jsx",
-          "path": "src\\components\\admin\\RlsTestEnvironment.jsx",
-          "modified": "2025-07-24T00:35:14.000Z"
-        },
-        {
-          "name": "check_user_departments_constraints.sql",
-          "path": "src\\check_user_departments_constraints.sql",
-          "modified": "2025-07-24T00:34:24.000Z"
-        },
-        {
-          "name": "check_user_departments_fk.sql",
-          "path": "src\\check_user_departments_fk.sql",
-          "modified": "2025-07-24T00:25:44.000Z"
         }
       ]
     },
@@ -2950,6 +3007,21 @@
         "suggestedAction": "Remove if unused or add proper imports"
       },
       {
+        "file": "src\\services\\backup\\backupImportService.ts",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\services\\backup\\testImportBackup.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\services\\backup\\backupImportService.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
         "file": "src\\fixRLSPolicies.js",
         "reason": "Not imported anywhere",
         "suggestedAction": "Remove if unused or add proper imports"
@@ -2994,7 +3066,7 @@
       "unusedImports": [],
       "missingImports": [],
       "circularDependencies": [],
-      "totalImports": 277,
+      "totalImports": 285,
       "message": "Import analysis completed (simplified version)"
     },
     "issues": [
@@ -3025,7 +3097,7 @@
       {
         "severity": "MEDIUM",
         "category": "TODOS",
-        "message": "166 TODO items found across 10 files",
+        "message": "170 TODO items found across 13 files",
         "impact": "Incomplete features and technical debt",
         "details": [
           {
@@ -3316,37 +3388,37 @@
               {
                 "type": "BUG",
                 "message": "Info - Only visible in development */}",
-                "line": 1094,
+                "line": 1101,
                 "context": "{/* Debug Info - Only visible in development */}"
               },
               {
                 "type": "BUG",
                 "message": "log",
-                "line": 1127,
+                "line": 1134,
                 "context": "// Wrap every setActivePanel call with a debug log"
               },
               {
                 "type": "BUG",
                 "message": "SetActivePanel = (panel) => {",
-                "line": 1128,
+                "line": 1135,
                 "context": "const debugSetActivePanel = (panel) => {"
               },
               {
                 "type": "BUG",
                 "message": "setActivePanel] Setting panel to', panel, 'hash:', window.location.hash);",
-                "line": 1129,
+                "line": 1136,
                 "context": "console.log('[App Debug setActivePanel] Setting panel to', panel, 'hash:', window.location.hash);"
               },
               {
                 "type": "BUG",
                 "message": "SetActivePanel(panel)",
-                "line": 1133,
+                "line": 1140,
                 "context": "// Replace all setActivePanel(panel) with debugSetActivePanel(panel)"
               },
               {
                 "type": "NOTE",
                 "message": "This function is not used in the root App component",
-                "line": 1130,
+                "line": 1137,
                 "context": "// Note: This function is not used in the root App component"
               }
             ]
@@ -3429,6 +3501,23 @@
                 "message": "ging",
                 "line": 58,
                 "context": "// Log the current user's email for debugging"
+              }
+            ]
+          },
+          {
+            "file": "src\\components\\admin\\BackupManager\\index.jsx",
+            "todos": [
+              {
+                "type": "BUG",
+                "message": "confirm file is loaded",
+                "line": 1,
+                "context": "// Debug: confirm file is loaded"
+              },
+              {
+                "type": "BUG",
+                "message": "log for permissions",
+                "line": 23,
+                "context": "// Debug log for permissions"
               }
             ]
           },
@@ -4073,6 +4162,28 @@
                 "context": "{ type: 'NOTE', regex: /NOTE[:\\s]*([^\\n]*)/gi }"
               }
             ]
+          },
+          {
+            "file": "src\\services\\backup\\backupImportService.ts",
+            "todos": [
+              {
+                "type": "TODO",
+                "message": "Implement image restore logic",
+                "line": 104,
+                "context": "// TODO: Implement image restore logic"
+              }
+            ]
+          },
+          {
+            "file": "src\\services\\backup\\backupImportService.js",
+            "todos": [
+              {
+                "type": "TODO",
+                "message": "Implement image restore logic",
+                "line": 97,
+                "context": "// TODO: Implement image restore logic"
+              }
+            ]
           }
         ]
       },
@@ -4097,7 +4208,7 @@
       {
         "severity": "LOW",
         "category": "ORPHANED",
-        "message": "84 orphaned files found",
+        "message": "87 orphaned files found",
         "impact": "Code bloat and confusion",
         "details": [
           {
@@ -4481,6 +4592,21 @@
             "suggestedAction": "Remove if unused or add proper imports"
           },
           {
+            "file": "src\\services\\backup\\backupImportService.ts",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\services\\backup\\testImportBackup.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\services\\backup\\backupImportService.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
             "file": "src\\fixRLSPolicies.js",
             "reason": "Not imported anywhere",
             "suggestedAction": "Remove if unused or add proper imports"
@@ -4536,7 +4662,7 @@
         "category": "TODOS",
         "action": "Address TODO items",
         "command": "Review and complete TODO items",
-        "description": "Complete 166 TODO items or document why they remain"
+        "description": "Complete 170 TODO items or document why they remain"
       },
       {
         "priority": "LOW",
@@ -4547,5 +4673,5 @@
       }
     ]
   },
-  "snapshotHash": "c1e78ded558189aa33886714fd4a22eabb5e8d698ec662acab90bbf1f1f2fd2f"
+  "snapshotHash": "1b485314bc73ccc048f35e3eab0d4d2a986826059263ff49016e44f86e03a07b"
 }

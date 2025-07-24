@@ -970,6 +970,13 @@ function MainApp({ session, setSession }) {
           </div>
         )}
 
+        {activePanel === "backupManager" && (
+          <div className="w-full" style={{ gridColumn: '1 / -1', width: '100%' }}>
+            {console.log('Rendering BackupManager for backupManager panel')}
+            <BackupManager departmentId={selectedDepartmentId} />
+          </div>
+        )}
+
         {/* RLS Test Page for Superadmins */}
         {activePanel === "rlsTest" && userIsSuperAdmin && (
           <div className="w-full" style={{ gridColumn: '1 / -1', width: '100%' }}>
