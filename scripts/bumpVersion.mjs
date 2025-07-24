@@ -229,6 +229,20 @@ async function main() {
     fs.writeFileSync(snapshotPath, JSON.stringify(snapshot, null, 2));
     console.log('✅ Progress snapshot saved');
     
+    // 8. Save revision log (latest 50 commits)
+    try {
+      const logLines = execSync('git log -n 50 --pretty=format:"%h|%an|%ad|%s" --date=iso').toString().split('\n');
+      const revisionLog = logLines.map(line => {
+        const [hash, author, date, ...msgParts] = line.split('|');
+        return { hash, author, date, message: msgParts.join('|') };
+      });
+      const revisionLogPath = path.join(process.cwd(), 'src', 'revision-log.json');
+      fs.writeFileSync(revisionLogPath, JSON.stringify(revisionLog, null, 2));
+      console.log('✅ Revision log saved');
+    } catch (e) {
+      console.error('❌ Failed to save revision log:', e);
+    }
+    
     // 7. Print summary
     console.log('\n🎉 Version bump complete!');
     console.log(`📋 Version: ${currentVersion} → ${newVersion}`);

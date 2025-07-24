@@ -1,0 +1,164 @@
+[
+  {
+    "hash": "71a54a8",
+    "author": "Noel Gordon",
+    "date": "2025-07-24 16:11:51 +1000",
+    "message": "chore: bump version to 2.4.0 (minor)"
+  },
+  {
+    "hash": "bdd4362",
+    "author": "Noel Gordon",
+    "date": "2025-07-24 12:57:20 +1000",
+    "message": "chore: bump version to 2.3.0 and enhance snapshot/audit metadata"
+  },
+  {
+    "hash": "c7c63a1",
+    "author": "Noel Gordon",
+    "date": "2025-07-24 12:43:50 +1000",
+    "message": "v2.2.0: Ensure audit and snapshot use new version immediately after bump\\n\\n- Fix: version.json is now updated before audit and snapshot\\n- All generated notes and audit files now reference the correct version\\n- Minor version bump for verification"
+  },
+  {
+    "hash": "b8d5ca2",
+    "author": "Noel Gordon",
+    "date": "2025-07-24 11:50:07 +1000",
+    "message": "v2.1.0: Clipboard fallback and reliability improvements\\n\\n- Added fallback clipboard copy for production\\n- Improved async handling and error feedback\\n- Updated project snapshot and audit logic\\n- Minor version bump for deployment"
+  },
+  {
+    "hash": "5a396d9",
+    "author": "Noel Gordon",
+    "date": "2025-07-24 11:46:57 +1000",
+    "message": "Fix clipboard functionality with debugging and fallback methods"
+  },
+  {
+    "hash": "c2432c1",
+    "author": "Noel Gordon",
+    "date": "2025-07-24 11:38:21 +1000",
+    "message": "v2.0.0: Enhanced Project Snapshot System with Comprehensive Auditing"
+  },
+  {
+    "hash": "33562c9",
+    "author": "Noel Gordon",
+    "date": "2025-07-24 08:31:14 +1000",
+    "message": "v1.11: Fix logout error handling and bump version"
+  },
+  {
+    "hash": "cd803ac",
+    "author": "Noel Gordon",
+    "date": "2025-07-24 07:49:07 +1000",
+    "message": "Bump version to v1.10 and implement robust RLS test, superadmin UI lock, and future-proofed admin panel"
+  },
+  {
+    "hash": "bf91763",
+    "author": "Noel Gordon",
+    "date": "2025-07-23 15:53:17 +1000",
+    "message": "Shorten pending access message for new users with no department memberships"
+  },
+  {
+    "hash": "39713b1",
+    "author": "Noel Gordon",
+    "date": "2025-07-23 15:48:00 +1000",
+    "message": "v1.9: Improve mobile sidebar UX and split signup name fields"
+  },
+  {
+    "hash": "55df211",
+    "author": "Noel Gordon",
+    "date": "2025-07-23 14:53:59 +1000",
+    "message": "v1.8: Fix user profile creation and access control flow"
+  },
+  {
+    "hash": "3957d2d",
+    "author": "Noel Gordon",
+    "date": "2025-07-23 12:50:26 +1000",
+    "message": "fix: profile assignment bug for Vite 6 compatibility"
+  },
+  {
+    "hash": "236c162",
+    "author": "Noel Gordon",
+    "date": "2025-07-23 12:40:22 +1000",
+    "message": "fix: downgrade vite to v6.x to resolve plugin-react peer dependency for Vercel build"
+  },
+  {
+    "hash": "d508359",
+    "author": "Noel Gordon",
+    "date": "2025-07-23 12:32:33 +1000",
+    "message": "feat: v1.7 - robust SOP edit/new flow, no step duplication, all wizard features working, navigation and versioning improvements"
+  },
+  {
+    "hash": "aad1d80",
+    "author": "Noel Gordon",
+    "date": "2025-06-05 16:28:02 +1000",
+    "message": "fix: Update import paths in Header.jsx"
+  },
+  {
+    "hash": "6d7221c",
+    "author": "Noel Gordon",
+    "date": "2025-05-20 06:55:10 +1000",
+    "message": "Add compression dependency"
+  },
+  {
+    "hash": "af09c88",
+    "author": "Noel Gordon",
+    "date": "2025-05-20 06:28:17 +1000",
+    "message": "bump version to vX.X"
+  },
+  {
+    "hash": "2c212dd",
+    "author": "Noel Gordon",
+    "date": "2025-05-15 12:21:06 +1000",
+    "message": "bump version to vX.X"
+  },
+  {
+    "hash": "6912138",
+    "author": "Noel Gordon",
+    "date": "2025-05-15 12:03:24 +1000",
+    "message": "bump version to vX.X"
+  },
+  {
+    "hash": "c71e39f",
+    "author": "Noel Gordon",
+    "date": "2025-05-15 11:54:33 +1000",
+    "message": "update layout and header"
+  },
+  {
+    "hash": "29b0238",
+    "author": "Noel Gordon",
+    "date": "2025-05-15 10:49:12 +1000",
+    "message": "fix: add framer-motion dependency"
+  },
+  {
+    "hash": "81af92a",
+    "author": "Noel Gordon",
+    "date": "2025-05-15 10:30:47 +1000",
+    "message": "version: bump to v1.X"
+  },
+  {
+    "hash": "4f05538",
+    "author": "Noel Gordon",
+    "date": "2025-05-15 10:24:23 +1000",
+    "message": "check hook"
+  },
+  {
+    "hash": "b70660c",
+    "author": "Noel Gordon",
+    "date": "2025-05-15 10:14:35 +1000",
+    "message": "test version bump"
+  },
+  {
+    "hash": "21c6f30",
+    "author": "Noel Gordon",
+    "date": "2025-05-15 09:47:27 +1000",
+    "message": "Update: fixed camera input and cleaned up Wizard component"
+  },
+  {
+    "hash": "0a711cf",
+    "author": "Noel Gordon",
+    "date": "2025-05-15 08:34:58 +1000",
+    "message": "Add camera capture for photo upload"
+  },
+  {
+    "hash": "7aeb8cb",
+    "author": "Noel Gordon",
+    "date": "2025-05-14 16:34:29 +1000",
+    "message": "Add .gitignore and prepare for Vercel deployment"
+  }
+]
