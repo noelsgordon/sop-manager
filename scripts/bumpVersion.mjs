@@ -55,12 +55,12 @@ async function main() {
     
     console.log(`📋 Version: ${currentVersion} → ${newVersion}`);
     
-    // 3. Update version.json
+    // 3. Update version.json (move this BEFORE audit and snapshot)
     versionData.version = newVersion;
     fs.writeFileSync(versionPath, JSON.stringify(versionData, null, 2));
     console.log('✅ Updated version.json');
     
-    // 4. Run comprehensive project audit
+    // 4. Run comprehensive project audit (now uses updated version)
     console.log('🔍 Running project audit...');
     try {
       const audit = await runComprehensiveAudit();
