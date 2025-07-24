@@ -1,8 +1,26 @@
 {
-  "version": "2.2.0",
-  "timestamp": "2025-07-24T02:43:42.707Z",
+  "version": "2.3.0",
+  "timestamp": "2025-07-24T02:57:10.127Z",
   "bumpType": "minor",
-  "previousVersion": "2.1.0",
+  "previousVersion": "2.2.0",
+  "gitBranch": "main",
+  "gitCommits": [
+    "c7c63a1|Noel Gordon|2025-07-24 12:43:50 +1000|v2.2.0: Ensure audit and snapshot use new version immediately after bump\\n\\n- Fix: version.json is now updated before audit and snapshot\\n- All generated notes and audit files now reference the correct version\\n- Minor version bump for verification",
+    "b8d5ca2|Noel Gordon|2025-07-24 11:50:07 +1000|v2.1.0: Clipboard fallback and reliability improvements\\n\\n- Added fallback clipboard copy for production\\n- Improved async handling and error feedback\\n- Updated project snapshot and audit logic\\n- Minor version bump for deployment",
+    "5a396d9|Noel Gordon|2025-07-24 11:46:57 +1000|Fix clipboard functionality with debugging and fallback methods",
+    "c2432c1|Noel Gordon|2025-07-24 11:38:21 +1000|v2.0.0: Enhanced Project Snapshot System with Comprehensive Auditing",
+    "33562c9|Noel Gordon|2025-07-24 08:31:14 +1000|v1.11: Fix logout error handling and bump version"
+  ],
+  "nodeEnv": "development",
+  "lastBackup": null,
+  "migrationStatus": null,
+  "rlsHashes": {
+    "src/fix_all_rls_policies.sql": "e9309640b3a6fe370de650caf41584f94f3f430a934f1241dcd0bd466b4fed9f",
+    "src/production_rls_implementation.sql": "1ec6437409769235d3813775a4a9acda4b82d11b35d12dc57aeb1b8ffd8a181f",
+    "src/rls_implementation_plan.sql": "f522278f9219aedd8d97a8104dc16dc7f3bb01b2d62b36b4ff5a185d8079432d"
+  },
+  "packageLockHash": "7a4135c11ffcfa771d6710871e0243aac4f148d12127ab34606e4c6612af2cd2",
+  "frontendBuildHash": "0bb88a648ea4cf8c268a0a12e4bca5638c09a869a2c9a78d0f7ec7f733aecde0",
   "projectStatus": {
     "rlsImplementation": "COMPLETE",
     "userManagement": "FUNCTIONAL",
@@ -41,25 +59,22 @@
     ]
   },
   "auditResults": {
-    "timestamp": "2025-07-24T02:43:36.183Z",
+    "timestamp": "2025-07-24T02:57:02.736Z",
     "versionCheck": {
-      "packageJson": "1.0.0",
-      "versionJson": "2.2.0",
+      "packageJson": "2.3.0",
+      "versionJson": "2.3.0",
       "otherFiles": [
         {
           "file": "src\\version.json",
-          "version": "2.2.0"
+          "version": "2.3.0"
         }
       ],
-      "isConsistent": false,
-      "inconsistencies": [
-        "1.0.0",
-        "2.2.0"
-      ],
+      "isConsistent": true,
+      "inconsistencies": [],
       "allVersions": [
-        "1.0.0",
-        "2.2.0",
-        "2.2.0"
+        "2.3.0",
+        "2.3.0",
+        "2.3.0"
       ]
     },
     "duplicateFiles": [
@@ -1179,7 +1194,7 @@
           {
             "name": "version.json",
             "size": 24,
-            "modified": "2025-07-24T02:43:38.000Z",
+            "modified": "2025-07-24T02:57:04.000Z",
             "path": "src\\version.json"
           },
           {
@@ -2025,13 +2040,13 @@
           {
             "name": "progress-snapshot.json",
             "size": 158005,
-            "modified": "2025-07-24T01:50:02.000Z",
+            "modified": "2025-07-24T02:43:44.000Z",
             "path": "src\\progress-snapshot.json"
           },
           {
             "name": "audit-results.json",
             "size": 147337,
-            "modified": "2025-07-24T01:50:02.000Z",
+            "modified": "2025-07-24T02:43:44.000Z",
             "path": "src\\audit-results.json"
           }
         ],
@@ -2504,17 +2519,17 @@
         {
           "name": "version.json",
           "path": "src\\version.json",
-          "modified": "2025-07-24T02:43:38.000Z"
+          "modified": "2025-07-24T02:57:04.000Z"
         },
         {
           "name": "progress-snapshot.json",
           "path": "src\\progress-snapshot.json",
-          "modified": "2025-07-24T01:50:02.000Z"
+          "modified": "2025-07-24T02:43:44.000Z"
         },
         {
           "name": "audit-results.json",
           "path": "src\\audit-results.json",
-          "modified": "2025-07-24T01:50:02.000Z"
+          "modified": "2025-07-24T02:43:44.000Z"
         },
         {
           "name": "projectSnapshot.js",
@@ -2983,32 +2998,6 @@
       "message": "Import analysis completed (simplified version)"
     },
     "issues": [
-      {
-        "severity": "HIGH",
-        "category": "VERSION",
-        "message": "Version inconsistencies found: 1.0.0, 2.2.0",
-        "impact": "Build and deployment issues",
-        "details": {
-          "packageJson": "1.0.0",
-          "versionJson": "2.2.0",
-          "otherFiles": [
-            {
-              "file": "src\\version.json",
-              "version": "2.2.0"
-            }
-          ],
-          "isConsistent": false,
-          "inconsistencies": [
-            "1.0.0",
-            "2.2.0"
-          ],
-          "allVersions": [
-            "1.0.0",
-            "2.2.0",
-            "2.2.0"
-          ]
-        }
-      },
       {
         "severity": "MEDIUM",
         "category": "DUPLICATES",
@@ -4536,13 +4525,6 @@
     ],
     "recommendations": [
       {
-        "priority": "HIGH",
-        "category": "VERSION",
-        "action": "Synchronize all version files",
-        "command": "npm run bump-version",
-        "description": "Use the bumpVersion.cjs script to update all version files consistently"
-      },
-      {
         "priority": "MEDIUM",
         "category": "DUPLICATES",
         "action": "Remove duplicate files",
@@ -4564,5 +4546,6 @@
         "description": "Remove orphaned files or add proper imports"
       }
     ]
-  }
+  },
+  "snapshotHash": "c1e78ded558189aa33886714fd4a22eabb5e8d698ec662acab90bbf1f1f2fd2f"
 }
