@@ -268,10 +268,16 @@ export default function SuperAdminPanel({ currentUserId, userProfile, department
 
   // Handle project snapshot copying
   const handleCopySnapshot = async (generator, type) => {
+    console.log(`Starting copy process for: ${type}`);
     setCopyLoading(true);
     try {
-      const data = generator();
+      console.log('Calling generator function...');
+      const data = await generator();
+      console.log('Generator completed, data size:', JSON.stringify(data).length);
+      
+      console.log('Calling copyToClipboard...');
       const result = await copyToClipboard(data);
+      console.log('Copy result:', result);
       
       if (result.success) {
         toast({
