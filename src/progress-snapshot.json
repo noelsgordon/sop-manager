@@ -1,15 +1,15 @@
 {
-  "version": "2.5.0",
-  "timestamp": "2025-07-24T06:22:39.993Z",
-  "bumpType": "minor",
-  "previousVersion": "2.4.0",
+  "version": "2.5.2",
+  "timestamp": "2025-07-24T06:27:30.477Z",
+  "bumpType": "patch",
+  "previousVersion": "2.5.1",
   "gitBranch": "main",
   "gitCommits": [
+    "f68d9fe|Noel Gordon|2025-07-24 16:24:07 +1000|chore: bump version to 2.5.0 (minor) and update revision log",
     "71a54a8|Noel Gordon|2025-07-24 16:11:51 +1000|chore: bump version to 2.4.0 (minor)",
     "bdd4362|Noel Gordon|2025-07-24 12:57:20 +1000|chore: bump version to 2.3.0 and enhance snapshot/audit metadata",
     "c7c63a1|Noel Gordon|2025-07-24 12:43:50 +1000|v2.2.0: Ensure audit and snapshot use new version immediately after bump\\n\\n- Fix: version.json is now updated before audit and snapshot\\n- All generated notes and audit files now reference the correct version\\n- Minor version bump for verification",
-    "b8d5ca2|Noel Gordon|2025-07-24 11:50:07 +1000|v2.1.0: Clipboard fallback and reliability improvements\\n\\n- Added fallback clipboard copy for production\\n- Improved async handling and error feedback\\n- Updated project snapshot and audit logic\\n- Minor version bump for deployment",
-    "5a396d9|Noel Gordon|2025-07-24 11:46:57 +1000|Fix clipboard functionality with debugging and fallback methods"
+    "b8d5ca2|Noel Gordon|2025-07-24 11:50:07 +1000|v2.1.0: Clipboard fallback and reliability improvements\\n\\n- Added fallback clipboard copy for production\\n- Improved async handling and error feedback\\n- Updated project snapshot and audit logic\\n- Minor version bump for deployment"
   ],
   "nodeEnv": "development",
   "lastBackup": null,
@@ -20,7 +20,7 @@
     "src/rls_implementation_plan.sql": "f522278f9219aedd8d97a8104dc16dc7f3bb01b2d62b36b4ff5a185d8079432d"
   },
   "packageLockHash": "befbec9c6576dc91fb505b55dceeacb5a991f9c8591d819b64e1384577609ef7",
-  "frontendBuildHash": "e5bfbe4524ccdec51b022647072a1a5e5df9a931ce25114df1e4b042d4a4b080",
+  "frontendBuildHash": "bc5dac3fac99580078d71b61fac9172a318b03661858ac156d9ec378e4b6a49c",
   "projectStatus": {
     "rlsImplementation": "COMPLETE",
     "userManagement": "FUNCTIONAL",
@@ -59,22 +59,22 @@
     ]
   },
   "auditResults": {
-    "timestamp": "2025-07-24T06:22:32.640Z",
+    "timestamp": "2025-07-24T06:27:23.648Z",
     "versionCheck": {
-      "packageJson": "2.5.0",
-      "versionJson": "2.5.0",
+      "packageJson": "2.5.2",
+      "versionJson": "2.5.2",
       "otherFiles": [
         {
           "file": "src\\version.json",
-          "version": "2.5.0"
+          "version": "2.5.2"
         }
       ],
       "isConsistent": true,
       "inconsistencies": [],
       "allVersions": [
-        "2.5.0",
-        "2.5.0",
-        "2.5.0"
+        "2.5.2",
+        "2.5.2",
+        "2.5.2"
       ]
     },
     "duplicateFiles": [
@@ -1289,7 +1289,7 @@
       }
     ],
     "fileStructure": {
-      "totalFiles": 201,
+      "totalFiles": 202,
       "directories": {
         "name": "src",
         "path": "src",
@@ -1322,7 +1322,7 @@
           {
             "name": "version.json",
             "size": 24,
-            "modified": "2025-07-24T06:22:34.000Z",
+            "modified": "2025-07-24T06:27:24.000Z",
             "path": "src\\version.json"
           },
           {
@@ -2167,15 +2167,21 @@
           },
           {
             "name": "progress-snapshot.json",
-            "size": 163055,
-            "modified": "2025-07-24T06:10:56.000Z",
+            "size": 169626,
+            "modified": "2025-07-24T06:27:18.000Z",
             "path": "src\\progress-snapshot.json"
           },
           {
             "name": "audit-results.json",
-            "size": 150520,
-            "modified": "2025-07-24T06:10:56.000Z",
+            "size": 156758,
+            "modified": "2025-07-24T06:27:18.000Z",
             "path": "src\\audit-results.json"
+          },
+          {
+            "name": "revision-log.json",
+            "size": 4937,
+            "modified": "2025-07-24T06:22:42.000Z",
+            "path": "src\\revision-log.json"
           }
         ],
         "subdirs": [
@@ -2381,8 +2387,8 @@
                 "files": [
                   {
                     "name": "SuperAdminPanel.jsx",
-                    "size": 25748,
-                    "modified": "2025-07-24T06:21:58.000Z",
+                    "size": 25744,
+                    "modified": "2025-07-24T06:26:28.000Z",
                     "path": "src\\components\\admin\\SuperAdminPanel.jsx"
                   },
                   {
@@ -2596,21 +2602,21 @@
         ".ts": 5,
         ".tsx": 5,
         ".md": 3,
-        ".json": 3,
+        ".json": 4,
         ".sql": 79
       },
       "largestFiles": [
         {
           "name": "progress-snapshot.json",
           "path": "src\\progress-snapshot.json",
-          "size": 163055,
-          "sizeKB": 159
+          "size": 169626,
+          "sizeKB": 166
         },
         {
           "name": "audit-results.json",
           "path": "src\\audit-results.json",
-          "size": 150520,
-          "sizeKB": 147
+          "size": 156758,
+          "sizeKB": 153
         },
         {
           "name": "App.jsx",
@@ -2621,7 +2627,7 @@
         {
           "name": "SuperAdminPanel.jsx",
           "path": "src\\components\\admin\\SuperAdminPanel.jsx",
-          "size": 25748,
+          "size": 25744,
           "sizeKB": 25
         },
         {
@@ -2665,22 +2671,27 @@
         {
           "name": "version.json",
           "path": "src\\version.json",
-          "modified": "2025-07-24T06:22:34.000Z"
-        },
-        {
-          "name": "SuperAdminPanel.jsx",
-          "path": "src\\components\\admin\\SuperAdminPanel.jsx",
-          "modified": "2025-07-24T06:21:58.000Z"
+          "modified": "2025-07-24T06:27:24.000Z"
         },
         {
           "name": "progress-snapshot.json",
           "path": "src\\progress-snapshot.json",
-          "modified": "2025-07-24T06:10:56.000Z"
+          "modified": "2025-07-24T06:27:18.000Z"
         },
         {
           "name": "audit-results.json",
           "path": "src\\audit-results.json",
-          "modified": "2025-07-24T06:10:56.000Z"
+          "modified": "2025-07-24T06:27:18.000Z"
+        },
+        {
+          "name": "SuperAdminPanel.jsx",
+          "path": "src\\components\\admin\\SuperAdminPanel.jsx",
+          "modified": "2025-07-24T06:26:28.000Z"
+        },
+        {
+          "name": "revision-log.json",
+          "path": "src\\revision-log.json",
+          "modified": "2025-07-24T06:22:42.000Z"
         },
         {
           "name": "App.jsx",
@@ -2706,11 +2717,6 @@
           "name": "testImportBackup.js",
           "path": "src\\services\\backup\\testImportBackup.js",
           "modified": "2025-07-24T05:46:40.000Z"
-        },
-        {
-          "name": "projectSnapshot.js",
-          "path": "src\\utils\\projectSnapshot.js",
-          "modified": "2025-07-24T01:46:42.000Z"
         }
       ]
     },
@@ -4851,5 +4857,5 @@
       }
     ]
   },
-  "snapshotHash": "2954881f72f47bdc481106190288cd6f2a46f82093726d7bfa5dd667c258e603"
+  "snapshotHash": "fdf8fe20ab45cbc593b2cf8f48e7e401458e24f9ea11922ef0788aa56bcb0709"
 }

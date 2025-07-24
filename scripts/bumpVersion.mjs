@@ -236,7 +236,7 @@ async function main() {
         const [hash, author, date, ...msgParts] = line.split('|');
         return { hash, author, date, message: msgParts.join('|') };
       });
-      const revisionLogPath = path.join(process.cwd(), 'src', 'revision-log.json');
+      const revisionLogPath = path.join(process.cwd(), 'public', 'revision-log.json');
       fs.writeFileSync(revisionLogPath, JSON.stringify(revisionLog, null, 2));
       console.log('✅ Revision log saved');
     } catch (e) {

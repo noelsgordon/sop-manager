@@ -73,7 +73,7 @@ export default function SuperAdminPanel({ currentUserId, userProfile, department
   useEffect(() => {
     if (showRevisionModal) {
       setRevisionLoading(true);
-      fetch('/src/revision-log.json')
+      fetch('/revision-log.json')
         .then(res => res.ok ? res.json() : Promise.reject('Not found'))
         .then(data => setRevisionLog(Array.isArray(data) ? data : fallbackNotes))
         .catch(() => setRevisionLog(fallbackNotes))
