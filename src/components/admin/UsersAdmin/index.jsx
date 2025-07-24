@@ -7,6 +7,7 @@ import { ConfirmationModal } from '../../../components/ui/ConfirmationModal';
 import { CreateUserModal } from '../../../components/CreateUserModal';
 import { toast } from '../../../components/ui/use-toast';
 import { useRoleBasedUI } from '../../../utils/hooks/useRoleBasedUI';
+import { FEATURE_PERMISSIONS } from '../../../utils/permissions';
 
 const PERMISSION_LEVELS = [
   { value: 'look', label: 'Look' },
@@ -15,7 +16,11 @@ const PERMISSION_LEVELS = [
   { value: 'manage', label: 'Admin' }
 ];
 
-export default function UsersAdmin({ currentUserId }) {
+export default function UsersAdmin({ currentUserId, userProfile }) {
+  // Debug: Log received props
+  console.log('[UsersAdmin Debug] currentUserId:', currentUserId);
+  console.log('[UsersAdmin Debug] userProfile:', userProfile);
+
   // State Management
   const [users, setUsers] = useState([]);
   const [departments, setDepartments] = useState([]);
@@ -29,7 +34,25 @@ export default function UsersAdmin({ currentUserId }) {
   const [userToDelete, setUserToDelete] = useState(null);
   const [isDeletingUser, setIsDeletingUser] = useState(false);
 
-  const { canShowFeature, getFeatureProps } = useRoleBasedUI({ user_id: currentUserId }, null);
+  // --- Admin's departments and permissions ---
+  // Fetch the current admin's departments and roles
+  const [adminDepartments, setAdminDepartments] = useState([]);
+  const [adminRoles, setAdminRoles] = useState({});
+  useEffect(() => {
+    // Fetch admin's own memberships
+    (async () => {
+      const { data: myDepts } = await supabase
+        .from('user_departments')
+        .select('department_id, role')
+        .eq('user_id', currentUserId);
+      setAdminDepartments((myDepts || []).map(d => d.department_id));
+      setAdminRoles((myDepts || []).reduce((acc, d) => ({ ...acc, [d.department_id]: d.role }), {}));
+    })();
+  }, [currentUserId]);
+
+  const { canShowFeature, getFeatureProps, isSuper } = useRoleBasedUI(userProfile, null);
+  console.log('[UsersAdmin Debug] isSuper:', isSuper);
+  console.log('[UsersAdmin Debug] canShowFeature(MANAGE_USERS):', canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS));
 
   useEffect(() => {
     fetchData();
@@ -301,18 +324,26 @@ export default function UsersAdmin({ currentUserId }) {
     }
   };
 
-  // Filtered users based on search
+  // --- Filtered users: only those in admin's departments and not superadmins ---
   const filteredUsers = React.useMemo(() => {
-    if (!searchQuery) return users;
-    const query = searchQuery.toLowerCase();
-    return users.filter(user => 
-      user.email?.toLowerCase().includes(query) ||
-      user.first_name?.toLowerCase().includes(query) ||
-      user.last_name?.toLowerCase().includes(query)
-    );
-  }, [users, searchQuery]);
+    return users.filter(user => {
+      if (user.is_superadmin) return false;
+      // User must share at least one department with admin
+      const userDeptIds = Object.keys(permissions[user.user_id] || {});
+      return userDeptIds.some(deptId => adminDepartments.includes(deptId));
+    });
+  }, [users, permissions, adminDepartments]);
+
+  // --- Filtered departments: only those the admin manages ---
+  const filteredDepartments = React.useMemo(() => {
+    return departments.filter(dept => adminDepartments.includes(dept.department_id));
+  }, [departments, adminDepartments]);
+
+  // --- Allowed roles for admins ---
+  const ALLOWED_ROLES = ['look', 'tweak', 'build'];
 
   if (!canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS)) {
+    console.log('[UsersAdmin Debug] Access Denied: canShowFeature returned false');
     return (
       <div className="p-6 text-center">
         <h2 className="text-xl font-semibold text-red-600">Access Denied</h2>
@@ -361,13 +392,12 @@ export default function UsersAdmin({ currentUserId }) {
           />
         </div>
       </div>
-
       <div className="overflow-x-auto">
         <table className="min-w-full border-collapse border">
           <thead>
             <tr className="bg-gray-100">
               <th className="border p-2">User</th>
-              {departments.map(dept => (
+              {filteredDepartments.map(dept => (
                 <th key={dept.department_id} className="border p-2">
                   {dept.name}
                 </th>
@@ -386,11 +416,12 @@ export default function UsersAdmin({ currentUserId }) {
                     </div>
                   </div>
                 </td>
-                {departments.map(dept => {
+                {filteredDepartments.map(dept => {
                   const hasAccess = !!permissions[user.user_id]?.[dept.department_id];
                   const currentRole = permissions[user.user_id]?.[dept.department_id] || 'look';
                   const isSavingThis = savingStates[`${user.user_id}-${dept.department_id}`];
-
+                  // Only allow actions if admin manages this department
+                  const canEdit = adminRoles[dept.department_id] === 'manage';
                   return (
                     <td key={dept.department_id} className="border p-2">
                       <div className="space-y-2">
@@ -398,24 +429,23 @@ export default function UsersAdmin({ currentUserId }) {
                           <input
                             type="checkbox"
                             checked={hasAccess}
-                            onChange={(e) => handleAccessToggle(user.user_id, dept.department_id, e.target.checked)}
-                            disabled={!canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS) || user.user_id === currentUserId}
+                            onChange={(e) => canEdit && handleAccessToggle(user.user_id, dept.department_id, e.target.checked)}
+                            disabled={!canEdit || user.user_id === currentUserId}
                             className="mr-2"
                           />
                           Access
                         </label>
-
                         {hasAccess && (
                           <div className="space-y-1">
-                            {['look', 'tweak', 'build', 'manage'].map(role => (
+                            {ALLOWED_ROLES.map(role => (
                               <label key={role} className="flex items-center text-sm">
                                 <input
                                   type="radio"
                                   name={`${user.user_id}-${dept.department_id}-role`}
                                   value={role}
                                   checked={currentRole === role}
-                                  onChange={() => handlePermissionChange(user.user_id, dept.department_id, role)}
-                                  disabled={!canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS) || user.user_id === currentUserId}
+                                  onChange={() => canEdit && handlePermissionChange(user.user_id, dept.department_id, role)}
+                                  disabled={!canEdit || user.user_id === currentUserId}
                                   className="mr-1"
                                 />
                                 {role.charAt(0).toUpperCase() + role.slice(1)}
@@ -423,7 +453,6 @@ export default function UsersAdmin({ currentUserId }) {
                             ))}
                           </div>
                         )}
-
                         {isSavingThis && (
                           <div className="mt-1">
                             <Loader2 className="animate-spin h-4 w-4" />
@@ -452,7 +481,7 @@ export default function UsersAdmin({ currentUserId }) {
                           variant="destructive"
                           size="sm"
                           onClick={() => handleDeleteUser(user)}
-                          disabled={user.user_id === currentUserId || user.is_superadmin}
+                          disabled={user.user_id === currentUserId}
                           className="flex items-center"
                         >
                           <Trash2 className="h-4 w-4" />

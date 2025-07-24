@@ -1,5 +1,11 @@
 [
   {
+    "hash": "a509c5a",
+    "author": "Noel Gordon",
+    "date": "2025-07-24 16:27:59 +1000",
+    "message": "chore: bump version to 2.5.2 (patch) and update revision log"
+  },
+  {
     "hash": "f68d9fe",
     "author": "Noel Gordon",
     "date": "2025-07-24 16:24:07 +1000",

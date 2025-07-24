@@ -101,20 +101,40 @@ export async function createBackup(supabase: any, onProgress?: (progress: number
       .select('*');
     if (deptError) throw deptError;
 
+    // NEW: Fetch user_profiles, user_departments, invite_codes
+    const { data: userProfiles, error: userProfilesError } = await supabase
+      .from('user_profiles')
+      .select('*');
+    if (userProfilesError) throw userProfilesError;
+
+    const { data: userDepartments, error: userDepartmentsError } = await supabase
+      .from('user_departments')
+      .select('*');
+    if (userDepartmentsError) throw userDepartmentsError;
+
+    const { data: inviteCodes, error: inviteCodesError } = await supabase
+      .from('invite_codes')
+      .select('*');
+    if (inviteCodesError) throw inviteCodesError;
+
     // Create metadata
     const metadata: BackupMetadata = {
-      version: '1.0',
+      version: '1.1',
       timestamp: new Date().toISOString(),
       totalSops: sops.length,
       totalSteps: steps.length,
       totalImages: steps.filter(s => s.photo).length,
       departments: departments.length
+      // Optionally add user count, etc.
     };
 
     // Save JSON data
     dataFolder?.file('sops.json', JSON.stringify(sops, null, 2));
     dataFolder?.file('sop_steps.json', JSON.stringify(steps, null, 2));
     dataFolder?.file('departments.json', JSON.stringify(departments, null, 2));
+    dataFolder?.file('user_profiles.json', JSON.stringify(userProfiles, null, 2));
+    dataFolder?.file('user_departments.json', JSON.stringify(userDepartments, null, 2));
+    dataFolder?.file('invite_codes.json', JSON.stringify(inviteCodes, null, 2));
     dataFolder?.file('metadata.json', JSON.stringify(metadata, null, 2));
 
     // Download and save images
@@ -144,10 +164,16 @@ export async function createBackup(supabase: any, onProgress?: (progress: number
     // Create README
     const readme = `SOP Manager Backup
 Created: ${new Date().toLocaleString()}
-Version: 1.0
+Version: 1.1
 
 Contents:
-1. data/ - JSON files containing all SOP data
+1. data/ - JSON files containing all SOP, user, department, and invite data
+   - sops.json
+   - sop_steps.json
+   - departments.json
+   - user_profiles.json
+   - user_departments.json
+   - invite_codes.json
 2. images/ - All SOP images organized by SOP
 3. preview/ - Double-click index.html to view SOPs in browser
 
@@ -160,7 +186,10 @@ Backup Statistics:
 - Total SOPs: ${metadata.totalSops}
 - Total Steps: ${metadata.totalSteps}
 - Total Images: ${metadata.totalImages}
-- Departments: ${metadata.departments}`;
+- Departments: ${metadata.departments}
+- User Profiles: ${userProfiles.length}
+- User Departments: ${userDepartments.length}
+- Invite Codes: ${inviteCodes.length}`;
 
     zip.file('README.txt', readme);
 

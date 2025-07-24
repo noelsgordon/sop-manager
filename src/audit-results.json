@@ -1,20 +1,20 @@
 {
-  "timestamp": "2025-07-24T06:27:23.648Z",
+  "timestamp": "2025-07-24T06:56:55.000Z",
   "versionCheck": {
-    "packageJson": "2.5.2",
-    "versionJson": "2.5.2",
+    "packageJson": "2.6.0",
+    "versionJson": "2.6.0",
     "otherFiles": [
       {
         "file": "src\\version.json",
-        "version": "2.5.2"
+        "version": "2.6.0"
       }
     ],
     "isConsistent": true,
     "inconsistencies": [],
     "allVersions": [
-      "2.5.2",
-      "2.5.2",
-      "2.5.2"
+      "2.6.0",
+      "2.6.0",
+      "2.6.0"
     ]
   },
   "duplicateFiles": [
@@ -42,319 +42,319 @@
         {
           "type": "TODO",
           "message": "Implement suggestion functionality",
-          "line": 728,
+          "line": 729,
           "context": "// TODO: Implement suggestion functionality"
         },
         {
           "type": "BUG",
           "message": "admin view mode changes",
-          "line": 54,
+          "line": 55,
           "context": "// Debug admin view mode changes"
         },
         {
           "type": "BUG",
           "message": "State,",
-          "line": 72,
+          "line": 73,
           "context": "getDebugState,"
         },
         {
           "type": "BUG",
           "message": "Logger",
-          "line": 87,
+          "line": 88,
           "context": "// Enhanced Debug Logger"
         },
         {
           "type": "BUG",
           "message": "= useCallback((location, data, type = 'info') => {",
-          "line": 88,
+          "line": 89,
           "context": "const logStateDebug = useCallback((location, data, type = 'info') => {"
         },
         {
           "type": "BUG",
           "message": "Info = {",
-          "line": 89,
+          "line": 90,
           "context": "const debugInfo = {"
         },
         {
           "type": "BUG",
           "message": "${location}]`, debugInfo);",
-          "line": 107,
+          "line": 108,
           "context": "console.log(`[App Debug ${location}]`, debugInfo);"
         },
         {
           "type": "BUG",
           "message": "History) {",
-          "line": 109,
+          "line": 110,
           "context": "if (!window._appDebugHistory) {"
         },
         {
           "type": "BUG",
           "message": "History = [];",
-          "line": 110,
+          "line": 111,
           "context": "window._appDebugHistory = [];"
         },
         {
           "type": "BUG",
           "message": "History.push(debugInfo);",
-          "line": 112,
+          "line": 113,
           "context": "window._appDebugHistory.push(debugInfo);"
         },
         {
           "type": "BUG",
           "message": "('setViewMode Entry', {",
-          "line": 151,
+          "line": 152,
           "context": "logStateDebug('setViewMode Entry', {"
         },
         {
           "type": "BUG",
           "message": "('Skipping transition - already in requested panel', {",
-          "line": 162,
+          "line": 163,
           "context": "logStateDebug('Skipping transition - already in requested panel', {"
         },
         {
           "type": "BUG",
           "message": "('SuperAdmin Access Denied', {",
-          "line": 172,
+          "line": 173,
           "context": "logStateDebug('SuperAdmin Access Denied', {"
         },
         {
           "type": "BUG",
           "message": "('Setting SuperAdmin Panel', {",
-          "line": 180,
+          "line": 181,
           "context": "logStateDebug('Setting SuperAdmin Panel', {"
         },
         {
           "type": "BUG",
           "message": "('SuperAdmin Panel Set', {",
-          "line": 190,
+          "line": 191,
           "context": "logStateDebug('SuperAdmin Panel Set', {"
         },
         {
           "type": "BUG",
           "message": "('Setting Regular Panel', {",
-          "line": 197,
+          "line": 198,
           "context": "logStateDebug('Setting Regular Panel', {"
         },
         {
           "type": "BUG",
           "message": "('Panel Set Complete', {",
-          "line": 208,
+          "line": 209,
           "context": "logStateDebug('Panel Set Complete', {"
         },
         {
           "type": "BUG",
           "message": "('setViewMode Error', {",
-          "line": 213,
+          "line": 214,
           "context": "logStateDebug('setViewMode Error', {"
         },
         {
           "type": "BUG",
           "message": "]);",
-          "line": 224,
+          "line": 225,
           "context": "logStateDebug"
         },
         {
           "type": "BUG",
           "message": "('Panel Change Effect', {",
-          "line": 230,
+          "line": 231,
           "context": "logStateDebug('Panel Change Effect', {"
         },
         {
           "type": "BUG",
           "message": "]);",
-          "line": 241,
+          "line": 242,
           "context": "}, [activePanel, getCurrentRole, viewRole, userIsSuperAdmin, logStateDebug]);"
         },
         {
           "type": "BUG",
           "message": "] handleNewSop called');",
-          "line": 276,
+          "line": 277,
           "context": "console.log('[App Debug] handleNewSop called');"
         },
         {
           "type": "BUG",
           "message": "] New SOP initialized:', newSop);",
-          "line": 300,
+          "line": 301,
           "context": "console.log('[App Debug] New SOP initialized:', newSop);"
         },
         {
           "type": "BUG",
           "message": "Mode Setup",
-          "line": 312,
+          "line": 313,
           "context": "// 🔄 Debug Mode Setup"
         },
         {
           "type": "BUG",
           "message": "State = () => {",
-          "line": 315,
+          "line": 316,
           "context": "window.debugState = () => {"
         },
         {
           "type": "BUG",
           "message": "State();",
-          "line": 316,
+          "line": 317,
           "context": "const state = getDebugState();"
         },
         {
           "type": "BUG",
           "message": "State();",
-          "line": 324,
+          "line": 325,
           "context": "return window.debugState();"
         },
         {
           "type": "BUG",
           "message": "State, changeRole]);",
-          "line": 335,
+          "line": 336,
           "context": "}, [getDebugState, changeRole]);"
         },
         {
           "type": "BUG",
           "message": "] handleSaveSop called');",
-          "line": 450,
+          "line": 451,
           "context": "console.log('[App Debug] handleSaveSop called');"
         },
         {
           "type": "BUG",
           "message": "] Saving SOP:', draftSop);",
-          "line": 456,
+          "line": 457,
           "context": "console.log('[App Debug] Saving SOP:', draftSop);"
         },
         {
           "type": "BUG",
           "message": "] Current user:', userProfile);",
-          "line": 457,
+          "line": 458,
           "context": "console.log('[App Debug] Current user:', userProfile);"
         },
         {
           "type": "BUG",
           "message": "] Current department:', selectedDepartmentId);",
-          "line": 458,
+          "line": 459,
           "context": "console.log('[App Debug] Current department:', selectedDepartmentId);"
         },
         {
           "type": "BUG",
           "message": "] Permissions:', userProfile?.permissions);",
-          "line": 459,
+          "line": 460,
           "context": "console.log('[App Debug] Permissions:', userProfile?.permissions);"
         },
         {
           "type": "BUG",
           "message": "] Error updating SOP:', updateError);",
-          "line": 480,
+          "line": 481,
           "context": "console.error('[App Debug] Error updating SOP:', updateError);"
         },
         {
           "type": "BUG",
           "message": "] Creating new SOP with id:', sopId);",
-          "line": 538,
+          "line": 539,
           "context": "console.log('[App Debug] Creating new SOP with id:', sopId);"
         },
         {
           "type": "BUG",
           "message": "] Error creating SOP:', sopError);",
-          "line": 551,
+          "line": 552,
           "context": "console.error('[App Debug] Error creating SOP:', sopError);"
         },
         {
           "type": "BUG",
           "message": "] SOP insert response:', sopInsertData);",
-          "line": 555,
+          "line": 556,
           "context": "console.log('[App Debug] SOP insert response:', sopInsertData);"
         },
         {
           "type": "BUG",
           "message": "] Error inserting step:', stepError);",
-          "line": 562,
+          "line": 563,
           "context": "console.error('[App Debug] Error inserting step:', stepError);"
         },
         {
           "type": "BUG",
           "message": "] Step insert response:', stepInsertData);",
-          "line": 566,
+          "line": 567,
           "context": "console.log('[App Debug] Step insert response:', stepInsertData);"
         },
         {
           "type": "BUG",
           "message": "] Exception in handleSaveSop:', error);",
-          "line": 582,
+          "line": 583,
           "context": "console.error('[App Debug] Exception in handleSaveSop:', error);"
         },
         {
           "type": "BUG",
           "message": "] handleSopSelect called for SOP:', sop);",
-          "line": 594,
+          "line": 595,
           "context": "console.log('[App Debug] handleSopSelect called for SOP:', sop);"
         },
         {
           "type": "BUG",
           "message": "] Error fetching SOP steps:', error);",
-          "line": 604,
+          "line": 605,
           "context": "console.error('[App Debug] Error fetching SOP steps:', error);"
         },
         {
           "type": "BUG",
           "message": "] Fetched SOP steps:', steps);",
-          "line": 606,
+          "line": 607,
           "context": "console.log('[App Debug] Fetched SOP steps:', steps);"
         },
         {
           "type": "BUG",
           "message": "] Exception in handleSopSelect:', err);",
-          "line": 610,
+          "line": 611,
           "context": "console.error('[App Debug] Exception in handleSopSelect:', err);"
         },
         {
           "type": "BUG",
           "message": "] Setting panel to detail');",
-          "line": 614,
+          "line": 615,
           "context": "console.log('[App Debug] Setting panel to detail');"
         },
         {
           "type": "BUG",
           "message": "] window.location.hash before:', window.location.hash);",
-          "line": 616,
+          "line": 617,
           "context": "console.log('[App Debug] window.location.hash before:', window.location.hash);"
         },
         {
           "type": "BUG",
           "message": "] window.location.hash after:', window.location.hash);",
-          "line": 618,
+          "line": 619,
           "context": "console.log('[App Debug] window.location.hash after:', window.location.hash);"
         },
         {
           "type": "BUG",
           "message": "Info - Only visible in development */}",
-          "line": 1101,
+          "line": 1097,
           "context": "{/* Debug Info - Only visible in development */}"
         },
         {
           "type": "BUG",
           "message": "log",
-          "line": 1134,
+          "line": 1130,
           "context": "// Wrap every setActivePanel call with a debug log"
         },
         {
           "type": "BUG",
           "message": "SetActivePanel = (panel) => {",
-          "line": 1135,
+          "line": 1131,
           "context": "const debugSetActivePanel = (panel) => {"
         },
         {
           "type": "BUG",
           "message": "setActivePanel] Setting panel to', panel, 'hash:', window.location.hash);",
-          "line": 1136,
+          "line": 1132,
           "context": "console.log('[App Debug setActivePanel] Setting panel to', panel, 'hash:', window.location.hash);"
         },
         {
           "type": "BUG",
           "message": "SetActivePanel(panel)",
-          "line": 1140,
+          "line": 1136,
           "context": "// Replace all setActivePanel(panel) with debugSetActivePanel(panel)"
         },
         {
           "type": "NOTE",
           "message": "This function is not used in the root App component",
-          "line": 1137,
+          "line": 1133,
           "context": "// Note: This function is not used in the root App component"
         }
       ]
@@ -454,6 +454,47 @@
           "message": "log for permissions",
           "line": 23,
           "context": "// Debug log for permissions"
+        }
+      ]
+    },
+    {
+      "file": "src\\components\\admin\\UsersAdmin\\index.jsx",
+      "todos": [
+        {
+          "type": "BUG",
+          "message": "Log received props",
+          "line": 20,
+          "context": "// Debug: Log received props"
+        },
+        {
+          "type": "BUG",
+          "message": "] currentUserId:', currentUserId);",
+          "line": 21,
+          "context": "console.log('[UsersAdmin Debug] currentUserId:', currentUserId);"
+        },
+        {
+          "type": "BUG",
+          "message": "] userProfile:', userProfile);",
+          "line": 22,
+          "context": "console.log('[UsersAdmin Debug] userProfile:', userProfile);"
+        },
+        {
+          "type": "BUG",
+          "message": "] isSuper:', isSuper);",
+          "line": 54,
+          "context": "console.log('[UsersAdmin Debug] isSuper:', isSuper);"
+        },
+        {
+          "type": "BUG",
+          "message": "] canShowFeature(MANAGE_USERS):', canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS));",
+          "line": 55,
+          "context": "console.log('[UsersAdmin Debug] canShowFeature(MANAGE_USERS):', canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS));"
+        },
+        {
+          "type": "BUG",
+          "message": "] Access Denied: canShowFeature returned false');",
+          "line": 346,
+          "context": "console.log('[UsersAdmin Debug] Access Denied: canShowFeature returned false');"
         }
       ]
     },
@@ -1237,8 +1278,8 @@
       "files": [
         {
           "name": "App.jsx",
-          "size": 39959,
-          "modified": "2025-07-24T06:06:58.000Z",
+          "size": 39927,
+          "modified": "2025-07-24T06:38:08.000Z",
           "path": "src\\App.jsx"
         },
         {
@@ -1262,7 +1303,7 @@
         {
           "name": "version.json",
           "size": 24,
-          "modified": "2025-07-24T06:27:24.000Z",
+          "modified": "2025-07-24T06:56:56.000Z",
           "path": "src\\version.json"
         },
         {
@@ -2108,13 +2149,13 @@
         {
           "name": "progress-snapshot.json",
           "size": 169626,
-          "modified": "2025-07-24T06:27:18.000Z",
+          "modified": "2025-07-24T06:27:32.000Z",
           "path": "src\\progress-snapshot.json"
         },
         {
           "name": "audit-results.json",
           "size": 156758,
-          "modified": "2025-07-24T06:27:18.000Z",
+          "modified": "2025-07-24T06:27:32.000Z",
           "path": "src\\audit-results.json"
         },
         {
@@ -2372,8 +2413,8 @@
                   "files": [
                     {
                       "name": "index.jsx",
-                      "size": 16325,
-                      "modified": "2025-07-22T20:46:12.000Z",
+                      "size": 17946,
+                      "modified": "2025-07-24T06:39:00.000Z",
                       "path": "src\\components\\admin\\UsersAdmin\\index.jsx"
                     }
                   ],
@@ -2505,8 +2546,8 @@
               "files": [
                 {
                   "name": "backupService.ts",
-                  "size": 5332,
-                  "modified": "2025-06-05T01:26:44.000Z",
+                  "size": 6548,
+                  "modified": "2025-07-24T06:53:58.000Z",
                   "path": "src\\services\\backup\\backupService.ts"
                 },
                 {
@@ -2561,7 +2602,7 @@
       {
         "name": "App.jsx",
         "path": "src\\App.jsx",
-        "size": 39959,
+        "size": 39927,
         "sizeKB": 39
       },
       {
@@ -2611,17 +2652,32 @@
       {
         "name": "version.json",
         "path": "src\\version.json",
-        "modified": "2025-07-24T06:27:24.000Z"
+        "modified": "2025-07-24T06:56:56.000Z"
+      },
+      {
+        "name": "backupService.ts",
+        "path": "src\\services\\backup\\backupService.ts",
+        "modified": "2025-07-24T06:53:58.000Z"
+      },
+      {
+        "name": "index.jsx",
+        "path": "src\\components\\admin\\UsersAdmin\\index.jsx",
+        "modified": "2025-07-24T06:39:00.000Z"
+      },
+      {
+        "name": "App.jsx",
+        "path": "src\\App.jsx",
+        "modified": "2025-07-24T06:38:08.000Z"
       },
       {
         "name": "progress-snapshot.json",
         "path": "src\\progress-snapshot.json",
-        "modified": "2025-07-24T06:27:18.000Z"
+        "modified": "2025-07-24T06:27:32.000Z"
       },
       {
         "name": "audit-results.json",
         "path": "src\\audit-results.json",
-        "modified": "2025-07-24T06:27:18.000Z"
+        "modified": "2025-07-24T06:27:32.000Z"
       },
       {
         "name": "SuperAdminPanel.jsx",
@@ -2634,11 +2690,6 @@
         "modified": "2025-07-24T06:22:42.000Z"
       },
       {
-        "name": "App.jsx",
-        "path": "src\\App.jsx",
-        "modified": "2025-07-24T06:06:58.000Z"
-      },
-      {
         "name": "index.jsx",
         "path": "src\\components\\admin\\BackupManager\\index.jsx",
         "modified": "2025-07-24T06:05:06.000Z"
@@ -2647,16 +2698,6 @@
         "name": "backupImportService.js",
         "path": "src\\services\\backup\\backupImportService.js",
         "modified": "2025-07-24T05:50:26.000Z"
-      },
-      {
-        "name": "backupImportService.ts",
-        "path": "src\\services\\backup\\backupImportService.ts",
-        "modified": "2025-07-24T05:46:52.000Z"
-      },
-      {
-        "name": "testImportBackup.js",
-        "path": "src\\services\\backup\\testImportBackup.js",
-        "modified": "2025-07-24T05:46:40.000Z"
       }
     ]
   },
@@ -3101,7 +3142,7 @@
     "unusedImports": [],
     "missingImports": [],
     "circularDependencies": [],
-    "totalImports": 285,
+    "totalImports": 287,
     "message": "Import analysis completed (simplified version)"
   },
   "issues": [
@@ -3132,7 +3173,7 @@
     {
       "severity": "MEDIUM",
       "category": "TODOS",
-      "message": "184 TODO items found across 14 files",
+      "message": "190 TODO items found across 15 files",
       "impact": "Incomplete features and technical debt",
       "details": [
         {
@@ -3141,319 +3182,319 @@
             {
               "type": "TODO",
               "message": "Implement suggestion functionality",
-              "line": 728,
+              "line": 729,
               "context": "// TODO: Implement suggestion functionality"
             },
             {
               "type": "BUG",
               "message": "admin view mode changes",
-              "line": 54,
+              "line": 55,
               "context": "// Debug admin view mode changes"
             },
             {
               "type": "BUG",
               "message": "State,",
-              "line": 72,
+              "line": 73,
               "context": "getDebugState,"
             },
             {
               "type": "BUG",
               "message": "Logger",
-              "line": 87,
+              "line": 88,
               "context": "// Enhanced Debug Logger"
             },
             {
               "type": "BUG",
               "message": "= useCallback((location, data, type = 'info') => {",
-              "line": 88,
+              "line": 89,
               "context": "const logStateDebug = useCallback((location, data, type = 'info') => {"
             },
             {
               "type": "BUG",
               "message": "Info = {",
-              "line": 89,
+              "line": 90,
               "context": "const debugInfo = {"
             },
             {
               "type": "BUG",
               "message": "${location}]`, debugInfo);",
-              "line": 107,
+              "line": 108,
               "context": "console.log(`[App Debug ${location}]`, debugInfo);"
             },
             {
               "type": "BUG",
               "message": "History) {",
-              "line": 109,
+              "line": 110,
               "context": "if (!window._appDebugHistory) {"
             },
             {
               "type": "BUG",
               "message": "History = [];",
-              "line": 110,
+              "line": 111,
               "context": "window._appDebugHistory = [];"
             },
             {
               "type": "BUG",
               "message": "History.push(debugInfo);",
-              "line": 112,
+              "line": 113,
               "context": "window._appDebugHistory.push(debugInfo);"
             },
             {
               "type": "BUG",
               "message": "('setViewMode Entry', {",
-              "line": 151,
+              "line": 152,
               "context": "logStateDebug('setViewMode Entry', {"
             },
             {
               "type": "BUG",
               "message": "('Skipping transition - already in requested panel', {",
-              "line": 162,
+              "line": 163,
               "context": "logStateDebug('Skipping transition - already in requested panel', {"
             },
             {
               "type": "BUG",
               "message": "('SuperAdmin Access Denied', {",
-              "line": 172,
+              "line": 173,
               "context": "logStateDebug('SuperAdmin Access Denied', {"
             },
             {
               "type": "BUG",
               "message": "('Setting SuperAdmin Panel', {",
-              "line": 180,
+              "line": 181,
               "context": "logStateDebug('Setting SuperAdmin Panel', {"
             },
             {
               "type": "BUG",
               "message": "('SuperAdmin Panel Set', {",
-              "line": 190,
+              "line": 191,
               "context": "logStateDebug('SuperAdmin Panel Set', {"
             },
             {
               "type": "BUG",
               "message": "('Setting Regular Panel', {",
-              "line": 197,
+              "line": 198,
               "context": "logStateDebug('Setting Regular Panel', {"
             },
             {
               "type": "BUG",
               "message": "('Panel Set Complete', {",
-              "line": 208,
+              "line": 209,
               "context": "logStateDebug('Panel Set Complete', {"
             },
             {
               "type": "BUG",
               "message": "('setViewMode Error', {",
-              "line": 213,
+              "line": 214,
               "context": "logStateDebug('setViewMode Error', {"
             },
             {
               "type": "BUG",
               "message": "]);",
-              "line": 224,
+              "line": 225,
               "context": "logStateDebug"
             },
             {
               "type": "BUG",
               "message": "('Panel Change Effect', {",
-              "line": 230,
+              "line": 231,
               "context": "logStateDebug('Panel Change Effect', {"
             },
             {
               "type": "BUG",
               "message": "]);",
-              "line": 241,
+              "line": 242,
               "context": "}, [activePanel, getCurrentRole, viewRole, userIsSuperAdmin, logStateDebug]);"
             },
             {
               "type": "BUG",
               "message": "] handleNewSop called');",
-              "line": 276,
+              "line": 277,
               "context": "console.log('[App Debug] handleNewSop called');"
             },
             {
               "type": "BUG",
               "message": "] New SOP initialized:', newSop);",
-              "line": 300,
+              "line": 301,
               "context": "console.log('[App Debug] New SOP initialized:', newSop);"
             },
             {
               "type": "BUG",
               "message": "Mode Setup",
-              "line": 312,
+              "line": 313,
               "context": "// 🔄 Debug Mode Setup"
             },
             {
               "type": "BUG",
               "message": "State = () => {",
-              "line": 315,
+              "line": 316,
               "context": "window.debugState = () => {"
             },
             {
               "type": "BUG",
               "message": "State();",
-              "line": 316,
+              "line": 317,
               "context": "const state = getDebugState();"
             },
             {
               "type": "BUG",
               "message": "State();",
-              "line": 324,
+              "line": 325,
               "context": "return window.debugState();"
             },
             {
               "type": "BUG",
               "message": "State, changeRole]);",
-              "line": 335,
+              "line": 336,
               "context": "}, [getDebugState, changeRole]);"
             },
             {
               "type": "BUG",
               "message": "] handleSaveSop called');",
-              "line": 450,
+              "line": 451,
               "context": "console.log('[App Debug] handleSaveSop called');"
             },
             {
               "type": "BUG",
               "message": "] Saving SOP:', draftSop);",
-              "line": 456,
+              "line": 457,
               "context": "console.log('[App Debug] Saving SOP:', draftSop);"
             },
             {
               "type": "BUG",
               "message": "] Current user:', userProfile);",
-              "line": 457,
+              "line": 458,
               "context": "console.log('[App Debug] Current user:', userProfile);"
             },
             {
               "type": "BUG",
               "message": "] Current department:', selectedDepartmentId);",
-              "line": 458,
+              "line": 459,
               "context": "console.log('[App Debug] Current department:', selectedDepartmentId);"
             },
             {
               "type": "BUG",
               "message": "] Permissions:', userProfile?.permissions);",
-              "line": 459,
+              "line": 460,
               "context": "console.log('[App Debug] Permissions:', userProfile?.permissions);"
             },
             {
               "type": "BUG",
               "message": "] Error updating SOP:', updateError);",
-              "line": 480,
+              "line": 481,
               "context": "console.error('[App Debug] Error updating SOP:', updateError);"
             },
             {
               "type": "BUG",
               "message": "] Creating new SOP with id:', sopId);",
-              "line": 538,
+              "line": 539,
               "context": "console.log('[App Debug] Creating new SOP with id:', sopId);"
             },
             {
               "type": "BUG",
               "message": "] Error creating SOP:', sopError);",
-              "line": 551,
+              "line": 552,
               "context": "console.error('[App Debug] Error creating SOP:', sopError);"
             },
             {
               "type": "BUG",
               "message": "] SOP insert response:', sopInsertData);",
-              "line": 555,
+              "line": 556,
               "context": "console.log('[App Debug] SOP insert response:', sopInsertData);"
             },
             {
               "type": "BUG",
               "message": "] Error inserting step:', stepError);",
-              "line": 562,
+              "line": 563,
               "context": "console.error('[App Debug] Error inserting step:', stepError);"
             },
             {
               "type": "BUG",
               "message": "] Step insert response:', stepInsertData);",
-              "line": 566,
+              "line": 567,
               "context": "console.log('[App Debug] Step insert response:', stepInsertData);"
             },
             {
               "type": "BUG",
               "message": "] Exception in handleSaveSop:', error);",
-              "line": 582,
+              "line": 583,
               "context": "console.error('[App Debug] Exception in handleSaveSop:', error);"
             },
             {
               "type": "BUG",
               "message": "] handleSopSelect called for SOP:', sop);",
-              "line": 594,
+              "line": 595,
               "context": "console.log('[App Debug] handleSopSelect called for SOP:', sop);"
             },
             {
               "type": "BUG",
               "message": "] Error fetching SOP steps:', error);",
-              "line": 604,
+              "line": 605,
               "context": "console.error('[App Debug] Error fetching SOP steps:', error);"
             },
             {
               "type": "BUG",
               "message": "] Fetched SOP steps:', steps);",
-              "line": 606,
+              "line": 607,
               "context": "console.log('[App Debug] Fetched SOP steps:', steps);"
             },
             {
               "type": "BUG",
               "message": "] Exception in handleSopSelect:', err);",
-              "line": 610,
+              "line": 611,
               "context": "console.error('[App Debug] Exception in handleSopSelect:', err);"
             },
             {
               "type": "BUG",
               "message": "] Setting panel to detail');",
-              "line": 614,
+              "line": 615,
               "context": "console.log('[App Debug] Setting panel to detail');"
             },
             {
               "type": "BUG",
               "message": "] window.location.hash before:', window.location.hash);",
-              "line": 616,
+              "line": 617,
               "context": "console.log('[App Debug] window.location.hash before:', window.location.hash);"
             },
             {
               "type": "BUG",
               "message": "] window.location.hash after:', window.location.hash);",
-              "line": 618,
+              "line": 619,
               "context": "console.log('[App Debug] window.location.hash after:', window.location.hash);"
             },
             {
               "type": "BUG",
               "message": "Info - Only visible in development */}",
-              "line": 1101,
+              "line": 1097,
               "context": "{/* Debug Info - Only visible in development */}"
             },
             {
               "type": "BUG",
               "message": "log",
-              "line": 1134,
+              "line": 1130,
               "context": "// Wrap every setActivePanel call with a debug log"
             },
             {
               "type": "BUG",
               "message": "SetActivePanel = (panel) => {",
-              "line": 1135,
+              "line": 1131,
               "context": "const debugSetActivePanel = (panel) => {"
             },
             {
               "type": "BUG",
               "message": "setActivePanel] Setting panel to', panel, 'hash:', window.location.hash);",
-              "line": 1136,
+              "line": 1132,
               "context": "console.log('[App Debug setActivePanel] Setting panel to', panel, 'hash:', window.location.hash);"
             },
             {
               "type": "BUG",
               "message": "SetActivePanel(panel)",
-              "line": 1140,
+              "line": 1136,
               "context": "// Replace all setActivePanel(panel) with debugSetActivePanel(panel)"
             },
             {
               "type": "NOTE",
               "message": "This function is not used in the root App component",
-              "line": 1137,
+              "line": 1133,
               "context": "// Note: This function is not used in the root App component"
             }
           ]
@@ -3553,6 +3594,47 @@
               "message": "log for permissions",
               "line": 23,
               "context": "// Debug log for permissions"
+            }
+          ]
+        },
+        {
+          "file": "src\\components\\admin\\UsersAdmin\\index.jsx",
+          "todos": [
+            {
+              "type": "BUG",
+              "message": "Log received props",
+              "line": 20,
+              "context": "// Debug: Log received props"
+            },
+            {
+              "type": "BUG",
+              "message": "] currentUserId:', currentUserId);",
+              "line": 21,
+              "context": "console.log('[UsersAdmin Debug] currentUserId:', currentUserId);"
+            },
+            {
+              "type": "BUG",
+              "message": "] userProfile:', userProfile);",
+              "line": 22,
+              "context": "console.log('[UsersAdmin Debug] userProfile:', userProfile);"
+            },
+            {
+              "type": "BUG",
+              "message": "] isSuper:', isSuper);",
+              "line": 54,
+              "context": "console.log('[UsersAdmin Debug] isSuper:', isSuper);"
+            },
+            {
+              "type": "BUG",
+              "message": "] canShowFeature(MANAGE_USERS):', canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS));",
+              "line": 55,
+              "context": "console.log('[UsersAdmin Debug] canShowFeature(MANAGE_USERS):', canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS));"
+            },
+            {
+              "type": "BUG",
+              "message": "] Access Denied: canShowFeature returned false');",
+              "line": 346,
+              "context": "console.log('[UsersAdmin Debug] Access Denied: canShowFeature returned false');"
             }
           ]
         },
@@ -4786,7 +4868,7 @@
       "category": "TODOS",
       "action": "Address TODO items",
       "command": "Review and complete TODO items",
-      "description": "Complete 184 TODO items or document why they remain"
+      "description": "Complete 190 TODO items or document why they remain"
     },
     {
       "priority": "LOW",

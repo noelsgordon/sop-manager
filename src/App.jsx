@@ -32,6 +32,7 @@ import { useRoleBasedUI } from './utils/hooks/useRoleBasedUI';
 import { toast } from './components/ui/use-toast';
 import RlsTestPage from "./components/admin/RlsTestPage.jsx";
 import RlsTestEnvironment from "./components/admin/RlsTestEnvironment.jsx";
+import UsersAdmin from "./components/admin/UsersAdmin/index.jsx";
 
 function MainApp({ session, setSession }) {
   // 📄 Initialize all state first
@@ -915,18 +916,13 @@ function MainApp({ session, setSession }) {
             />
             ) : adminViewMode === 'users' ? (
               <div className="space-y-4">
-
                 <div className="flex items-center justify-between">
                   <h2 className="text-xl font-semibold">User Management</h2>
-
-                                      <Button 
-                      onClick={() => setAdminViewMode(null)} 
-                      variant="outline"
-                    >
-                      ← Back to Admin Panel
-                    </Button>
+                  <Button onClick={() => setAdminViewMode(null)} variant="outline">
+                    ← Back to Admin Panel
+                  </Button>
                 </div>
-                <p className="text-gray-600">User management functionality coming soon...</p>
+                <UsersAdmin currentUserId={session.user.id} userProfile={userProfile} />
               </div>
             ) : adminViewMode === 'departments' ? (
               <div className="space-y-4">
