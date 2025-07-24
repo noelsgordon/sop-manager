@@ -1,0 +1,4568 @@
+{
+  "version": "2.0.0",
+  "timestamp": "2025-07-24T01:37:19.250Z",
+  "bumpType": "major",
+  "previousVersion": "1.11.2",
+  "projectStatus": {
+    "rlsImplementation": "COMPLETE",
+    "userManagement": "FUNCTIONAL",
+    "backupSystem": "ACTIVE",
+    "auditStatus": "COMPREHENSIVE_AUDIT_ENABLED"
+  },
+  "developmentContext": {
+    "currentWork": "Project audit system implementation",
+    "recentDecisions": [
+      "Enhanced project snapshot system with comprehensive audits",
+      "Implemented server-side audit runner for accurate project analysis",
+      "Added version consistency checking and duplicate file detection",
+      "Integrated audit results with project snapshot generation"
+    ],
+    "knownIssues": [],
+    "nextSteps": [
+      "Monitor audit results for critical issues",
+      "Address any version inconsistencies found",
+      "Clean up duplicate files if identified",
+      "Complete TODO items before next major release"
+    ]
+  },
+  "lessonsLearned": {
+    "projectAudit": [
+      "Comprehensive audits catch issues before they become problems",
+      "Version consistency is critical for deployment",
+      "Duplicate files create confusion and maintenance overhead",
+      "TODO items accumulate technical debt over time",
+      "Build warnings indicate potential performance issues"
+    ],
+    "snapshotSystem": [
+      "Real-time audit data improves snapshot accuracy",
+      "Server-side analysis provides deeper insights than client-side",
+      "Automated issue detection prevents knowledge gaps",
+      "Structured audit results enable better AI continuity"
+    ]
+  },
+  "auditResults": {
+    "timestamp": "2025-07-24T01:37:12.075Z",
+    "versionCheck": {
+      "packageJson": "1.0.0",
+      "versionJson": "2.0.0",
+      "otherFiles": [
+        {
+          "file": "src\\version.json",
+          "version": "2.0.0"
+        }
+      ],
+      "isConsistent": false,
+      "inconsistencies": [
+        "1.0.0",
+        "2.0.0"
+      ],
+      "allVersions": [
+        "1.0.0",
+        "2.0.0",
+        "2.0.0"
+      ]
+    },
+    "duplicateFiles": [
+      {
+        "name": "index.jsx",
+        "files": [
+          {
+            "name": "index.jsx",
+            "path": "src\\components\\admin\\BackupManager\\index.jsx",
+            "dir": "E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\src\\components\\admin\\BackupManager"
+          },
+          {
+            "name": "index.jsx",
+            "path": "src\\components\\admin\\UsersAdmin\\index.jsx",
+            "dir": "E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\src\\components\\admin\\UsersAdmin"
+          }
+        ],
+        "count": 2
+      }
+    ],
+    "todoItems": [
+      {
+        "file": "src\\App.jsx",
+        "todos": [
+          {
+            "type": "TODO",
+            "message": "Implement suggestion functionality",
+            "line": 728,
+            "context": "// TODO: Implement suggestion functionality"
+          },
+          {
+            "type": "BUG",
+            "message": "admin view mode changes",
+            "line": 54,
+            "context": "// Debug admin view mode changes"
+          },
+          {
+            "type": "BUG",
+            "message": "State,",
+            "line": 72,
+            "context": "getDebugState,"
+          },
+          {
+            "type": "BUG",
+            "message": "Logger",
+            "line": 87,
+            "context": "// Enhanced Debug Logger"
+          },
+          {
+            "type": "BUG",
+            "message": "= useCallback((location, data, type = 'info') => {",
+            "line": 88,
+            "context": "const logStateDebug = useCallback((location, data, type = 'info') => {"
+          },
+          {
+            "type": "BUG",
+            "message": "Info = {",
+            "line": 89,
+            "context": "const debugInfo = {"
+          },
+          {
+            "type": "BUG",
+            "message": "${location}]`, debugInfo);",
+            "line": 107,
+            "context": "console.log(`[App Debug ${location}]`, debugInfo);"
+          },
+          {
+            "type": "BUG",
+            "message": "History) {",
+            "line": 109,
+            "context": "if (!window._appDebugHistory) {"
+          },
+          {
+            "type": "BUG",
+            "message": "History = [];",
+            "line": 110,
+            "context": "window._appDebugHistory = [];"
+          },
+          {
+            "type": "BUG",
+            "message": "History.push(debugInfo);",
+            "line": 112,
+            "context": "window._appDebugHistory.push(debugInfo);"
+          },
+          {
+            "type": "BUG",
+            "message": "('setViewMode Entry', {",
+            "line": 151,
+            "context": "logStateDebug('setViewMode Entry', {"
+          },
+          {
+            "type": "BUG",
+            "message": "('Skipping transition - already in requested panel', {",
+            "line": 162,
+            "context": "logStateDebug('Skipping transition - already in requested panel', {"
+          },
+          {
+            "type": "BUG",
+            "message": "('SuperAdmin Access Denied', {",
+            "line": 172,
+            "context": "logStateDebug('SuperAdmin Access Denied', {"
+          },
+          {
+            "type": "BUG",
+            "message": "('Setting SuperAdmin Panel', {",
+            "line": 180,
+            "context": "logStateDebug('Setting SuperAdmin Panel', {"
+          },
+          {
+            "type": "BUG",
+            "message": "('SuperAdmin Panel Set', {",
+            "line": 190,
+            "context": "logStateDebug('SuperAdmin Panel Set', {"
+          },
+          {
+            "type": "BUG",
+            "message": "('Setting Regular Panel', {",
+            "line": 197,
+            "context": "logStateDebug('Setting Regular Panel', {"
+          },
+          {
+            "type": "BUG",
+            "message": "('Panel Set Complete', {",
+            "line": 208,
+            "context": "logStateDebug('Panel Set Complete', {"
+          },
+          {
+            "type": "BUG",
+            "message": "('setViewMode Error', {",
+            "line": 213,
+            "context": "logStateDebug('setViewMode Error', {"
+          },
+          {
+            "type": "BUG",
+            "message": "]);",
+            "line": 224,
+            "context": "logStateDebug"
+          },
+          {
+            "type": "BUG",
+            "message": "('Panel Change Effect', {",
+            "line": 230,
+            "context": "logStateDebug('Panel Change Effect', {"
+          },
+          {
+            "type": "BUG",
+            "message": "]);",
+            "line": 241,
+            "context": "}, [activePanel, getCurrentRole, viewRole, userIsSuperAdmin, logStateDebug]);"
+          },
+          {
+            "type": "BUG",
+            "message": "] handleNewSop called');",
+            "line": 276,
+            "context": "console.log('[App Debug] handleNewSop called');"
+          },
+          {
+            "type": "BUG",
+            "message": "] New SOP initialized:', newSop);",
+            "line": 300,
+            "context": "console.log('[App Debug] New SOP initialized:', newSop);"
+          },
+          {
+            "type": "BUG",
+            "message": "Mode Setup",
+            "line": 312,
+            "context": "// 🔄 Debug Mode Setup"
+          },
+          {
+            "type": "BUG",
+            "message": "State = () => {",
+            "line": 315,
+            "context": "window.debugState = () => {"
+          },
+          {
+            "type": "BUG",
+            "message": "State();",
+            "line": 316,
+            "context": "const state = getDebugState();"
+          },
+          {
+            "type": "BUG",
+            "message": "State();",
+            "line": 324,
+            "context": "return window.debugState();"
+          },
+          {
+            "type": "BUG",
+            "message": "State, changeRole]);",
+            "line": 335,
+            "context": "}, [getDebugState, changeRole]);"
+          },
+          {
+            "type": "BUG",
+            "message": "] handleSaveSop called');",
+            "line": 450,
+            "context": "console.log('[App Debug] handleSaveSop called');"
+          },
+          {
+            "type": "BUG",
+            "message": "] Saving SOP:', draftSop);",
+            "line": 456,
+            "context": "console.log('[App Debug] Saving SOP:', draftSop);"
+          },
+          {
+            "type": "BUG",
+            "message": "] Current user:', userProfile);",
+            "line": 457,
+            "context": "console.log('[App Debug] Current user:', userProfile);"
+          },
+          {
+            "type": "BUG",
+            "message": "] Current department:', selectedDepartmentId);",
+            "line": 458,
+            "context": "console.log('[App Debug] Current department:', selectedDepartmentId);"
+          },
+          {
+            "type": "BUG",
+            "message": "] Permissions:', userProfile?.permissions);",
+            "line": 459,
+            "context": "console.log('[App Debug] Permissions:', userProfile?.permissions);"
+          },
+          {
+            "type": "BUG",
+            "message": "] Error updating SOP:', updateError);",
+            "line": 480,
+            "context": "console.error('[App Debug] Error updating SOP:', updateError);"
+          },
+          {
+            "type": "BUG",
+            "message": "] Creating new SOP with id:', sopId);",
+            "line": 538,
+            "context": "console.log('[App Debug] Creating new SOP with id:', sopId);"
+          },
+          {
+            "type": "BUG",
+            "message": "] Error creating SOP:', sopError);",
+            "line": 551,
+            "context": "console.error('[App Debug] Error creating SOP:', sopError);"
+          },
+          {
+            "type": "BUG",
+            "message": "] SOP insert response:', sopInsertData);",
+            "line": 555,
+            "context": "console.log('[App Debug] SOP insert response:', sopInsertData);"
+          },
+          {
+            "type": "BUG",
+            "message": "] Error inserting step:', stepError);",
+            "line": 562,
+            "context": "console.error('[App Debug] Error inserting step:', stepError);"
+          },
+          {
+            "type": "BUG",
+            "message": "] Step insert response:', stepInsertData);",
+            "line": 566,
+            "context": "console.log('[App Debug] Step insert response:', stepInsertData);"
+          },
+          {
+            "type": "BUG",
+            "message": "] Exception in handleSaveSop:', error);",
+            "line": 582,
+            "context": "console.error('[App Debug] Exception in handleSaveSop:', error);"
+          },
+          {
+            "type": "BUG",
+            "message": "] handleSopSelect called for SOP:', sop);",
+            "line": 594,
+            "context": "console.log('[App Debug] handleSopSelect called for SOP:', sop);"
+          },
+          {
+            "type": "BUG",
+            "message": "] Error fetching SOP steps:', error);",
+            "line": 604,
+            "context": "console.error('[App Debug] Error fetching SOP steps:', error);"
+          },
+          {
+            "type": "BUG",
+            "message": "] Fetched SOP steps:', steps);",
+            "line": 606,
+            "context": "console.log('[App Debug] Fetched SOP steps:', steps);"
+          },
+          {
+            "type": "BUG",
+            "message": "] Exception in handleSopSelect:', err);",
+            "line": 610,
+            "context": "console.error('[App Debug] Exception in handleSopSelect:', err);"
+          },
+          {
+            "type": "BUG",
+            "message": "] Setting panel to detail');",
+            "line": 614,
+            "context": "console.log('[App Debug] Setting panel to detail');"
+          },
+          {
+            "type": "BUG",
+            "message": "] window.location.hash before:', window.location.hash);",
+            "line": 616,
+            "context": "console.log('[App Debug] window.location.hash before:', window.location.hash);"
+          },
+          {
+            "type": "BUG",
+            "message": "] window.location.hash after:', window.location.hash);",
+            "line": 618,
+            "context": "console.log('[App Debug] window.location.hash after:', window.location.hash);"
+          },
+          {
+            "type": "BUG",
+            "message": "Info - Only visible in development */}",
+            "line": 1094,
+            "context": "{/* Debug Info - Only visible in development */}"
+          },
+          {
+            "type": "BUG",
+            "message": "log",
+            "line": 1127,
+            "context": "// Wrap every setActivePanel call with a debug log"
+          },
+          {
+            "type": "BUG",
+            "message": "SetActivePanel = (panel) => {",
+            "line": 1128,
+            "context": "const debugSetActivePanel = (panel) => {"
+          },
+          {
+            "type": "BUG",
+            "message": "setActivePanel] Setting panel to', panel, 'hash:', window.location.hash);",
+            "line": 1129,
+            "context": "console.log('[App Debug setActivePanel] Setting panel to', panel, 'hash:', window.location.hash);"
+          },
+          {
+            "type": "BUG",
+            "message": "SetActivePanel(panel)",
+            "line": 1133,
+            "context": "// Replace all setActivePanel(panel) with debugSetActivePanel(panel)"
+          },
+          {
+            "type": "NOTE",
+            "message": "This function is not used in the root App component",
+            "line": 1130,
+            "context": "// Note: This function is not used in the root App component"
+          }
+        ]
+      },
+      {
+        "file": "src\\components\\Header.jsx",
+        "todos": [
+          {
+            "type": "BUG",
+            "message": "logs to prevent render loop",
+            "line": 32,
+            "context": "// Remove visual confirmation and excessive debug logs to prevent render loop"
+          },
+          {
+            "type": "BUG",
+            "message": "log for all props (log only once per mount)",
+            "line": 34,
+            "context": "// Top-level debug log for all props (log only once per mount)"
+          },
+          {
+            "type": "BUG",
+            "message": "] Render', { activePanel, isSuperAdminProp, onNewSopType: typeof onNewSop, userRole, viewRole });",
+            "line": 36,
+            "context": "console.log('[Header Debug] Render', { activePanel, isSuperAdminProp, onNewSopType: typeof onNewSop, userRole, viewRole });"
+          },
+          {
+            "type": "BUG",
+            "message": "] canShowFeature CREATE_SOP:', canShowFeature(FEATURE_PERMISSIONS.CREATE_SOP));",
+            "line": 37,
+            "context": "console.log('[Header Debug] canShowFeature CREATE_SOP:', canShowFeature(FEATURE_PERMISSIONS.CREATE_SOP));"
+          },
+          {
+            "type": "BUG",
+            "message": "canShowFeature for CREATE_SOP",
+            "line": 56,
+            "context": "// Debug canShowFeature for CREATE_SOP"
+          },
+          {
+            "type": "BUG",
+            "message": "] canShowFeature CREATE_SOP:', canShowFeature(FEATURE_PERMISSIONS.CREATE_SOP));",
+            "line": 57,
+            "context": "// console.log('[Header Debug] canShowFeature CREATE_SOP:', canShowFeature(FEATURE_PERMISSIONS.CREATE_SOP));"
+          }
+        ]
+      },
+      {
+        "file": "src\\components\\SOPDetail.jsx",
+        "todos": [
+          {
+            "type": "BUG",
+            "message": "logging",
+            "line": 48,
+            "context": "// Debug logging"
+          },
+          {
+            "type": "BUG",
+            "message": "]', {",
+            "line": 49,
+            "context": "console.log('[SOPDetail Debug]', {"
+          },
+          {
+            "type": "BUG",
+            "message": "] Edit button condition:', { isDeleted, canShowEdit: canShowFeature(FEATURE_PERMISSIONS.EDIT_SOP) })}",
+            "line": 79,
+            "context": "{console.log('[SOPDetail Debug] Edit button condition:', { isDeleted, canShowEdit: canShowFeature(FEATURE_PERMISSIONS.EDIT_SOP) })}"
+          },
+          {
+            "type": "BUG",
+            "message": "] Suggest button condition:', { isDeleted, canShowSuggest: canShowFeature(FEATURE_PERMISSIONS.SUGGEST_CHANGES) })}",
+            "line": 94,
+            "context": "{console.log('[SOPDetail Debug] Suggest button condition:', { isDeleted, canShowSuggest: canShowFeature(FEATURE_PERMISSIONS.SUGGEST_CHANGES) })}"
+          }
+        ]
+      },
+      {
+        "file": "src\\components\\DepartmentJoinOrCreateModal.jsx",
+        "todos": [
+          {
+            "type": "BUG",
+            "message": "ging",
+            "line": 58,
+            "context": "// Log the current user's email for debugging"
+          }
+        ]
+      },
+      {
+        "file": "src\\components\\admin\\RlsTestEnvironment.jsx",
+        "todos": [
+          {
+            "type": "BUG",
+            "message": "{ testRecord: uniqueRecord, tableName }",
+            "line": 94,
+            "context": "debug: { testRecord: uniqueRecord, tableName }"
+          },
+          {
+            "type": "BUG",
+            "message": "{ testRecord: uniqueRecord, tableName, error: err }",
+            "line": 113,
+            "context": "debug: { testRecord: uniqueRecord, tableName, error: err }"
+          },
+          {
+            "type": "BUG",
+            "message": "{ firstRecord, idField }",
+            "line": 156,
+            "context": "debug: { firstRecord, idField }"
+          },
+          {
+            "type": "BUG",
+            "message": "{ idField, recordId, updateData }",
+            "line": 171,
+            "context": "debug: { idField, recordId, updateData }"
+          },
+          {
+            "type": "BUG",
+            "message": "{ tableName, existingData }",
+            "line": 179,
+            "context": "debug: { tableName, existingData }"
+          },
+          {
+            "type": "BUG",
+            "message": "{ tableName, error: err }",
+            "line": 187,
+            "context": "debug: { tableName, error: err }"
+          },
+          {
+            "type": "BUG",
+            "message": "{ idField, recordId, tableName }",
+            "line": 244,
+            "context": "debug: { idField, recordId, tableName }"
+          },
+          {
+            "type": "BUG",
+            "message": "{ idField, insertData, tableName }",
+            "line": 251,
+            "context": "debug: { idField, insertData, tableName }"
+          },
+          {
+            "type": "BUG",
+            "message": "{ insertData, tableName, uniqueRecord }",
+            "line": 259,
+            "context": "debug: { insertData, tableName, uniqueRecord }"
+          },
+          {
+            "type": "BUG",
+            "message": "{ tableName, uniqueRecord, error: err }",
+            "line": 267,
+            "context": "debug: { tableName, uniqueRecord, error: err }"
+          },
+          {
+            "type": "BUG",
+            "message": "ging info",
+            "line": 476,
+            "context": "// Create enhanced results object with additional debugging info"
+          },
+          {
+            "type": "BUG",
+            "message": "ging info',",
+            "line": 502,
+            "context": "description: 'Test results copied to clipboard with enhanced debugging info',"
+          },
+          {
+            "type": "BUG",
+            "message": "ging assistance.",
+            "line": 608,
+            "context": "Paste the copied results in the chat for debugging assistance."
+          },
+          {
+            "type": "BUG",
+            "message": "ging info are included in the copied data.",
+            "line": 609,
+            "context": "Console logs and debugging info are included in the copied data."
+          }
+        ]
+      },
+      {
+        "file": "src\\components\\SuperAdminPanel.tsx",
+        "todos": [
+          {
+            "type": "BUG",
+            "message": "Logger",
+            "line": 10,
+            "context": "// Enhanced Debug Logger"
+          },
+          {
+            "type": "BUG",
+            "message": "= (location: string, data: any, type: 'info' | 'warning' | 'error' | 'function' | 'effect' | 'success' = 'info') => {",
+            "line": 11,
+            "context": "const logDebug = (location: string, data: any, type: 'info' | 'warning' | 'error' | 'function' | 'effect' | 'success' = 'info') => {"
+          },
+          {
+            "type": "BUG",
+            "message": "Info = {",
+            "line": 12,
+            "context": "const debugInfo = {"
+          },
+          {
+            "type": "BUG",
+            "message": "${location}]`, debugInfo);",
+            "line": 24,
+            "context": "console.log(`[SuperAdminPanel Debug ${location}]`, debugInfo);"
+          },
+          {
+            "type": "BUG",
+            "message": "history for tracing",
+            "line": 26,
+            "context": "// Log to debug history for tracing"
+          },
+          {
+            "type": "BUG",
+            "message": "History) {",
+            "line": 27,
+            "context": "if (!(window as any)._superAdminDebugHistory) {"
+          },
+          {
+            "type": "BUG",
+            "message": "History = [];",
+            "line": 28,
+            "context": "(window as any)._superAdminDebugHistory = [];"
+          },
+          {
+            "type": "BUG",
+            "message": "History.push(debugInfo);",
+            "line": 30,
+            "context": "(window as any)._superAdminDebugHistory.push(debugInfo);"
+          },
+          {
+            "type": "BUG",
+            "message": "utility to trace state change history",
+            "line": 33,
+            "context": "// Debug utility to trace state change history"
+          },
+          {
+            "type": "BUG",
+            "message": "History = () => {",
+            "line": 34,
+            "context": "const getDebugHistory = () => {"
+          },
+          {
+            "type": "BUG",
+            "message": "History || [];",
+            "line": 35,
+            "context": "return (window as any)._superAdminDebugHistory || [];"
+          },
+          {
+            "type": "BUG",
+            "message": "history",
+            "line": 38,
+            "context": "// Clear debug history"
+          },
+          {
+            "type": "BUG",
+            "message": "History = () => {",
+            "line": 39,
+            "context": "const clearDebugHistory = () => {"
+          },
+          {
+            "type": "BUG",
+            "message": "History = [];",
+            "line": 40,
+            "context": "(window as any)._superAdminDebugHistory = [];"
+          },
+          {
+            "type": "BUG",
+            "message": "utilities to window for console access",
+            "line": 43,
+            "context": "// Add debug utilities to window for console access"
+          },
+          {
+            "type": "BUG",
+            "message": "= {",
+            "line": 45,
+            "context": "(window as any)._superAdminDebug = {"
+          },
+          {
+            "type": "BUG",
+            "message": "History,",
+            "line": 46,
+            "context": "getHistory: getDebugHistory,"
+          },
+          {
+            "type": "BUG",
+            "message": "History,",
+            "line": 47,
+            "context": "clearHistory: clearDebugHistory,"
+          },
+          {
+            "type": "BUG",
+            "message": "ging",
+            "line": 56,
+            "context": "// Section change handler with enhanced debugging"
+          },
+          {
+            "type": "BUG",
+            "message": "('handleSectionChange Entry', {",
+            "line": 59,
+            "context": "logDebug('handleSectionChange Entry', {"
+          },
+          {
+            "type": "BUG",
+            "message": "('Section Change Skipped', {",
+            "line": 66,
+            "context": "logDebug('Section Change Skipped', {"
+          },
+          {
+            "type": "BUG",
+            "message": "('Changing Section', {",
+            "line": 73,
+            "context": "logDebug('Changing Section', {"
+          },
+          {
+            "type": "BUG",
+            "message": "('Section Change Complete', {",
+            "line": 80,
+            "context": "logDebug('Section Change Complete', {"
+          },
+          {
+            "type": "BUG",
+            "message": "('Section Change Error', {",
+            "line": 84,
+            "context": "logDebug('Section Change Error', {"
+          },
+          {
+            "type": "BUG",
+            "message": "('Section Change Effect', {",
+            "line": 94,
+            "context": "logDebug('Section Change Effect', {"
+          },
+          {
+            "type": "BUG",
+            "message": "('Initial Section Setup', {",
+            "line": 104,
+            "context": "logDebug('Initial Section Setup', {"
+          },
+          {
+            "type": "BUG",
+            "message": "('Default Section Set', {",
+            "line": 112,
+            "context": "logDebug('Default Section Set', {"
+          },
+          {
+            "type": "BUG",
+            "message": "('Initial Setup Error', {",
+            "line": 117,
+            "context": "logDebug('Initial Setup Error', {"
+          }
+        ]
+      },
+      {
+        "file": "src\\utils\\permissions.js",
+        "todos": [
+          {
+            "type": "BUG",
+            "message": "ging and verifying the permission system",
+            "line": 402,
+            "context": "* This function is used for debugging and verifying the permission system"
+          }
+        ]
+      },
+      {
+        "file": "src\\utils\\hooks\\useUserState.js",
+        "todos": [
+          {
+            "type": "BUG",
+            "message": "state",
+            "line": 236,
+            "context": "// Get debug state"
+          },
+          {
+            "type": "BUG",
+            "message": "State = useCallback(() => ({",
+            "line": 237,
+            "context": "const getDebugState = useCallback(() => ({"
+          },
+          {
+            "type": "BUG",
+            "message": "State,",
+            "line": 262,
+            "context": "getDebugState,"
+          }
+        ]
+      },
+      {
+        "file": "src\\utils\\projectSnapshot.js",
+        "todos": [
+          {
+            "type": "TODO",
+            "message": "s, build status",
+            "line": 13,
+            "context": "* @returns {Object} Audit results including versions, duplicates, TODOs, build status"
+          },
+          {
+            "type": "TODO",
+            "message": "Items: await scanForTodos(),",
+            "line": 22,
+            "context": "todoItems: await scanForTodos(),"
+          },
+          {
+            "type": "TODO",
+            "message": ", FIXME, and BUG comments",
+            "line": 137,
+            "context": "* Scans for TODO, FIXME, and BUG comments"
+          },
+          {
+            "type": "TODO",
+            "message": "s() {",
+            "line": 139,
+            "context": "async function scanForTodos() {"
+          },
+          {
+            "type": "TODO",
+            "message": "s = [];",
+            "line": 140,
+            "context": "const todos = [];"
+          },
+          {
+            "type": "TODO",
+            "message": "s.push({",
+            "line": 145,
+            "context": "todos.push({"
+          },
+          {
+            "type": "TODO",
+            "message": "scanning requires server-side implementation',",
+            "line": 147,
+            "context": "message: 'TODO scanning requires server-side implementation',"
+          },
+          {
+            "type": "TODO",
+            "message": "s:', error);",
+            "line": 152,
+            "context": "console.error('Error scanning TODOs:', error);"
+          },
+          {
+            "type": "TODO",
+            "message": "s;",
+            "line": 155,
+            "context": "return todos;"
+          },
+          {
+            "type": "TODO",
+            "message": "items",
+            "line": 184,
+            "context": "// TODO items"
+          },
+          {
+            "type": "TODO",
+            "message": "Items.length > 0) {",
+            "line": 185,
+            "context": "if (audit.todoItems.length > 0) {"
+          },
+          {
+            "type": "TODO",
+            "message": "S',",
+            "line": 188,
+            "context": "category: 'TODOS',"
+          },
+          {
+            "type": "TODO",
+            "message": "Items.length} TODO items found`,",
+            "line": 189,
+            "context": "message: `${audit.todoItems.length} TODO items found`,"
+          },
+          {
+            "type": "TODO",
+            "message": "items before major features',",
+            "line": 261,
+            "context": "'Address TODO items before major features',"
+          },
+          {
+            "type": "TODO",
+            "message": "items before considering features complete',",
+            "line": 325,
+            "context": "'Address TODO items before considering features complete',"
+          },
+          {
+            "type": "TODO",
+            "message": "S: 'Complete TODO items or document why they remain',",
+            "line": 452,
+            "context": "TODOS: 'Complete TODO items or document why they remain',"
+          },
+          {
+            "type": "FIXME",
+            "message": ", and BUG comments",
+            "line": 137,
+            "context": "* Scans for TODO, FIXME, and BUG comments"
+          },
+          {
+            "type": "BUG",
+            "message": "comments",
+            "line": 137,
+            "context": "* Scans for TODO, FIXME, and BUG comments"
+          }
+        ]
+      },
+      {
+        "file": "src\\utils\\projectAuditor.js",
+        "todos": [
+          {
+            "type": "TODO",
+            "message": "/FIXME items in code",
+            "line": 7,
+            "context": "* - TODO/FIXME items in code"
+          },
+          {
+            "type": "TODO",
+            "message": "Items: [],",
+            "line": 30,
+            "context": "todoItems: [],"
+          },
+          {
+            "type": "TODO",
+            "message": "/FIXME Scan",
+            "line": 50,
+            "context": "// 3. TODO/FIXME Scan"
+          },
+          {
+            "type": "TODO",
+            "message": "items...');",
+            "line": 51,
+            "context": "console.log('📝 Scanning for TODO items...');"
+          },
+          {
+            "type": "TODO",
+            "message": "Items = await scanForTodos();",
+            "line": 52,
+            "context": "audit.todoItems = await scanForTodos();"
+          },
+          {
+            "type": "TODO",
+            "message": ", FIXME, and BUG comments",
+            "line": 216,
+            "context": "* Scans for TODO, FIXME, and BUG comments"
+          },
+          {
+            "type": "TODO",
+            "message": "s() {",
+            "line": 218,
+            "context": "async function scanForTodos() {"
+          },
+          {
+            "type": "TODO",
+            "message": "s = [];",
+            "line": 219,
+            "context": "const todos = [];"
+          },
+          {
+            "type": "TODO",
+            "message": "', regex: /TODO[:\\s]*([^\\n]*)/gi },",
+            "line": 224,
+            "context": "{ type: 'TODO', regex: /TODO[:\\s]*([^\\n]*)/gi },"
+          },
+          {
+            "type": "TODO",
+            "message": "s = [];",
+            "line": 234,
+            "context": "const fileTodos = [];"
+          },
+          {
+            "type": "TODO",
+            "message": "s.push({",
+            "line": 239,
+            "context": "fileTodos.push({"
+          },
+          {
+            "type": "TODO",
+            "message": "s.length > 0) {",
+            "line": 248,
+            "context": "if (fileTodos.length > 0) {"
+          },
+          {
+            "type": "TODO",
+            "message": "s.push({",
+            "line": 249,
+            "context": "todos.push({"
+          },
+          {
+            "type": "TODO",
+            "message": "s: fileTodos",
+            "line": 251,
+            "context": "todos: fileTodos"
+          },
+          {
+            "type": "TODO",
+            "message": "s:', error);",
+            "line": 276,
+            "context": "console.error('Error scanning TODOs:', error);"
+          },
+          {
+            "type": "TODO",
+            "message": "s;",
+            "line": 279,
+            "context": "return todos;"
+          },
+          {
+            "type": "TODO",
+            "message": "items",
+            "line": 597,
+            "context": "// TODO items"
+          },
+          {
+            "type": "TODO",
+            "message": "s = audit.todoItems.reduce((sum, file) => sum + file.todos.length, 0);",
+            "line": 598,
+            "context": "const totalTodos = audit.todoItems.reduce((sum, file) => sum + file.todos.length, 0);"
+          },
+          {
+            "type": "TODO",
+            "message": "s > 0) {",
+            "line": 599,
+            "context": "if (totalTodos > 0) {"
+          },
+          {
+            "type": "TODO",
+            "message": "S',",
+            "line": 602,
+            "context": "category: 'TODOS',"
+          },
+          {
+            "type": "TODO",
+            "message": "s} TODO items found across ${audit.todoItems.length} files`,",
+            "line": 603,
+            "context": "message: `${totalTodos} TODO items found across ${audit.todoItems.length} files`,"
+          },
+          {
+            "type": "TODO",
+            "message": "Items",
+            "line": 605,
+            "context": "details: audit.todoItems"
+          },
+          {
+            "type": "TODO",
+            "message": "items",
+            "line": 675,
+            "context": "// TODO items"
+          },
+          {
+            "type": "TODO",
+            "message": "s = audit.todoItems.reduce((sum, file) => sum + file.todos.length, 0);",
+            "line": 676,
+            "context": "const totalTodos = audit.todoItems.reduce((sum, file) => sum + file.todos.length, 0);"
+          },
+          {
+            "type": "TODO",
+            "message": "s > 0) {",
+            "line": 677,
+            "context": "if (totalTodos > 0) {"
+          },
+          {
+            "type": "TODO",
+            "message": "S',",
+            "line": 680,
+            "context": "category: 'TODOS',"
+          },
+          {
+            "type": "TODO",
+            "message": "items',",
+            "line": 681,
+            "context": "action: 'Address TODO items',"
+          },
+          {
+            "type": "TODO",
+            "message": "items',",
+            "line": 682,
+            "context": "command: 'Review and complete TODO items',"
+          },
+          {
+            "type": "TODO",
+            "message": "s} TODO items or document why they remain`",
+            "line": 683,
+            "context": "description: `Complete ${totalTodos} TODO items or document why they remain`"
+          },
+          {
+            "type": "TODO",
+            "message": "s,",
+            "line": 758,
+            "context": "scanForTodos,"
+          },
+          {
+            "type": "FIXME",
+            "message": "items in code",
+            "line": 7,
+            "context": "* - TODO/FIXME items in code"
+          },
+          {
+            "type": "FIXME",
+            "message": "Scan",
+            "line": 50,
+            "context": "// 3. TODO/FIXME Scan"
+          },
+          {
+            "type": "FIXME",
+            "message": ", and BUG comments",
+            "line": 216,
+            "context": "* Scans for TODO, FIXME, and BUG comments"
+          },
+          {
+            "type": "FIXME",
+            "message": "', regex: /FIXME[:\\s]*([^\\n]*)/gi },",
+            "line": 225,
+            "context": "{ type: 'FIXME', regex: /FIXME[:\\s]*([^\\n]*)/gi },"
+          },
+          {
+            "type": "BUG",
+            "message": "comments",
+            "line": 216,
+            "context": "* Scans for TODO, FIXME, and BUG comments"
+          },
+          {
+            "type": "BUG",
+            "message": "', regex: /BUG[:\\s]*([^\\n]*)/gi },",
+            "line": 226,
+            "context": "{ type: 'BUG', regex: /BUG[:\\s]*([^\\n]*)/gi },"
+          },
+          {
+            "type": "HACK",
+            "message": "', regex: /HACK[:\\s]*([^\\n]*)/gi },",
+            "line": 227,
+            "context": "{ type: 'HACK', regex: /HACK[:\\s]*([^\\n]*)/gi },"
+          },
+          {
+            "type": "NOTE",
+            "message": "', regex: /NOTE[:\\s]*([^\\n]*)/gi }",
+            "line": 228,
+            "context": "{ type: 'NOTE', regex: /NOTE[:\\s]*([^\\n]*)/gi }"
+          }
+        ]
+      }
+    ],
+    "buildWarnings": [
+      {
+        "type": "BUNDLE_SIZE",
+        "message": "(!) Some chunks are larger than 500 kB after minification. Consider:",
+        "severity": "warning"
+      },
+      {
+        "type": "BUILD_WARNING",
+        "message": "- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\u001b[39m",
+        "severity": "warning"
+      },
+      {
+        "type": "BUILD_STATUS",
+        "message": "Build successful",
+        "severity": "info"
+      }
+    ],
+    "fileStructure": {
+      "totalFiles": 198,
+      "directories": {
+        "name": "src",
+        "path": "src",
+        "depth": 0,
+        "files": [
+          {
+            "name": "App.jsx",
+            "size": 39658,
+            "modified": "2025-07-24T01:12:02.000Z",
+            "path": "src\\App.jsx"
+          },
+          {
+            "name": "supabaseClient.js",
+            "size": 776,
+            "modified": "2025-06-05T03:07:50.000Z",
+            "path": "src\\supabaseClient.js"
+          },
+          {
+            "name": "index.css",
+            "size": 62,
+            "modified": "2025-05-13T06:15:48.000Z",
+            "path": "src\\index.css"
+          },
+          {
+            "name": "main.jsx",
+            "size": 249,
+            "modified": "2025-05-14T00:18:16.000Z",
+            "path": "src\\main.jsx"
+          },
+          {
+            "name": "version.json",
+            "size": 24,
+            "modified": "2025-07-24T01:37:14.000Z",
+            "path": "src\\version.json"
+          },
+          {
+            "name": "dbCheck.js",
+            "size": 2185,
+            "modified": "2025-05-25T21:46:10.000Z",
+            "path": "src\\dbCheck.js"
+          },
+          {
+            "name": "dbMigrate.js",
+            "size": 3890,
+            "modified": "2025-05-25T22:48:18.000Z",
+            "path": "src\\dbMigrate.js"
+          },
+          {
+            "name": "migrations.sql",
+            "size": 1027,
+            "modified": "2025-05-25T21:48:04.000Z",
+            "path": "src\\migrations.sql"
+          },
+          {
+            "name": "column_rename.sql",
+            "size": 245,
+            "modified": "2025-05-25T21:50:52.000Z",
+            "path": "src\\column_rename.sql"
+          },
+          {
+            "name": "verifyMigration.js",
+            "size": 4254,
+            "modified": "2025-05-25T22:50:20.000Z",
+            "path": "src\\verifyMigration.js"
+          },
+          {
+            "name": "complete_migration.sql",
+            "size": 1147,
+            "modified": "2025-05-25T22:30:50.000Z",
+            "path": "src\\complete_migration.sql"
+          },
+          {
+            "name": "check_columns.sql",
+            "size": 820,
+            "modified": "2025-05-25T22:15:26.000Z",
+            "path": "src\\check_columns.sql"
+          },
+          {
+            "name": "check_roles.sql",
+            "size": 409,
+            "modified": "2025-05-25T22:17:44.000Z",
+            "path": "src\\check_roles.sql"
+          },
+          {
+            "name": "check_exact_roles.sql",
+            "size": 559,
+            "modified": "2025-05-25T22:28:12.000Z",
+            "path": "src\\check_exact_roles.sql"
+          },
+          {
+            "name": "check_constraint.sql",
+            "size": 199,
+            "modified": "2025-05-25T22:29:46.000Z",
+            "path": "src\\check_constraint.sql"
+          },
+          {
+            "name": "fixInviteCodes.js",
+            "size": 2562,
+            "modified": "2025-05-26T00:09:28.000Z",
+            "path": "src\\fixInviteCodes.js"
+          },
+          {
+            "name": "checkInvites.js",
+            "size": 1450,
+            "modified": "2025-05-25T22:53:00.000Z",
+            "path": "src\\checkInvites.js"
+          },
+          {
+            "name": "cleanup_invites.sql",
+            "size": 2733,
+            "modified": "2025-05-25T22:56:54.000Z",
+            "path": "src\\cleanup_invites.sql"
+          },
+          {
+            "name": "runCleanup.js",
+            "size": 2139,
+            "modified": "2025-05-25T22:57:08.000Z",
+            "path": "src\\runCleanup.js"
+          },
+          {
+            "name": "applySQL.js",
+            "size": 1078,
+            "modified": "2025-05-25T22:57:26.000Z",
+            "path": "src\\applySQL.js"
+          },
+          {
+            "name": "cleanupInvites.js",
+            "size": 6214,
+            "modified": "2025-05-25T22:58:54.000Z",
+            "path": "src\\cleanupInvites.js"
+          },
+          {
+            "name": "migrate_departments.sql",
+            "size": 1919,
+            "modified": "2025-05-25T23:04:28.000Z",
+            "path": "src\\migrate_departments.sql"
+          },
+          {
+            "name": "migrateDepartments.js",
+            "size": 2415,
+            "modified": "2025-05-25T23:06:36.000Z",
+            "path": "src\\migrateDepartments.js"
+          },
+          {
+            "name": "create_exec_sql.sql",
+            "size": 174,
+            "modified": "2025-05-25T23:04:54.000Z",
+            "path": "src\\create_exec_sql.sql"
+          },
+          {
+            "name": "migration_functions.sql",
+            "size": 4951,
+            "modified": "2025-06-05T01:17:06.000Z",
+            "path": "src\\migration_functions.sql"
+          },
+          {
+            "name": "add_metadata_column.sql",
+            "size": 323,
+            "modified": "2025-05-25T23:29:34.000Z",
+            "path": "src\\add_metadata_column.sql"
+          },
+          {
+            "name": "addMetadataColumn.js",
+            "size": 1502,
+            "modified": "2025-05-25T23:30:18.000Z",
+            "path": "src\\addMetadataColumn.js"
+          },
+          {
+            "name": "alterDepartmentsAddMetadata.sql",
+            "size": 514,
+            "modified": "2025-05-25T23:07:04.000Z",
+            "path": "src\\alterDepartmentsAddMetadata.sql"
+          },
+          {
+            "name": "addMetadataColumn.sql",
+            "size": 246,
+            "modified": "2025-05-25T23:07:30.000Z",
+            "path": "src\\addMetadataColumn.sql"
+          },
+          {
+            "name": "migrate_departments_safe.sql",
+            "size": 3410,
+            "modified": "2025-05-25T23:13:00.000Z",
+            "path": "src\\migrate_departments_safe.sql"
+          },
+          {
+            "name": "migrateDepartmentsSafe.js",
+            "size": 3277,
+            "modified": "2025-05-25T23:14:44.000Z",
+            "path": "src\\migrateDepartmentsSafe.js"
+          },
+          {
+            "name": "setupMigrationPrereqs.js",
+            "size": 2718,
+            "modified": "2025-05-25T23:20:58.000Z",
+            "path": "src\\setupMigrationPrereqs.js"
+          },
+          {
+            "name": "migrate_departments_safe_v2.sql",
+            "size": 2867,
+            "modified": "2025-05-25T23:19:40.000Z",
+            "path": "src\\migrate_departments_safe_v2.sql"
+          },
+          {
+            "name": "migrateDepartmentsSafeV2.js",
+            "size": 1694,
+            "modified": "2025-05-25T23:28:48.000Z",
+            "path": "src\\migrateDepartmentsSafeV2.js"
+          },
+          {
+            "name": "checkExecSQL.js",
+            "size": 1272,
+            "modified": "2025-05-25T23:20:30.000Z",
+            "path": "src\\checkExecSQL.js"
+          },
+          {
+            "name": "testSupabase.js",
+            "size": 1264,
+            "modified": "2025-05-25T23:27:24.000Z",
+            "path": "src\\testSupabase.js"
+          },
+          {
+            "name": "testLogging.js",
+            "size": 254,
+            "modified": "2025-05-25T23:23:18.000Z",
+            "path": "src\\testLogging.js"
+          },
+          {
+            "name": "testNode.js",
+            "size": 287,
+            "modified": "2025-05-25T23:24:44.000Z",
+            "path": "src\\testNode.js"
+          },
+          {
+            "name": "testDB.js",
+            "size": 866,
+            "modified": "2025-05-25T23:26:00.000Z",
+            "path": "src\\testDB.js"
+          },
+          {
+            "name": "testError.js",
+            "size": 1048,
+            "modified": "2025-05-25T23:28:28.000Z",
+            "path": "src\\testError.js"
+          },
+          {
+            "name": "checkDepartments.js",
+            "size": 729,
+            "modified": "2025-05-25T23:29:06.000Z",
+            "path": "src\\checkDepartments.js"
+          },
+          {
+            "name": "setupSQLFunctions.js",
+            "size": 735,
+            "modified": "2025-05-25T23:29:44.000Z",
+            "path": "src\\setupSQLFunctions.js"
+          },
+          {
+            "name": "README.md",
+            "size": 2595,
+            "modified": "2025-07-22T22:23:40.000Z",
+            "path": "src\\README.md"
+          },
+          {
+            "name": "create_policies.sql",
+            "size": 4571,
+            "modified": "2025-05-26T01:27:50.000Z",
+            "path": "src\\create_policies.sql"
+          },
+          {
+            "name": "normalize_invite_roles.sql",
+            "size": 1100,
+            "modified": "2025-05-26T00:04:16.000Z",
+            "path": "src\\normalize_invite_roles.sql"
+          },
+          {
+            "name": "normalizeInviteRoles.js",
+            "size": 2485,
+            "modified": "2025-05-26T00:04:40.000Z",
+            "path": "src\\normalizeInviteRoles.js"
+          },
+          {
+            "name": "fixRemainingRoles.js",
+            "size": 1179,
+            "modified": "2025-05-26T00:04:58.000Z",
+            "path": "src\\fixRemainingRoles.js"
+          },
+          {
+            "name": "checkExactRoles.js",
+            "size": 1,
+            "modified": "2025-05-26T00:05:16.000Z",
+            "path": "src\\checkExactRoles.js"
+          },
+          {
+            "name": "checkRoles.js",
+            "size": 512,
+            "modified": "2025-05-26T00:05:26.000Z",
+            "path": "src\\checkRoles.js"
+          },
+          {
+            "name": "updateRolesById.js",
+            "size": 1180,
+            "modified": "2025-05-26T00:05:48.000Z",
+            "path": "src\\updateRolesById.js"
+          },
+          {
+            "name": "fixUserDepartments.js",
+            "size": 1555,
+            "modified": "2025-05-26T00:07:44.000Z",
+            "path": "src\\fixUserDepartments.js"
+          },
+          {
+            "name": "fixUserDepartmentsV2.js",
+            "size": 2164,
+            "modified": "2025-05-26T00:08:08.000Z",
+            "path": "src\\fixUserDepartmentsV2.js"
+          },
+          {
+            "name": "fixUserDepartmentsV3.js",
+            "size": 2439,
+            "modified": "2025-05-26T00:08:32.000Z",
+            "path": "src\\fixUserDepartmentsV3.js"
+          },
+          {
+            "name": "checkTables.js",
+            "size": 1906,
+            "modified": "2025-05-26T00:59:26.000Z",
+            "path": "src\\checkTables.js"
+          },
+          {
+            "name": "fixInviteCodesV2.js",
+            "size": 3653,
+            "modified": "2025-05-26T00:09:56.000Z",
+            "path": "src\\fixInviteCodesV2.js"
+          },
+          {
+            "name": "fixRolesInDB.js",
+            "size": 2701,
+            "modified": "2025-05-26T00:10:36.000Z",
+            "path": "src\\fixRolesInDB.js"
+          },
+          {
+            "name": "fixRolesInDBV2.js",
+            "size": 1998,
+            "modified": "2025-05-26T00:10:56.000Z",
+            "path": "src\\fixRolesInDBV2.js"
+          },
+          {
+            "name": "fixRolesInDBV3.js",
+            "size": 5605,
+            "modified": "2025-05-26T00:11:32.000Z",
+            "path": "src\\fixRolesInDBV3.js"
+          },
+          {
+            "name": "addUpdatePolicy.sql",
+            "size": 485,
+            "modified": "2025-05-26T00:11:52.000Z",
+            "path": "src\\addUpdatePolicy.sql"
+          },
+          {
+            "name": "applyUpdatePolicy.js",
+            "size": 1117,
+            "modified": "2025-05-26T00:12:02.000Z",
+            "path": "src\\applyUpdatePolicy.js"
+          },
+          {
+            "name": "addTrigger.sql",
+            "size": 1088,
+            "modified": "2025-05-26T00:12:58.000Z",
+            "path": "src\\addTrigger.sql"
+          },
+          {
+            "name": "applyTrigger.js",
+            "size": 1,
+            "modified": "2025-05-26T00:13:12.000Z",
+            "path": "src\\applyTrigger.js"
+          },
+          {
+            "name": "applyTriggerV2.js",
+            "size": 1950,
+            "modified": "2025-05-26T00:13:28.000Z",
+            "path": "src\\applyTriggerV2.js"
+          },
+          {
+            "name": "fix_constraints.sql",
+            "size": 1865,
+            "modified": "2025-05-26T01:38:36.000Z",
+            "path": "src\\fix_constraints.sql"
+          },
+          {
+            "name": "add_user_profiles_policy.sql",
+            "size": 2130,
+            "modified": "2025-06-04T23:42:28.000Z",
+            "path": "src\\add_user_profiles_policy.sql"
+          },
+          {
+            "name": "create_user_profiles.sql",
+            "size": 791,
+            "modified": "2025-05-26T00:26:30.000Z",
+            "path": "src\\create_user_profiles.sql"
+          },
+          {
+            "name": "fix_foreign_keys.sql",
+            "size": 855,
+            "modified": "2025-05-26T00:30:32.000Z",
+            "path": "src\\fix_foreign_keys.sql"
+          },
+          {
+            "name": "fixForeignKeys.js",
+            "size": 3348,
+            "modified": "2025-05-26T00:46:16.000Z",
+            "path": "src\\fixForeignKeys.js"
+          },
+          {
+            "name": "createTestData.js",
+            "size": 2299,
+            "modified": "2025-05-26T00:51:30.000Z",
+            "path": "src\\createTestData.js"
+          },
+          {
+            "name": "checkSops.js",
+            "size": 3070,
+            "modified": "2025-05-26T01:25:02.000Z",
+            "path": "src\\checkSops.js"
+          },
+          {
+            "name": "fixDepartments.js",
+            "size": 6054,
+            "modified": "2025-05-26T01:06:58.000Z",
+            "path": "src\\fixDepartments.js"
+          },
+          {
+            "name": "fix_departments.sql",
+            "size": 3435,
+            "modified": "2025-05-26T01:29:48.000Z",
+            "path": "src\\fix_departments.sql"
+          },
+          {
+            "name": "runSql.js",
+            "size": 881,
+            "modified": "2025-05-26T01:20:40.000Z",
+            "path": "src\\runSql.js"
+          },
+          {
+            "name": "cleanUserMemberships.js",
+            "size": 3600,
+            "modified": "2025-05-26T01:21:26.000Z",
+            "path": "src\\cleanUserMemberships.js"
+          },
+          {
+            "name": "cleanDepartments.js",
+            "size": 3003,
+            "modified": "2025-05-26T01:23:18.000Z",
+            "path": "src\\cleanDepartments.js"
+          },
+          {
+            "name": "fixConstraints.js",
+            "size": 2185,
+            "modified": "2025-05-26T01:39:20.000Z",
+            "path": "src\\fixConstraints.js"
+          },
+          {
+            "name": "setupDefaultDepartment.js",
+            "size": 3751,
+            "modified": "2025-05-26T01:22:14.000Z",
+            "path": "src\\setupDefaultDepartment.js"
+          },
+          {
+            "name": "cleanUnknownDepartments.js",
+            "size": 2429,
+            "modified": "2025-05-26T01:23:58.000Z",
+            "path": "src\\cleanUnknownDepartments.js"
+          },
+          {
+            "name": "verifyFixes.js",
+            "size": 3508,
+            "modified": "2025-05-26T01:30:26.000Z",
+            "path": "src\\verifyFixes.js"
+          },
+          {
+            "name": "fix_schema.sql",
+            "size": 3322,
+            "modified": "2025-05-26T01:36:04.000Z",
+            "path": "src\\fix_schema.sql"
+          },
+          {
+            "name": "fixDuplicateDepartments.js",
+            "size": 2718,
+            "modified": "2025-05-26T01:58:46.000Z",
+            "path": "src\\fixDuplicateDepartments.js"
+          },
+          {
+            "name": "setupDatabaseSecurity.js",
+            "size": 10732,
+            "modified": "2025-06-04T23:59:06.000Z",
+            "path": "src\\setupDatabaseSecurity.js"
+          },
+          {
+            "name": "verifyDatabaseState.js",
+            "size": 4243,
+            "modified": "2025-05-26T02:10:06.000Z",
+            "path": "src\\verifyDatabaseState.js"
+          },
+          {
+            "name": "fixDatabaseRelationships.js",
+            "size": 5050,
+            "modified": "2025-05-26T02:18:32.000Z",
+            "path": "src\\fixDatabaseRelationships.js"
+          },
+          {
+            "name": "add_user_departments_policy.sql",
+            "size": 1520,
+            "modified": "2025-06-04T23:47:44.000Z",
+            "path": "src\\add_user_departments_policy.sql"
+          },
+          {
+            "name": "restore_function.sql",
+            "size": 676,
+            "modified": "2025-06-05T01:19:24.000Z",
+            "path": "src\\restore_function.sql"
+          },
+          {
+            "name": "check_superadmin.sql",
+            "size": 1,
+            "modified": "2025-06-05T01:31:14.000Z",
+            "path": "src\\check_superadmin.sql"
+          },
+          {
+            "name": "fix_all_rls_policies.sql",
+            "size": 20771,
+            "modified": "2025-07-22T22:46:28.000Z",
+            "path": "src\\fix_all_rls_policies.sql"
+          },
+          {
+            "name": "fixRLSPolicies.js",
+            "size": 2455,
+            "modified": "2025-07-22T22:46:40.000Z",
+            "path": "src\\fixRLSPolicies.js"
+          },
+          {
+            "name": "fixRLSPoliciesNode.js",
+            "size": 3528,
+            "modified": "2025-07-22T22:51:58.000Z",
+            "path": "src\\fixRLSPoliciesNode.js"
+          },
+          {
+            "name": "fix_all_rls_policies_corrected.sql",
+            "size": 20900,
+            "modified": "2025-07-22T22:55:58.000Z",
+            "path": "src\\fix_all_rls_policies_corrected.sql"
+          },
+          {
+            "name": "fix_all_rls_policies_final.sql",
+            "size": 20940,
+            "modified": "2025-07-22T22:58:00.000Z",
+            "path": "src\\fix_all_rls_policies_final.sql"
+          },
+          {
+            "name": "fix_all_rls_policies_simple.sql",
+            "size": 20768,
+            "modified": "2025-07-22T23:01:50.000Z",
+            "path": "src\\fix_all_rls_policies_simple.sql"
+          },
+          {
+            "name": "fix_user_profiles_rls.sql",
+            "size": 1539,
+            "modified": "2025-07-22T23:15:26.000Z",
+            "path": "src\\fix_user_profiles_rls.sql"
+          },
+          {
+            "name": "fix_user_profiles_rls_v2.sql",
+            "size": 1823,
+            "modified": "2025-07-22T23:16:16.000Z",
+            "path": "src\\fix_user_profiles_rls_v2.sql"
+          },
+          {
+            "name": "disable_user_profiles_rls.sql",
+            "size": 131,
+            "modified": "2025-07-22T23:18:30.000Z",
+            "path": "src\\disable_user_profiles_rls.sql"
+          },
+          {
+            "name": "disable_user_departments_rls.sql",
+            "size": 137,
+            "modified": "2025-07-22T23:19:28.000Z",
+            "path": "src\\disable_user_departments_rls.sql"
+          },
+          {
+            "name": "disable_all_rls_for_testing.sql",
+            "size": 483,
+            "modified": "2025-07-22T23:35:42.000Z",
+            "path": "src\\disable_all_rls_for_testing.sql"
+          },
+          {
+            "name": "rls_user_profiles_policies.sql",
+            "size": 5313,
+            "modified": "2025-07-23T22:36:16.000Z",
+            "path": "src\\rls_user_profiles_policies.sql"
+          },
+          {
+            "name": "apply_user_profiles_rls.js",
+            "size": 6186,
+            "modified": "2025-07-23T22:37:30.000Z",
+            "path": "src\\apply_user_profiles_rls.js"
+          },
+          {
+            "name": "supabaseClientNode.js",
+            "size": 771,
+            "modified": "2025-07-23T22:37:26.000Z",
+            "path": "src\\supabaseClientNode.js"
+          },
+          {
+            "name": "apply_user_profiles_rls_simple.js",
+            "size": 5255,
+            "modified": "2025-07-23T22:39:52.000Z",
+            "path": "src\\apply_user_profiles_rls_simple.js"
+          },
+          {
+            "name": "temp_disable_user_profiles_rls.sql",
+            "size": 811,
+            "modified": "2025-07-23T22:45:02.000Z",
+            "path": "src\\temp_disable_user_profiles_rls.sql"
+          },
+          {
+            "name": "test_rls_policies.js",
+            "size": 3391,
+            "modified": "2025-07-23T22:46:38.000Z",
+            "path": "src\\test_rls_policies.js"
+          },
+          {
+            "name": "safe_user_profiles_rls.sql",
+            "size": 3444,
+            "modified": "2025-07-23T22:47:02.000Z",
+            "path": "src\\safe_user_profiles_rls.sql"
+          },
+          {
+            "name": "test_user_profiles_rls_comprehensive.js",
+            "size": 4669,
+            "modified": "2025-07-23T22:48:16.000Z",
+            "path": "src\\test_user_profiles_rls_comprehensive.js"
+          },
+          {
+            "name": "emergency_disable_user_profiles_rls.sql",
+            "size": 730,
+            "modified": "2025-07-23T22:48:58.000Z",
+            "path": "src\\emergency_disable_user_profiles_rls.sql"
+          },
+          {
+            "name": "rls_implementation_plan.sql",
+            "size": 7947,
+            "modified": "2025-07-23T22:53:54.000Z",
+            "path": "src\\rls_implementation_plan.sql"
+          },
+          {
+            "name": "fix_rls_policies.sql",
+            "size": 3970,
+            "modified": "2025-07-23T23:03:52.000Z",
+            "path": "src\\fix_rls_policies.sql"
+          },
+          {
+            "name": "debug_test_data.sql",
+            "size": 1907,
+            "modified": "2025-07-23T23:05:20.000Z",
+            "path": "src\\debug_test_data.sql"
+          },
+          {
+            "name": "fix_test_record_creation.js",
+            "size": 2692,
+            "modified": "2025-07-23T23:06:24.000Z",
+            "path": "src\\fix_test_record_creation.js"
+          },
+          {
+            "name": "check_user_departments_constraint.sql",
+            "size": 885,
+            "modified": "2025-07-23T23:08:44.000Z",
+            "path": "src\\check_user_departments_constraint.sql"
+          },
+          {
+            "name": "check_departments_issue.sql",
+            "size": 1292,
+            "modified": "2025-07-23T23:11:14.000Z",
+            "path": "src\\check_departments_issue.sql"
+          },
+          {
+            "name": "apply_invite_codes_rls.sql",
+            "size": 1157,
+            "modified": "2025-07-23T23:14:12.000Z",
+            "path": "src\\apply_invite_codes_rls.sql"
+          },
+          {
+            "name": "apply_departments_rls.sql",
+            "size": 1490,
+            "modified": "2025-07-23T23:17:06.000Z",
+            "path": "src\\apply_departments_rls.sql"
+          },
+          {
+            "name": "apply_user_departments_rls.sql",
+            "size": 1700,
+            "modified": "2025-07-23T23:20:04.000Z",
+            "path": "src\\apply_user_departments_rls.sql"
+          },
+          {
+            "name": "fix_user_departments_rls.sql",
+            "size": 1798,
+            "modified": "2025-07-23T23:21:52.000Z",
+            "path": "src\\fix_user_departments_rls.sql"
+          },
+          {
+            "name": "apply_user_departments_rls_fixed.sql",
+            "size": 1947,
+            "modified": "2025-07-23T23:23:20.000Z",
+            "path": "src\\apply_user_departments_rls_fixed.sql"
+          },
+          {
+            "name": "fix_user_departments_recursion.sql",
+            "size": 1657,
+            "modified": "2025-07-23T23:24:48.000Z",
+            "path": "src\\fix_user_departments_recursion.sql"
+          },
+          {
+            "name": "emergency_disable_user_departments_rls.sql",
+            "size": 964,
+            "modified": "2025-07-23T23:25:50.000Z",
+            "path": "src\\emergency_disable_user_departments_rls.sql"
+          },
+          {
+            "name": "coordinated_rls_implementation.sql",
+            "size": 8022,
+            "modified": "2025-07-23T23:28:04.000Z",
+            "path": "src\\coordinated_rls_implementation.sql"
+          },
+          {
+            "name": "emergency_rollback_all_rls.sql",
+            "size": 3095,
+            "modified": "2025-07-23T23:28:22.000Z",
+            "path": "src\\emergency_rollback_all_rls.sql"
+          },
+          {
+            "name": "force_rollback_all_rls.sql",
+            "size": 3664,
+            "modified": "2025-07-23T23:31:02.000Z",
+            "path": "src\\force_rollback_all_rls.sql"
+          },
+          {
+            "name": "check_current_rls_status.sql",
+            "size": 2362,
+            "modified": "2025-07-23T23:34:16.000Z",
+            "path": "src\\check_current_rls_status.sql"
+          },
+          {
+            "name": "simple_rls_check.sql",
+            "size": 655,
+            "modified": "2025-07-23T23:35:02.000Z",
+            "path": "src\\simple_rls_check.sql"
+          },
+          {
+            "name": "enable_rls_on_tables.sql",
+            "size": 1766,
+            "modified": "2025-07-23T23:38:28.000Z",
+            "path": "src\\enable_rls_on_tables.sql"
+          },
+          {
+            "name": "fix_rls_and_security.sql",
+            "size": 3691,
+            "modified": "2025-07-23T23:39:14.000Z",
+            "path": "src\\fix_rls_and_security.sql"
+          },
+          {
+            "name": "complete_rls_reset.sql",
+            "size": 5375,
+            "modified": "2025-07-23T23:44:16.000Z",
+            "path": "src\\complete_rls_reset.sql"
+          },
+          {
+            "name": "fresh_invite_codes_rls.sql",
+            "size": 2056,
+            "modified": "2025-07-23T23:47:38.000Z",
+            "path": "src\\fresh_invite_codes_rls.sql"
+          },
+          {
+            "name": "test_invite_codes_rls.sql",
+            "size": 2094,
+            "modified": "2025-07-23T23:49:48.000Z",
+            "path": "src\\test_invite_codes_rls.sql"
+          },
+          {
+            "name": "clean_invite_codes_policies.sql",
+            "size": 2989,
+            "modified": "2025-07-23T23:50:52.000Z",
+            "path": "src\\clean_invite_codes_policies.sql"
+          },
+          {
+            "name": "fresh_departments_rls.sql",
+            "size": 2047,
+            "modified": "2025-07-23T23:52:44.000Z",
+            "path": "src\\fresh_departments_rls.sql"
+          },
+          {
+            "name": "fresh_user_departments_rls.sql",
+            "size": 2328,
+            "modified": "2025-07-23T23:53:48.000Z",
+            "path": "src\\fresh_user_departments_rls.sql"
+          },
+          {
+            "name": "fresh_user_profiles_rls.sql",
+            "size": 2048,
+            "modified": "2025-07-23T23:54:58.000Z",
+            "path": "src\\fresh_user_profiles_rls.sql"
+          },
+          {
+            "name": "debug_sops_issues.sql",
+            "size": 2236,
+            "modified": "2025-07-23T23:56:00.000Z",
+            "path": "src\\debug_sops_issues.sql"
+          },
+          {
+            "name": "debug_sops_issues_fixed.sql",
+            "size": 2330,
+            "modified": "2025-07-23T23:56:44.000Z",
+            "path": "src\\debug_sops_issues_fixed.sql"
+          },
+          {
+            "name": "check_sops_structure.sql",
+            "size": 775,
+            "modified": "2025-07-23T23:58:42.000Z",
+            "path": "src\\check_sops_structure.sql"
+          },
+          {
+            "name": "get_real_ids.sql",
+            "size": 369,
+            "modified": "2025-07-24T00:01:50.000Z",
+            "path": "src\\get_real_ids.sql"
+          },
+          {
+            "name": "get_department_id.sql",
+            "size": 140,
+            "modified": "2025-07-24T00:02:44.000Z",
+            "path": "src\\get_department_id.sql"
+          },
+          {
+            "name": "check_user_departments.sql",
+            "size": 164,
+            "modified": "2025-07-24T00:02:52.000Z",
+            "path": "src\\check_user_departments.sql"
+          },
+          {
+            "name": "check_user_departments_fixed.sql",
+            "size": 147,
+            "modified": "2025-07-24T00:03:54.000Z",
+            "path": "src\\check_user_departments_fixed.sql"
+          },
+          {
+            "name": "production_rls_implementation.sql",
+            "size": 9054,
+            "modified": "2025-07-24T00:06:58.000Z",
+            "path": "src\\production_rls_implementation.sql"
+          },
+          {
+            "name": "clean_and_apply_production_rls.sql",
+            "size": 11011,
+            "modified": "2025-07-24T00:08:26.000Z",
+            "path": "src\\clean_and_apply_production_rls.sql"
+          },
+          {
+            "name": "check_user_departments_fk.sql",
+            "size": 996,
+            "modified": "2025-07-24T00:25:44.000Z",
+            "path": "src\\check_user_departments_fk.sql"
+          },
+          {
+            "name": "check_user_departments_constraints.sql",
+            "size": 1055,
+            "modified": "2025-07-24T00:34:24.000Z",
+            "path": "src\\check_user_departments_constraints.sql"
+          },
+          {
+            "name": "progress-snapshot.json",
+            "size": 158091,
+            "modified": "2025-07-24T01:35:16.000Z",
+            "path": "src\\progress-snapshot.json"
+          },
+          {
+            "name": "audit-results.json",
+            "size": 147421,
+            "modified": "2025-07-24T01:35:16.000Z",
+            "path": "src\\audit-results.json"
+          }
+        ],
+        "subdirs": [
+          {
+            "name": "components",
+            "path": "src\\components",
+            "depth": 1,
+            "files": [
+              {
+                "name": "Header.jsx",
+                "size": 7606,
+                "modified": "2025-07-23T22:29:56.000Z",
+                "path": "src\\components\\Header.jsx"
+              },
+              {
+                "name": "Controls.jsx",
+                "size": 1123,
+                "modified": "2025-07-22T21:08:06.000Z",
+                "path": "src\\components\\Controls.jsx"
+              },
+              {
+                "name": "SOPCard.jsx",
+                "size": 2516,
+                "modified": "2025-07-22T20:46:02.000Z",
+                "path": "src\\components\\SOPCard.jsx"
+              },
+              {
+                "name": "Wizard.jsx",
+                "size": 7925,
+                "modified": "2025-07-23T02:24:26.000Z",
+                "path": "src\\components\\Wizard.jsx"
+              },
+              {
+                "name": "SOPDetail.jsx",
+                "size": 5771,
+                "modified": "2025-07-23T01:50:16.000Z",
+                "path": "src\\components\\SOPDetail.jsx"
+              },
+              {
+                "name": "Layout.jsx",
+                "size": 2190,
+                "modified": "2025-07-23T05:44:30.000Z",
+                "path": "src\\components\\Layout.jsx"
+              },
+              {
+                "name": "TagInput.jsx",
+                "size": 1880,
+                "modified": "2025-05-26T05:46:56.000Z",
+                "path": "src\\components\\TagInput.jsx"
+              },
+              {
+                "name": "Login.jsx",
+                "size": 5160,
+                "modified": "2025-07-23T20:54:04.000Z",
+                "path": "src\\components\\Login.jsx"
+              },
+              {
+                "name": "AdminPanel.jsx",
+                "size": 4314,
+                "modified": "2025-07-23T21:57:00.000Z",
+                "path": "src\\components\\AdminPanel.jsx"
+              },
+              {
+                "name": "InviteManager.jsx",
+                "size": 9181,
+                "modified": "2025-05-26T05:21:18.000Z",
+                "path": "src\\components\\InviteManager.jsx"
+              },
+              {
+                "name": "InviteRedeemModal.jsx",
+                "size": 4256,
+                "modified": "2025-05-25T22:56:36.000Z",
+                "path": "src\\components\\InviteRedeemModal.jsx"
+              },
+              {
+                "name": "DepartmentJoinOrCreateModal.jsx",
+                "size": 12421,
+                "modified": "2025-05-26T05:21:28.000Z",
+                "path": "src\\components\\DepartmentJoinOrCreateModal.jsx"
+              },
+              {
+                "name": "CreateUserModal.jsx",
+                "size": 9147,
+                "modified": "2025-07-23T05:25:16.000Z",
+                "path": "src\\components\\CreateUserModal.jsx"
+              },
+              {
+                "name": "README.md",
+                "size": 2876,
+                "modified": "2025-05-26T03:43:06.000Z",
+                "path": "src\\components\\README.md"
+              },
+              {
+                "name": "ResetPassword.jsx",
+                "size": 3905,
+                "modified": "2025-06-05T03:01:36.000Z",
+                "path": "src\\components\\ResetPassword.jsx"
+              },
+              {
+                "name": "SuperAdminPanel.tsx",
+                "size": 4398,
+                "modified": "2025-07-22T20:28:48.000Z",
+                "path": "src\\components\\SuperAdminPanel.tsx"
+              }
+            ],
+            "subdirs": [
+              {
+                "name": "ui",
+                "path": "src\\components\\ui",
+                "depth": 2,
+                "files": [
+                  {
+                    "name": "button.jsx",
+                    "size": 299,
+                    "modified": "2025-05-13T22:29:46.000Z",
+                    "path": "src\\components\\ui\\button.jsx"
+                  },
+                  {
+                    "name": "input.jsx",
+                    "size": 204,
+                    "modified": "2025-05-13T22:29:54.000Z",
+                    "path": "src\\components\\ui\\input.jsx"
+                  },
+                  {
+                    "name": "New Text Document.txt",
+                    "size": 0,
+                    "modified": "2025-05-13T22:32:14.000Z",
+                    "path": "src\\components\\ui\\New Text Document.txt"
+                  },
+                  {
+                    "name": "card.jsx",
+                    "size": 279,
+                    "modified": "2025-05-13T22:32:44.000Z",
+                    "path": "src\\components\\ui\\card.jsx"
+                  },
+                  {
+                    "name": "modal.jsx",
+                    "size": 434,
+                    "modified": "2025-05-14T00:50:52.000Z",
+                    "path": "src\\components\\ui\\modal.jsx"
+                  },
+                  {
+                    "name": "ConfirmationModal.jsx",
+                    "size": 2437,
+                    "modified": "2025-07-22T23:57:28.000Z",
+                    "path": "src\\components\\ui\\ConfirmationModal.jsx"
+                  },
+                  {
+                    "name": "checkbox.jsx",
+                    "size": 941,
+                    "modified": "2025-06-05T00:13:28.000Z",
+                    "path": "src\\components\\ui\\checkbox.jsx"
+                  },
+                  {
+                    "name": "use-toast.ts",
+                    "size": 3966,
+                    "modified": "2025-06-05T02:55:22.000Z",
+                    "path": "src\\components\\ui\\use-toast.ts"
+                  },
+                  {
+                    "name": "toast.tsx",
+                    "size": 4957,
+                    "modified": "2025-06-05T02:58:26.000Z",
+                    "path": "src\\components\\ui\\toast.tsx"
+                  },
+                  {
+                    "name": "toaster.tsx",
+                    "size": 784,
+                    "modified": "2025-06-05T02:57:00.000Z",
+                    "path": "src\\components\\ui\\toaster.tsx"
+                  },
+                  {
+                    "name": "toaster.jsx",
+                    "size": 812,
+                    "modified": "2025-06-05T02:57:08.000Z",
+                    "path": "src\\components\\ui\\toaster.jsx"
+                  },
+                  {
+                    "name": "toast.jsx",
+                    "size": 3982,
+                    "modified": "2025-06-05T02:58:48.000Z",
+                    "path": "src\\components\\ui\\toast.jsx"
+                  },
+                  {
+                    "name": "use-toast.jsx",
+                    "size": 3089,
+                    "modified": "2025-06-05T02:59:08.000Z",
+                    "path": "src\\components\\ui\\use-toast.jsx"
+                  },
+                  {
+                    "name": "dropdown-menu.jsx",
+                    "size": 1302,
+                    "modified": "2025-07-22T20:28:48.000Z",
+                    "path": "src\\components\\ui\\dropdown-menu.jsx"
+                  }
+                ],
+                "subdirs": []
+              },
+              {
+                "name": "admin",
+                "path": "src\\components\\admin",
+                "depth": 2,
+                "files": [
+                  {
+                    "name": "SuperAdminPanel.jsx",
+                    "size": 22205,
+                    "modified": "2025-07-24T01:06:38.000Z",
+                    "path": "src\\components\\admin\\SuperAdminPanel.jsx"
+                  },
+                  {
+                    "name": "RlsTestPage.jsx",
+                    "size": 7073,
+                    "modified": "2025-07-23T21:12:08.000Z",
+                    "path": "src\\components\\admin\\RlsTestPage.jsx"
+                  },
+                  {
+                    "name": "RlsTestEnvironment.jsx",
+                    "size": 21972,
+                    "modified": "2025-07-24T00:35:14.000Z",
+                    "path": "src\\components\\admin\\RlsTestEnvironment.jsx"
+                  }
+                ],
+                "subdirs": [
+                  {
+                    "name": "BackupManager",
+                    "path": "src\\components\\admin\\BackupManager",
+                    "depth": 3,
+                    "files": [
+                      {
+                        "name": "index.tsx",
+                        "size": 3195,
+                        "modified": "2025-06-18T06:51:50.000Z",
+                        "path": "src\\components\\admin\\BackupManager\\index.tsx"
+                      },
+                      {
+                        "name": "index.jsx",
+                        "size": 3403,
+                        "modified": "2025-07-23T00:31:48.000Z",
+                        "path": "src\\components\\admin\\BackupManager\\index.jsx"
+                      }
+                    ],
+                    "subdirs": []
+                  },
+                  {
+                    "name": "UsersAdmin",
+                    "path": "src\\components\\admin\\UsersAdmin",
+                    "depth": 3,
+                    "files": [
+                      {
+                        "name": "index.jsx",
+                        "size": 16325,
+                        "modified": "2025-07-22T20:46:12.000Z",
+                        "path": "src\\components\\admin\\UsersAdmin\\index.jsx"
+                      }
+                    ],
+                    "subdirs": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "utils",
+            "path": "src\\utils",
+            "depth": 1,
+            "files": [
+              {
+                "name": "imageCompression.js",
+                "size": 535,
+                "modified": "2025-05-19T20:10:24.000Z",
+                "path": "src\\utils\\imageCompression.js"
+              },
+              {
+                "name": "departmentCache.js",
+                "size": 1751,
+                "modified": "2025-05-26T01:56:06.000Z",
+                "path": "src\\utils\\departmentCache.js"
+              },
+              {
+                "name": "README.md",
+                "size": 3155,
+                "modified": "2025-05-26T03:44:04.000Z",
+                "path": "src\\utils\\README.md"
+              },
+              {
+                "name": "permissions.js",
+                "size": 14321,
+                "modified": "2025-07-23T00:32:16.000Z",
+                "path": "src\\utils\\permissions.js"
+              },
+              {
+                "name": "roleHelpers.js",
+                "size": 304,
+                "modified": "2025-05-26T05:19:48.000Z",
+                "path": "src\\utils\\roleHelpers.js"
+              },
+              {
+                "name": "validation.js",
+                "size": 73,
+                "modified": "2025-05-26T05:45:54.000Z",
+                "path": "src\\utils\\validation.js"
+              },
+              {
+                "name": "supabaseContext.tsx",
+                "size": 432,
+                "modified": "2025-06-05T01:27:46.000Z",
+                "path": "src\\utils\\supabaseContext.tsx"
+              },
+              {
+                "name": "projectSnapshot.js",
+                "size": 16022,
+                "modified": "2025-07-24T01:21:50.000Z",
+                "path": "src\\utils\\projectSnapshot.js"
+              },
+              {
+                "name": "projectAuditor.js",
+                "size": 22150,
+                "modified": "2025-07-24T01:26:02.000Z",
+                "path": "src\\utils\\projectAuditor.js"
+              }
+            ],
+            "subdirs": [
+              {
+                "name": "hooks",
+                "path": "src\\utils\\hooks",
+                "depth": 2,
+                "files": [
+                  {
+                    "name": "useRoleBasedUI.js",
+                    "size": 2282,
+                    "modified": "2025-07-22T20:28:48.000Z",
+                    "path": "src\\utils\\hooks\\useRoleBasedUI.js"
+                  },
+                  {
+                    "name": "useUserState.js",
+                    "size": 8230,
+                    "modified": "2025-07-23T05:52:42.000Z",
+                    "path": "src\\utils\\hooks\\useUserState.js"
+                  },
+                  {
+                    "name": "useSupabase.ts",
+                    "size": 299,
+                    "modified": "2025-06-05T01:27:32.000Z",
+                    "path": "src\\utils\\hooks\\useSupabase.ts"
+                  }
+                ],
+                "subdirs": []
+              }
+            ]
+          },
+          {
+            "name": "lib",
+            "path": "src\\lib",
+            "depth": 1,
+            "files": [
+              {
+                "name": "utils.js",
+                "size": 140,
+                "modified": "2025-06-05T00:26:26.000Z",
+                "path": "src\\lib\\utils.js"
+              },
+              {
+                "name": "utils.ts",
+                "size": 171,
+                "modified": "2025-06-05T02:56:06.000Z",
+                "path": "src\\lib\\utils.ts"
+              }
+            ],
+            "subdirs": []
+          },
+          {
+            "name": "services",
+            "path": "src\\services",
+            "depth": 1,
+            "files": [],
+            "subdirs": [
+              {
+                "name": "backup",
+                "path": "src\\services\\backup",
+                "depth": 2,
+                "files": [
+                  {
+                    "name": "backupService.ts",
+                    "size": 5332,
+                    "modified": "2025-06-05T01:26:44.000Z",
+                    "path": "src\\services\\backup\\backupService.ts"
+                  }
+                ],
+                "subdirs": []
+              }
+            ]
+          }
+        ]
+      },
+      "fileTypes": {
+        ".jsx": 31,
+        ".js": 71,
+        ".css": 1,
+        ".txt": 1,
+        ".ts": 4,
+        ".tsx": 5,
+        ".md": 3,
+        ".json": 3,
+        ".sql": 79
+      },
+      "largestFiles": [
+        {
+          "name": "progress-snapshot.json",
+          "path": "src\\progress-snapshot.json",
+          "size": 158091,
+          "sizeKB": 154
+        },
+        {
+          "name": "audit-results.json",
+          "path": "src\\audit-results.json",
+          "size": 147421,
+          "sizeKB": 144
+        },
+        {
+          "name": "App.jsx",
+          "path": "src\\App.jsx",
+          "size": 39658,
+          "sizeKB": 39
+        },
+        {
+          "name": "SuperAdminPanel.jsx",
+          "path": "src\\components\\admin\\SuperAdminPanel.jsx",
+          "size": 22205,
+          "sizeKB": 22
+        },
+        {
+          "name": "projectAuditor.js",
+          "path": "src\\utils\\projectAuditor.js",
+          "size": 22150,
+          "sizeKB": 22
+        },
+        {
+          "name": "RlsTestEnvironment.jsx",
+          "path": "src\\components\\admin\\RlsTestEnvironment.jsx",
+          "size": 21972,
+          "sizeKB": 21
+        },
+        {
+          "name": "fix_all_rls_policies_final.sql",
+          "path": "src\\fix_all_rls_policies_final.sql",
+          "size": 20940,
+          "sizeKB": 20
+        },
+        {
+          "name": "fix_all_rls_policies_corrected.sql",
+          "path": "src\\fix_all_rls_policies_corrected.sql",
+          "size": 20900,
+          "sizeKB": 20
+        },
+        {
+          "name": "fix_all_rls_policies.sql",
+          "path": "src\\fix_all_rls_policies.sql",
+          "size": 20771,
+          "sizeKB": 20
+        },
+        {
+          "name": "fix_all_rls_policies_simple.sql",
+          "path": "src\\fix_all_rls_policies_simple.sql",
+          "size": 20768,
+          "sizeKB": 20
+        }
+      ],
+      "recentChanges": [
+        {
+          "name": "version.json",
+          "path": "src\\version.json",
+          "modified": "2025-07-24T01:37:14.000Z"
+        },
+        {
+          "name": "progress-snapshot.json",
+          "path": "src\\progress-snapshot.json",
+          "modified": "2025-07-24T01:35:16.000Z"
+        },
+        {
+          "name": "audit-results.json",
+          "path": "src\\audit-results.json",
+          "modified": "2025-07-24T01:35:16.000Z"
+        },
+        {
+          "name": "projectAuditor.js",
+          "path": "src\\utils\\projectAuditor.js",
+          "modified": "2025-07-24T01:26:02.000Z"
+        },
+        {
+          "name": "projectSnapshot.js",
+          "path": "src\\utils\\projectSnapshot.js",
+          "modified": "2025-07-24T01:21:50.000Z"
+        },
+        {
+          "name": "App.jsx",
+          "path": "src\\App.jsx",
+          "modified": "2025-07-24T01:12:02.000Z"
+        },
+        {
+          "name": "SuperAdminPanel.jsx",
+          "path": "src\\components\\admin\\SuperAdminPanel.jsx",
+          "modified": "2025-07-24T01:06:38.000Z"
+        },
+        {
+          "name": "RlsTestEnvironment.jsx",
+          "path": "src\\components\\admin\\RlsTestEnvironment.jsx",
+          "modified": "2025-07-24T00:35:14.000Z"
+        },
+        {
+          "name": "check_user_departments_constraints.sql",
+          "path": "src\\check_user_departments_constraints.sql",
+          "modified": "2025-07-24T00:34:24.000Z"
+        },
+        {
+          "name": "check_user_departments_fk.sql",
+          "path": "src\\check_user_departments_fk.sql",
+          "modified": "2025-07-24T00:25:44.000Z"
+        }
+      ]
+    },
+    "orphanedFiles": [
+      {
+        "file": "src\\components\\Header.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\Controls.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\SOPCard.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\Wizard.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\SOPDetail.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\Layout.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\ui\\modal.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\ui\\toast.tsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\ui\\toast.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\ui\\dropdown-menu.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\Login.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\AdminPanel.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\InviteManager.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\InviteRedeemModal.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\DepartmentJoinOrCreateModal.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\admin\\BackupManager\\index.tsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\admin\\BackupManager\\index.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\admin\\UsersAdmin\\index.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\admin\\RlsTestPage.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\admin\\RlsTestEnvironment.jsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\components\\SuperAdminPanel.tsx",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\utils\\imageCompression.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\utils\\projectSnapshot.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\utils\\projectAuditor.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\dbCheck.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\dbMigrate.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\verifyMigration.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fixInviteCodes.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\checkInvites.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\runCleanup.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\applySQL.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\cleanupInvites.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\migrateDepartments.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\addMetadataColumn.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\migrateDepartmentsSafe.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\setupMigrationPrereqs.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\migrateDepartmentsSafeV2.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\checkExecSQL.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\testSupabase.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\testLogging.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\testNode.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\testDB.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\testError.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\checkDepartments.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\setupSQLFunctions.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\normalizeInviteRoles.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fixRemainingRoles.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\checkExactRoles.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\checkRoles.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\updateRolesById.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fixUserDepartments.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fixUserDepartmentsV2.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fixUserDepartmentsV3.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\checkTables.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fixInviteCodesV2.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fixRolesInDB.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fixRolesInDBV2.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fixRolesInDBV3.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\applyUpdatePolicy.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\applyTrigger.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\applyTriggerV2.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fixForeignKeys.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\createTestData.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\checkSops.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fixDepartments.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\runSql.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\cleanUserMemberships.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\cleanDepartments.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fixConstraints.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\setupDefaultDepartment.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\cleanUnknownDepartments.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\verifyFixes.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fixDuplicateDepartments.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\setupDatabaseSecurity.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\verifyDatabaseState.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fixDatabaseRelationships.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fixRLSPolicies.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fixRLSPoliciesNode.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\apply_user_profiles_rls.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\supabaseClientNode.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\apply_user_profiles_rls_simple.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\test_rls_policies.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\test_user_profiles_rls_comprehensive.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      },
+      {
+        "file": "src\\fix_test_record_creation.js",
+        "reason": "Not imported anywhere",
+        "suggestedAction": "Remove if unused or add proper imports"
+      }
+    ],
+    "importAnalysis": {
+      "unusedImports": [],
+      "missingImports": [],
+      "circularDependencies": [],
+      "totalImports": 277,
+      "message": "Import analysis completed (simplified version)"
+    },
+    "issues": [
+      {
+        "severity": "HIGH",
+        "category": "VERSION",
+        "message": "Version inconsistencies found: 1.0.0, 2.0.0",
+        "impact": "Build and deployment issues",
+        "details": {
+          "packageJson": "1.0.0",
+          "versionJson": "2.0.0",
+          "otherFiles": [
+            {
+              "file": "src\\version.json",
+              "version": "2.0.0"
+            }
+          ],
+          "isConsistent": false,
+          "inconsistencies": [
+            "1.0.0",
+            "2.0.0"
+          ],
+          "allVersions": [
+            "1.0.0",
+            "2.0.0",
+            "2.0.0"
+          ]
+        }
+      },
+      {
+        "severity": "MEDIUM",
+        "category": "DUPLICATES",
+        "message": "1 duplicate files found",
+        "impact": "Code confusion and maintenance issues",
+        "details": [
+          {
+            "name": "index.jsx",
+            "files": [
+              {
+                "name": "index.jsx",
+                "path": "src\\components\\admin\\BackupManager\\index.jsx",
+                "dir": "E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\src\\components\\admin\\BackupManager"
+              },
+              {
+                "name": "index.jsx",
+                "path": "src\\components\\admin\\UsersAdmin\\index.jsx",
+                "dir": "E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\src\\components\\admin\\UsersAdmin"
+              }
+            ],
+            "count": 2
+          }
+        ]
+      },
+      {
+        "severity": "MEDIUM",
+        "category": "TODOS",
+        "message": "166 TODO items found across 10 files",
+        "impact": "Incomplete features and technical debt",
+        "details": [
+          {
+            "file": "src\\App.jsx",
+            "todos": [
+              {
+                "type": "TODO",
+                "message": "Implement suggestion functionality",
+                "line": 728,
+                "context": "// TODO: Implement suggestion functionality"
+              },
+              {
+                "type": "BUG",
+                "message": "admin view mode changes",
+                "line": 54,
+                "context": "// Debug admin view mode changes"
+              },
+              {
+                "type": "BUG",
+                "message": "State,",
+                "line": 72,
+                "context": "getDebugState,"
+              },
+              {
+                "type": "BUG",
+                "message": "Logger",
+                "line": 87,
+                "context": "// Enhanced Debug Logger"
+              },
+              {
+                "type": "BUG",
+                "message": "= useCallback((location, data, type = 'info') => {",
+                "line": 88,
+                "context": "const logStateDebug = useCallback((location, data, type = 'info') => {"
+              },
+              {
+                "type": "BUG",
+                "message": "Info = {",
+                "line": 89,
+                "context": "const debugInfo = {"
+              },
+              {
+                "type": "BUG",
+                "message": "${location}]`, debugInfo);",
+                "line": 107,
+                "context": "console.log(`[App Debug ${location}]`, debugInfo);"
+              },
+              {
+                "type": "BUG",
+                "message": "History) {",
+                "line": 109,
+                "context": "if (!window._appDebugHistory) {"
+              },
+              {
+                "type": "BUG",
+                "message": "History = [];",
+                "line": 110,
+                "context": "window._appDebugHistory = [];"
+              },
+              {
+                "type": "BUG",
+                "message": "History.push(debugInfo);",
+                "line": 112,
+                "context": "window._appDebugHistory.push(debugInfo);"
+              },
+              {
+                "type": "BUG",
+                "message": "('setViewMode Entry', {",
+                "line": 151,
+                "context": "logStateDebug('setViewMode Entry', {"
+              },
+              {
+                "type": "BUG",
+                "message": "('Skipping transition - already in requested panel', {",
+                "line": 162,
+                "context": "logStateDebug('Skipping transition - already in requested panel', {"
+              },
+              {
+                "type": "BUG",
+                "message": "('SuperAdmin Access Denied', {",
+                "line": 172,
+                "context": "logStateDebug('SuperAdmin Access Denied', {"
+              },
+              {
+                "type": "BUG",
+                "message": "('Setting SuperAdmin Panel', {",
+                "line": 180,
+                "context": "logStateDebug('Setting SuperAdmin Panel', {"
+              },
+              {
+                "type": "BUG",
+                "message": "('SuperAdmin Panel Set', {",
+                "line": 190,
+                "context": "logStateDebug('SuperAdmin Panel Set', {"
+              },
+              {
+                "type": "BUG",
+                "message": "('Setting Regular Panel', {",
+                "line": 197,
+                "context": "logStateDebug('Setting Regular Panel', {"
+              },
+              {
+                "type": "BUG",
+                "message": "('Panel Set Complete', {",
+                "line": 208,
+                "context": "logStateDebug('Panel Set Complete', {"
+              },
+              {
+                "type": "BUG",
+                "message": "('setViewMode Error', {",
+                "line": 213,
+                "context": "logStateDebug('setViewMode Error', {"
+              },
+              {
+                "type": "BUG",
+                "message": "]);",
+                "line": 224,
+                "context": "logStateDebug"
+              },
+              {
+                "type": "BUG",
+                "message": "('Panel Change Effect', {",
+                "line": 230,
+                "context": "logStateDebug('Panel Change Effect', {"
+              },
+              {
+                "type": "BUG",
+                "message": "]);",
+                "line": 241,
+                "context": "}, [activePanel, getCurrentRole, viewRole, userIsSuperAdmin, logStateDebug]);"
+              },
+              {
+                "type": "BUG",
+                "message": "] handleNewSop called');",
+                "line": 276,
+                "context": "console.log('[App Debug] handleNewSop called');"
+              },
+              {
+                "type": "BUG",
+                "message": "] New SOP initialized:', newSop);",
+                "line": 300,
+                "context": "console.log('[App Debug] New SOP initialized:', newSop);"
+              },
+              {
+                "type": "BUG",
+                "message": "Mode Setup",
+                "line": 312,
+                "context": "// 🔄 Debug Mode Setup"
+              },
+              {
+                "type": "BUG",
+                "message": "State = () => {",
+                "line": 315,
+                "context": "window.debugState = () => {"
+              },
+              {
+                "type": "BUG",
+                "message": "State();",
+                "line": 316,
+                "context": "const state = getDebugState();"
+              },
+              {
+                "type": "BUG",
+                "message": "State();",
+                "line": 324,
+                "context": "return window.debugState();"
+              },
+              {
+                "type": "BUG",
+                "message": "State, changeRole]);",
+                "line": 335,
+                "context": "}, [getDebugState, changeRole]);"
+              },
+              {
+                "type": "BUG",
+                "message": "] handleSaveSop called');",
+                "line": 450,
+                "context": "console.log('[App Debug] handleSaveSop called');"
+              },
+              {
+                "type": "BUG",
+                "message": "] Saving SOP:', draftSop);",
+                "line": 456,
+                "context": "console.log('[App Debug] Saving SOP:', draftSop);"
+              },
+              {
+                "type": "BUG",
+                "message": "] Current user:', userProfile);",
+                "line": 457,
+                "context": "console.log('[App Debug] Current user:', userProfile);"
+              },
+              {
+                "type": "BUG",
+                "message": "] Current department:', selectedDepartmentId);",
+                "line": 458,
+                "context": "console.log('[App Debug] Current department:', selectedDepartmentId);"
+              },
+              {
+                "type": "BUG",
+                "message": "] Permissions:', userProfile?.permissions);",
+                "line": 459,
+                "context": "console.log('[App Debug] Permissions:', userProfile?.permissions);"
+              },
+              {
+                "type": "BUG",
+                "message": "] Error updating SOP:', updateError);",
+                "line": 480,
+                "context": "console.error('[App Debug] Error updating SOP:', updateError);"
+              },
+              {
+                "type": "BUG",
+                "message": "] Creating new SOP with id:', sopId);",
+                "line": 538,
+                "context": "console.log('[App Debug] Creating new SOP with id:', sopId);"
+              },
+              {
+                "type": "BUG",
+                "message": "] Error creating SOP:', sopError);",
+                "line": 551,
+                "context": "console.error('[App Debug] Error creating SOP:', sopError);"
+              },
+              {
+                "type": "BUG",
+                "message": "] SOP insert response:', sopInsertData);",
+                "line": 555,
+                "context": "console.log('[App Debug] SOP insert response:', sopInsertData);"
+              },
+              {
+                "type": "BUG",
+                "message": "] Error inserting step:', stepError);",
+                "line": 562,
+                "context": "console.error('[App Debug] Error inserting step:', stepError);"
+              },
+              {
+                "type": "BUG",
+                "message": "] Step insert response:', stepInsertData);",
+                "line": 566,
+                "context": "console.log('[App Debug] Step insert response:', stepInsertData);"
+              },
+              {
+                "type": "BUG",
+                "message": "] Exception in handleSaveSop:', error);",
+                "line": 582,
+                "context": "console.error('[App Debug] Exception in handleSaveSop:', error);"
+              },
+              {
+                "type": "BUG",
+                "message": "] handleSopSelect called for SOP:', sop);",
+                "line": 594,
+                "context": "console.log('[App Debug] handleSopSelect called for SOP:', sop);"
+              },
+              {
+                "type": "BUG",
+                "message": "] Error fetching SOP steps:', error);",
+                "line": 604,
+                "context": "console.error('[App Debug] Error fetching SOP steps:', error);"
+              },
+              {
+                "type": "BUG",
+                "message": "] Fetched SOP steps:', steps);",
+                "line": 606,
+                "context": "console.log('[App Debug] Fetched SOP steps:', steps);"
+              },
+              {
+                "type": "BUG",
+                "message": "] Exception in handleSopSelect:', err);",
+                "line": 610,
+                "context": "console.error('[App Debug] Exception in handleSopSelect:', err);"
+              },
+              {
+                "type": "BUG",
+                "message": "] Setting panel to detail');",
+                "line": 614,
+                "context": "console.log('[App Debug] Setting panel to detail');"
+              },
+              {
+                "type": "BUG",
+                "message": "] window.location.hash before:', window.location.hash);",
+                "line": 616,
+                "context": "console.log('[App Debug] window.location.hash before:', window.location.hash);"
+              },
+              {
+                "type": "BUG",
+                "message": "] window.location.hash after:', window.location.hash);",
+                "line": 618,
+                "context": "console.log('[App Debug] window.location.hash after:', window.location.hash);"
+              },
+              {
+                "type": "BUG",
+                "message": "Info - Only visible in development */}",
+                "line": 1094,
+                "context": "{/* Debug Info - Only visible in development */}"
+              },
+              {
+                "type": "BUG",
+                "message": "log",
+                "line": 1127,
+                "context": "// Wrap every setActivePanel call with a debug log"
+              },
+              {
+                "type": "BUG",
+                "message": "SetActivePanel = (panel) => {",
+                "line": 1128,
+                "context": "const debugSetActivePanel = (panel) => {"
+              },
+              {
+                "type": "BUG",
+                "message": "setActivePanel] Setting panel to', panel, 'hash:', window.location.hash);",
+                "line": 1129,
+                "context": "console.log('[App Debug setActivePanel] Setting panel to', panel, 'hash:', window.location.hash);"
+              },
+              {
+                "type": "BUG",
+                "message": "SetActivePanel(panel)",
+                "line": 1133,
+                "context": "// Replace all setActivePanel(panel) with debugSetActivePanel(panel)"
+              },
+              {
+                "type": "NOTE",
+                "message": "This function is not used in the root App component",
+                "line": 1130,
+                "context": "// Note: This function is not used in the root App component"
+              }
+            ]
+          },
+          {
+            "file": "src\\components\\Header.jsx",
+            "todos": [
+              {
+                "type": "BUG",
+                "message": "logs to prevent render loop",
+                "line": 32,
+                "context": "// Remove visual confirmation and excessive debug logs to prevent render loop"
+              },
+              {
+                "type": "BUG",
+                "message": "log for all props (log only once per mount)",
+                "line": 34,
+                "context": "// Top-level debug log for all props (log only once per mount)"
+              },
+              {
+                "type": "BUG",
+                "message": "] Render', { activePanel, isSuperAdminProp, onNewSopType: typeof onNewSop, userRole, viewRole });",
+                "line": 36,
+                "context": "console.log('[Header Debug] Render', { activePanel, isSuperAdminProp, onNewSopType: typeof onNewSop, userRole, viewRole });"
+              },
+              {
+                "type": "BUG",
+                "message": "] canShowFeature CREATE_SOP:', canShowFeature(FEATURE_PERMISSIONS.CREATE_SOP));",
+                "line": 37,
+                "context": "console.log('[Header Debug] canShowFeature CREATE_SOP:', canShowFeature(FEATURE_PERMISSIONS.CREATE_SOP));"
+              },
+              {
+                "type": "BUG",
+                "message": "canShowFeature for CREATE_SOP",
+                "line": 56,
+                "context": "// Debug canShowFeature for CREATE_SOP"
+              },
+              {
+                "type": "BUG",
+                "message": "] canShowFeature CREATE_SOP:', canShowFeature(FEATURE_PERMISSIONS.CREATE_SOP));",
+                "line": 57,
+                "context": "// console.log('[Header Debug] canShowFeature CREATE_SOP:', canShowFeature(FEATURE_PERMISSIONS.CREATE_SOP));"
+              }
+            ]
+          },
+          {
+            "file": "src\\components\\SOPDetail.jsx",
+            "todos": [
+              {
+                "type": "BUG",
+                "message": "logging",
+                "line": 48,
+                "context": "// Debug logging"
+              },
+              {
+                "type": "BUG",
+                "message": "]', {",
+                "line": 49,
+                "context": "console.log('[SOPDetail Debug]', {"
+              },
+              {
+                "type": "BUG",
+                "message": "] Edit button condition:', { isDeleted, canShowEdit: canShowFeature(FEATURE_PERMISSIONS.EDIT_SOP) })}",
+                "line": 79,
+                "context": "{console.log('[SOPDetail Debug] Edit button condition:', { isDeleted, canShowEdit: canShowFeature(FEATURE_PERMISSIONS.EDIT_SOP) })}"
+              },
+              {
+                "type": "BUG",
+                "message": "] Suggest button condition:', { isDeleted, canShowSuggest: canShowFeature(FEATURE_PERMISSIONS.SUGGEST_CHANGES) })}",
+                "line": 94,
+                "context": "{console.log('[SOPDetail Debug] Suggest button condition:', { isDeleted, canShowSuggest: canShowFeature(FEATURE_PERMISSIONS.SUGGEST_CHANGES) })}"
+              }
+            ]
+          },
+          {
+            "file": "src\\components\\DepartmentJoinOrCreateModal.jsx",
+            "todos": [
+              {
+                "type": "BUG",
+                "message": "ging",
+                "line": 58,
+                "context": "// Log the current user's email for debugging"
+              }
+            ]
+          },
+          {
+            "file": "src\\components\\admin\\RlsTestEnvironment.jsx",
+            "todos": [
+              {
+                "type": "BUG",
+                "message": "{ testRecord: uniqueRecord, tableName }",
+                "line": 94,
+                "context": "debug: { testRecord: uniqueRecord, tableName }"
+              },
+              {
+                "type": "BUG",
+                "message": "{ testRecord: uniqueRecord, tableName, error: err }",
+                "line": 113,
+                "context": "debug: { testRecord: uniqueRecord, tableName, error: err }"
+              },
+              {
+                "type": "BUG",
+                "message": "{ firstRecord, idField }",
+                "line": 156,
+                "context": "debug: { firstRecord, idField }"
+              },
+              {
+                "type": "BUG",
+                "message": "{ idField, recordId, updateData }",
+                "line": 171,
+                "context": "debug: { idField, recordId, updateData }"
+              },
+              {
+                "type": "BUG",
+                "message": "{ tableName, existingData }",
+                "line": 179,
+                "context": "debug: { tableName, existingData }"
+              },
+              {
+                "type": "BUG",
+                "message": "{ tableName, error: err }",
+                "line": 187,
+                "context": "debug: { tableName, error: err }"
+              },
+              {
+                "type": "BUG",
+                "message": "{ idField, recordId, tableName }",
+                "line": 244,
+                "context": "debug: { idField, recordId, tableName }"
+              },
+              {
+                "type": "BUG",
+                "message": "{ idField, insertData, tableName }",
+                "line": 251,
+                "context": "debug: { idField, insertData, tableName }"
+              },
+              {
+                "type": "BUG",
+                "message": "{ insertData, tableName, uniqueRecord }",
+                "line": 259,
+                "context": "debug: { insertData, tableName, uniqueRecord }"
+              },
+              {
+                "type": "BUG",
+                "message": "{ tableName, uniqueRecord, error: err }",
+                "line": 267,
+                "context": "debug: { tableName, uniqueRecord, error: err }"
+              },
+              {
+                "type": "BUG",
+                "message": "ging info",
+                "line": 476,
+                "context": "// Create enhanced results object with additional debugging info"
+              },
+              {
+                "type": "BUG",
+                "message": "ging info',",
+                "line": 502,
+                "context": "description: 'Test results copied to clipboard with enhanced debugging info',"
+              },
+              {
+                "type": "BUG",
+                "message": "ging assistance.",
+                "line": 608,
+                "context": "Paste the copied results in the chat for debugging assistance."
+              },
+              {
+                "type": "BUG",
+                "message": "ging info are included in the copied data.",
+                "line": 609,
+                "context": "Console logs and debugging info are included in the copied data."
+              }
+            ]
+          },
+          {
+            "file": "src\\components\\SuperAdminPanel.tsx",
+            "todos": [
+              {
+                "type": "BUG",
+                "message": "Logger",
+                "line": 10,
+                "context": "// Enhanced Debug Logger"
+              },
+              {
+                "type": "BUG",
+                "message": "= (location: string, data: any, type: 'info' | 'warning' | 'error' | 'function' | 'effect' | 'success' = 'info') => {",
+                "line": 11,
+                "context": "const logDebug = (location: string, data: any, type: 'info' | 'warning' | 'error' | 'function' | 'effect' | 'success' = 'info') => {"
+              },
+              {
+                "type": "BUG",
+                "message": "Info = {",
+                "line": 12,
+                "context": "const debugInfo = {"
+              },
+              {
+                "type": "BUG",
+                "message": "${location}]`, debugInfo);",
+                "line": 24,
+                "context": "console.log(`[SuperAdminPanel Debug ${location}]`, debugInfo);"
+              },
+              {
+                "type": "BUG",
+                "message": "history for tracing",
+                "line": 26,
+                "context": "// Log to debug history for tracing"
+              },
+              {
+                "type": "BUG",
+                "message": "History) {",
+                "line": 27,
+                "context": "if (!(window as any)._superAdminDebugHistory) {"
+              },
+              {
+                "type": "BUG",
+                "message": "History = [];",
+                "line": 28,
+                "context": "(window as any)._superAdminDebugHistory = [];"
+              },
+              {
+                "type": "BUG",
+                "message": "History.push(debugInfo);",
+                "line": 30,
+                "context": "(window as any)._superAdminDebugHistory.push(debugInfo);"
+              },
+              {
+                "type": "BUG",
+                "message": "utility to trace state change history",
+                "line": 33,
+                "context": "// Debug utility to trace state change history"
+              },
+              {
+                "type": "BUG",
+                "message": "History = () => {",
+                "line": 34,
+                "context": "const getDebugHistory = () => {"
+              },
+              {
+                "type": "BUG",
+                "message": "History || [];",
+                "line": 35,
+                "context": "return (window as any)._superAdminDebugHistory || [];"
+              },
+              {
+                "type": "BUG",
+                "message": "history",
+                "line": 38,
+                "context": "// Clear debug history"
+              },
+              {
+                "type": "BUG",
+                "message": "History = () => {",
+                "line": 39,
+                "context": "const clearDebugHistory = () => {"
+              },
+              {
+                "type": "BUG",
+                "message": "History = [];",
+                "line": 40,
+                "context": "(window as any)._superAdminDebugHistory = [];"
+              },
+              {
+                "type": "BUG",
+                "message": "utilities to window for console access",
+                "line": 43,
+                "context": "// Add debug utilities to window for console access"
+              },
+              {
+                "type": "BUG",
+                "message": "= {",
+                "line": 45,
+                "context": "(window as any)._superAdminDebug = {"
+              },
+              {
+                "type": "BUG",
+                "message": "History,",
+                "line": 46,
+                "context": "getHistory: getDebugHistory,"
+              },
+              {
+                "type": "BUG",
+                "message": "History,",
+                "line": 47,
+                "context": "clearHistory: clearDebugHistory,"
+              },
+              {
+                "type": "BUG",
+                "message": "ging",
+                "line": 56,
+                "context": "// Section change handler with enhanced debugging"
+              },
+              {
+                "type": "BUG",
+                "message": "('handleSectionChange Entry', {",
+                "line": 59,
+                "context": "logDebug('handleSectionChange Entry', {"
+              },
+              {
+                "type": "BUG",
+                "message": "('Section Change Skipped', {",
+                "line": 66,
+                "context": "logDebug('Section Change Skipped', {"
+              },
+              {
+                "type": "BUG",
+                "message": "('Changing Section', {",
+                "line": 73,
+                "context": "logDebug('Changing Section', {"
+              },
+              {
+                "type": "BUG",
+                "message": "('Section Change Complete', {",
+                "line": 80,
+                "context": "logDebug('Section Change Complete', {"
+              },
+              {
+                "type": "BUG",
+                "message": "('Section Change Error', {",
+                "line": 84,
+                "context": "logDebug('Section Change Error', {"
+              },
+              {
+                "type": "BUG",
+                "message": "('Section Change Effect', {",
+                "line": 94,
+                "context": "logDebug('Section Change Effect', {"
+              },
+              {
+                "type": "BUG",
+                "message": "('Initial Section Setup', {",
+                "line": 104,
+                "context": "logDebug('Initial Section Setup', {"
+              },
+              {
+                "type": "BUG",
+                "message": "('Default Section Set', {",
+                "line": 112,
+                "context": "logDebug('Default Section Set', {"
+              },
+              {
+                "type": "BUG",
+                "message": "('Initial Setup Error', {",
+                "line": 117,
+                "context": "logDebug('Initial Setup Error', {"
+              }
+            ]
+          },
+          {
+            "file": "src\\utils\\permissions.js",
+            "todos": [
+              {
+                "type": "BUG",
+                "message": "ging and verifying the permission system",
+                "line": 402,
+                "context": "* This function is used for debugging and verifying the permission system"
+              }
+            ]
+          },
+          {
+            "file": "src\\utils\\hooks\\useUserState.js",
+            "todos": [
+              {
+                "type": "BUG",
+                "message": "state",
+                "line": 236,
+                "context": "// Get debug state"
+              },
+              {
+                "type": "BUG",
+                "message": "State = useCallback(() => ({",
+                "line": 237,
+                "context": "const getDebugState = useCallback(() => ({"
+              },
+              {
+                "type": "BUG",
+                "message": "State,",
+                "line": 262,
+                "context": "getDebugState,"
+              }
+            ]
+          },
+          {
+            "file": "src\\utils\\projectSnapshot.js",
+            "todos": [
+              {
+                "type": "TODO",
+                "message": "s, build status",
+                "line": 13,
+                "context": "* @returns {Object} Audit results including versions, duplicates, TODOs, build status"
+              },
+              {
+                "type": "TODO",
+                "message": "Items: await scanForTodos(),",
+                "line": 22,
+                "context": "todoItems: await scanForTodos(),"
+              },
+              {
+                "type": "TODO",
+                "message": ", FIXME, and BUG comments",
+                "line": 137,
+                "context": "* Scans for TODO, FIXME, and BUG comments"
+              },
+              {
+                "type": "TODO",
+                "message": "s() {",
+                "line": 139,
+                "context": "async function scanForTodos() {"
+              },
+              {
+                "type": "TODO",
+                "message": "s = [];",
+                "line": 140,
+                "context": "const todos = [];"
+              },
+              {
+                "type": "TODO",
+                "message": "s.push({",
+                "line": 145,
+                "context": "todos.push({"
+              },
+              {
+                "type": "TODO",
+                "message": "scanning requires server-side implementation',",
+                "line": 147,
+                "context": "message: 'TODO scanning requires server-side implementation',"
+              },
+              {
+                "type": "TODO",
+                "message": "s:', error);",
+                "line": 152,
+                "context": "console.error('Error scanning TODOs:', error);"
+              },
+              {
+                "type": "TODO",
+                "message": "s;",
+                "line": 155,
+                "context": "return todos;"
+              },
+              {
+                "type": "TODO",
+                "message": "items",
+                "line": 184,
+                "context": "// TODO items"
+              },
+              {
+                "type": "TODO",
+                "message": "Items.length > 0) {",
+                "line": 185,
+                "context": "if (audit.todoItems.length > 0) {"
+              },
+              {
+                "type": "TODO",
+                "message": "S',",
+                "line": 188,
+                "context": "category: 'TODOS',"
+              },
+              {
+                "type": "TODO",
+                "message": "Items.length} TODO items found`,",
+                "line": 189,
+                "context": "message: `${audit.todoItems.length} TODO items found`,"
+              },
+              {
+                "type": "TODO",
+                "message": "items before major features',",
+                "line": 261,
+                "context": "'Address TODO items before major features',"
+              },
+              {
+                "type": "TODO",
+                "message": "items before considering features complete',",
+                "line": 325,
+                "context": "'Address TODO items before considering features complete',"
+              },
+              {
+                "type": "TODO",
+                "message": "S: 'Complete TODO items or document why they remain',",
+                "line": 452,
+                "context": "TODOS: 'Complete TODO items or document why they remain',"
+              },
+              {
+                "type": "FIXME",
+                "message": ", and BUG comments",
+                "line": 137,
+                "context": "* Scans for TODO, FIXME, and BUG comments"
+              },
+              {
+                "type": "BUG",
+                "message": "comments",
+                "line": 137,
+                "context": "* Scans for TODO, FIXME, and BUG comments"
+              }
+            ]
+          },
+          {
+            "file": "src\\utils\\projectAuditor.js",
+            "todos": [
+              {
+                "type": "TODO",
+                "message": "/FIXME items in code",
+                "line": 7,
+                "context": "* - TODO/FIXME items in code"
+              },
+              {
+                "type": "TODO",
+                "message": "Items: [],",
+                "line": 30,
+                "context": "todoItems: [],"
+              },
+              {
+                "type": "TODO",
+                "message": "/FIXME Scan",
+                "line": 50,
+                "context": "// 3. TODO/FIXME Scan"
+              },
+              {
+                "type": "TODO",
+                "message": "items...');",
+                "line": 51,
+                "context": "console.log('📝 Scanning for TODO items...');"
+              },
+              {
+                "type": "TODO",
+                "message": "Items = await scanForTodos();",
+                "line": 52,
+                "context": "audit.todoItems = await scanForTodos();"
+              },
+              {
+                "type": "TODO",
+                "message": ", FIXME, and BUG comments",
+                "line": 216,
+                "context": "* Scans for TODO, FIXME, and BUG comments"
+              },
+              {
+                "type": "TODO",
+                "message": "s() {",
+                "line": 218,
+                "context": "async function scanForTodos() {"
+              },
+              {
+                "type": "TODO",
+                "message": "s = [];",
+                "line": 219,
+                "context": "const todos = [];"
+              },
+              {
+                "type": "TODO",
+                "message": "', regex: /TODO[:\\s]*([^\\n]*)/gi },",
+                "line": 224,
+                "context": "{ type: 'TODO', regex: /TODO[:\\s]*([^\\n]*)/gi },"
+              },
+              {
+                "type": "TODO",
+                "message": "s = [];",
+                "line": 234,
+                "context": "const fileTodos = [];"
+              },
+              {
+                "type": "TODO",
+                "message": "s.push({",
+                "line": 239,
+                "context": "fileTodos.push({"
+              },
+              {
+                "type": "TODO",
+                "message": "s.length > 0) {",
+                "line": 248,
+                "context": "if (fileTodos.length > 0) {"
+              },
+              {
+                "type": "TODO",
+                "message": "s.push({",
+                "line": 249,
+                "context": "todos.push({"
+              },
+              {
+                "type": "TODO",
+                "message": "s: fileTodos",
+                "line": 251,
+                "context": "todos: fileTodos"
+              },
+              {
+                "type": "TODO",
+                "message": "s:', error);",
+                "line": 276,
+                "context": "console.error('Error scanning TODOs:', error);"
+              },
+              {
+                "type": "TODO",
+                "message": "s;",
+                "line": 279,
+                "context": "return todos;"
+              },
+              {
+                "type": "TODO",
+                "message": "items",
+                "line": 597,
+                "context": "// TODO items"
+              },
+              {
+                "type": "TODO",
+                "message": "s = audit.todoItems.reduce((sum, file) => sum + file.todos.length, 0);",
+                "line": 598,
+                "context": "const totalTodos = audit.todoItems.reduce((sum, file) => sum + file.todos.length, 0);"
+              },
+              {
+                "type": "TODO",
+                "message": "s > 0) {",
+                "line": 599,
+                "context": "if (totalTodos > 0) {"
+              },
+              {
+                "type": "TODO",
+                "message": "S',",
+                "line": 602,
+                "context": "category: 'TODOS',"
+              },
+              {
+                "type": "TODO",
+                "message": "s} TODO items found across ${audit.todoItems.length} files`,",
+                "line": 603,
+                "context": "message: `${totalTodos} TODO items found across ${audit.todoItems.length} files`,"
+              },
+              {
+                "type": "TODO",
+                "message": "Items",
+                "line": 605,
+                "context": "details: audit.todoItems"
+              },
+              {
+                "type": "TODO",
+                "message": "items",
+                "line": 675,
+                "context": "// TODO items"
+              },
+              {
+                "type": "TODO",
+                "message": "s = audit.todoItems.reduce((sum, file) => sum + file.todos.length, 0);",
+                "line": 676,
+                "context": "const totalTodos = audit.todoItems.reduce((sum, file) => sum + file.todos.length, 0);"
+              },
+              {
+                "type": "TODO",
+                "message": "s > 0) {",
+                "line": 677,
+                "context": "if (totalTodos > 0) {"
+              },
+              {
+                "type": "TODO",
+                "message": "S',",
+                "line": 680,
+                "context": "category: 'TODOS',"
+              },
+              {
+                "type": "TODO",
+                "message": "items',",
+                "line": 681,
+                "context": "action: 'Address TODO items',"
+              },
+              {
+                "type": "TODO",
+                "message": "items',",
+                "line": 682,
+                "context": "command: 'Review and complete TODO items',"
+              },
+              {
+                "type": "TODO",
+                "message": "s} TODO items or document why they remain`",
+                "line": 683,
+                "context": "description: `Complete ${totalTodos} TODO items or document why they remain`"
+              },
+              {
+                "type": "TODO",
+                "message": "s,",
+                "line": 758,
+                "context": "scanForTodos,"
+              },
+              {
+                "type": "FIXME",
+                "message": "items in code",
+                "line": 7,
+                "context": "* - TODO/FIXME items in code"
+              },
+              {
+                "type": "FIXME",
+                "message": "Scan",
+                "line": 50,
+                "context": "// 3. TODO/FIXME Scan"
+              },
+              {
+                "type": "FIXME",
+                "message": ", and BUG comments",
+                "line": 216,
+                "context": "* Scans for TODO, FIXME, and BUG comments"
+              },
+              {
+                "type": "FIXME",
+                "message": "', regex: /FIXME[:\\s]*([^\\n]*)/gi },",
+                "line": 225,
+                "context": "{ type: 'FIXME', regex: /FIXME[:\\s]*([^\\n]*)/gi },"
+              },
+              {
+                "type": "BUG",
+                "message": "comments",
+                "line": 216,
+                "context": "* Scans for TODO, FIXME, and BUG comments"
+              },
+              {
+                "type": "BUG",
+                "message": "', regex: /BUG[:\\s]*([^\\n]*)/gi },",
+                "line": 226,
+                "context": "{ type: 'BUG', regex: /BUG[:\\s]*([^\\n]*)/gi },"
+              },
+              {
+                "type": "HACK",
+                "message": "', regex: /HACK[:\\s]*([^\\n]*)/gi },",
+                "line": 227,
+                "context": "{ type: 'HACK', regex: /HACK[:\\s]*([^\\n]*)/gi },"
+              },
+              {
+                "type": "NOTE",
+                "message": "', regex: /NOTE[:\\s]*([^\\n]*)/gi }",
+                "line": 228,
+                "context": "{ type: 'NOTE', regex: /NOTE[:\\s]*([^\\n]*)/gi }"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "LOW",
+        "category": "BUILD",
+        "message": "2 build warnings found",
+        "impact": "Performance or compatibility issues",
+        "details": [
+          {
+            "type": "BUNDLE_SIZE",
+            "message": "(!) Some chunks are larger than 500 kB after minification. Consider:",
+            "severity": "warning"
+          },
+          {
+            "type": "BUILD_WARNING",
+            "message": "- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\u001b[39m",
+            "severity": "warning"
+          }
+        ]
+      },
+      {
+        "severity": "LOW",
+        "category": "ORPHANED",
+        "message": "84 orphaned files found",
+        "impact": "Code bloat and confusion",
+        "details": [
+          {
+            "file": "src\\components\\Header.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\Controls.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\SOPCard.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\Wizard.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\SOPDetail.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\Layout.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\ui\\modal.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\ui\\toast.tsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\ui\\toast.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\ui\\dropdown-menu.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\Login.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\AdminPanel.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\InviteManager.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\InviteRedeemModal.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\DepartmentJoinOrCreateModal.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\admin\\BackupManager\\index.tsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\admin\\BackupManager\\index.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\admin\\UsersAdmin\\index.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\admin\\RlsTestPage.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\admin\\RlsTestEnvironment.jsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\components\\SuperAdminPanel.tsx",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\utils\\imageCompression.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\utils\\projectSnapshot.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\utils\\projectAuditor.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\dbCheck.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\dbMigrate.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\verifyMigration.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fixInviteCodes.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\checkInvites.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\runCleanup.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\applySQL.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\cleanupInvites.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\migrateDepartments.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\addMetadataColumn.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\migrateDepartmentsSafe.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\setupMigrationPrereqs.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\migrateDepartmentsSafeV2.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\checkExecSQL.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\testSupabase.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\testLogging.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\testNode.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\testDB.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\testError.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\checkDepartments.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\setupSQLFunctions.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\normalizeInviteRoles.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fixRemainingRoles.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\checkExactRoles.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\checkRoles.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\updateRolesById.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fixUserDepartments.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fixUserDepartmentsV2.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fixUserDepartmentsV3.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\checkTables.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fixInviteCodesV2.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fixRolesInDB.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fixRolesInDBV2.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fixRolesInDBV3.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\applyUpdatePolicy.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\applyTrigger.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\applyTriggerV2.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fixForeignKeys.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\createTestData.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\checkSops.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fixDepartments.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\runSql.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\cleanUserMemberships.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\cleanDepartments.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fixConstraints.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\setupDefaultDepartment.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\cleanUnknownDepartments.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\verifyFixes.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fixDuplicateDepartments.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\setupDatabaseSecurity.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\verifyDatabaseState.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fixDatabaseRelationships.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fixRLSPolicies.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fixRLSPoliciesNode.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\apply_user_profiles_rls.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\supabaseClientNode.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\apply_user_profiles_rls_simple.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\test_rls_policies.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\test_user_profiles_rls_comprehensive.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          },
+          {
+            "file": "src\\fix_test_record_creation.js",
+            "reason": "Not imported anywhere",
+            "suggestedAction": "Remove if unused or add proper imports"
+          }
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "priority": "HIGH",
+        "category": "VERSION",
+        "action": "Synchronize all version files",
+        "command": "npm run bump-version",
+        "description": "Use the bumpVersion.cjs script to update all version files consistently"
+      },
+      {
+        "priority": "MEDIUM",
+        "category": "DUPLICATES",
+        "action": "Remove duplicate files",
+        "command": "Review and remove unused duplicate files",
+        "description": "Identify which duplicate files are actually used and remove the others"
+      },
+      {
+        "priority": "MEDIUM",
+        "category": "TODOS",
+        "action": "Address TODO items",
+        "command": "Review and complete TODO items",
+        "description": "Complete 166 TODO items or document why they remain"
+      },
+      {
+        "priority": "LOW",
+        "category": "ORPHANED",
+        "action": "Clean up orphaned files",
+        "command": "Remove unused files",
+        "description": "Remove orphaned files or add proper imports"
+      }
+    ]
+  }
+}

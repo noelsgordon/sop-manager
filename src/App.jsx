@@ -31,6 +31,7 @@ import { Toaster } from './components/ui/toaster';
 import { useRoleBasedUI } from './utils/hooks/useRoleBasedUI';
 import { toast } from './components/ui/use-toast';
 import RlsTestPage from "./components/admin/RlsTestPage.jsx";
+import RlsTestEnvironment from "./components/admin/RlsTestEnvironment.jsx";
 
 function MainApp({ session, setSession }) {
   // 📄 Initialize all state first
@@ -973,6 +974,14 @@ function MainApp({ session, setSession }) {
         {activePanel === "rlsTest" && userIsSuperAdmin && (
           <div className="w-full" style={{ gridColumn: '1 / -1', width: '100%' }}>
             <RlsTestPage
+              userProfile={userProfile}
+              onBack={() => setViewMode("superadmin")}
+            />
+          </div>
+        )}
+        {activePanel === "rlsTestEnvironment" && userIsSuperAdmin && (
+          <div className="w-full" style={{ gridColumn: '1 / -1', width: '100%' }}>
+            <RlsTestEnvironment
               userProfile={userProfile}
               onBack={() => setViewMode("superadmin")}
             />

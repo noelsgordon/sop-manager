@@ -5,14 +5,20 @@
 
 import React, { useEffect, useState, useMemo } from 'react';
 import { supabase } from '../../supabaseClient';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
 import { Loader2, Search, AlertCircle, Check, Plus, Trash2, Lock } from 'lucide-react';
 import { debounce } from 'lodash';
 import { ConfirmationModal } from '../ui/ConfirmationModal';
 import { CreateUserModal } from '../CreateUserModal';
 import { PERMISSION_LEVELS } from '../../utils/permissions';
-import { toast } from '@/components/ui/use-toast';
+import { toast } from '../ui/use-toast';
+import { 
+  generateEssentialInfo, 
+  generateDetailedKnowledge, 
+  generateCompleteDocumentation,
+  copyToClipboard 
+} from '../../utils/projectSnapshot';
 
 /**
  * Permission levels available in the system.
@@ -50,6 +56,7 @@ export default function SuperAdminPanel({ currentUserId, userProfile, department
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [userToDelete, setUserToDelete] = useState(null);
   const [recentChanges, setRecentChanges] = useState([]);
+  const [copyLoading, setCopyLoading] = useState(false);
 
   // Fetch users and their permissions
   useEffect(() => {
@@ -259,6 +266,38 @@ export default function SuperAdminPanel({ currentUserId, userProfile, department
     }
   };
 
+  // Handle project snapshot copying
+  const handleCopySnapshot = async (generator, type) => {
+    setCopyLoading(true);
+    try {
+      const data = generator();
+      const result = await copyToClipboard(data);
+      
+      if (result.success) {
+        toast({
+          title: '✅ Copied Successfully!',
+          description: `${type} copied to clipboard (${Math.round(result.size / 1024)}KB)`,
+          variant: 'default'
+        });
+      } else {
+        toast({
+          title: '❌ Copy Failed',
+          description: result.error || 'Failed to copy to clipboard',
+          variant: 'destructive'
+        });
+      }
+    } catch (error) {
+      console.error('Error copying snapshot:', error);
+      toast({
+        title: '❌ Error',
+        description: 'Failed to generate project snapshot',
+        variant: 'destructive'
+      });
+    } finally {
+      setCopyLoading(false);
+    }
+  };
+
   // Filter users based on search term
   const filteredUsers = useMemo(() => {
     if (!searchTerm) return users;
@@ -273,24 +312,90 @@ export default function SuperAdminPanel({ currentUserId, userProfile, department
   // --- MENU RENDER ---
   if (activeSection === 'menu') {
     return (
-      <div className="p-8 max-w-2xl mx-auto">
+      <div className="p-8 max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold mb-6">SuperAdmin Tools</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <Button
-            className="w-full h-24 text-lg"
-            variant="outline"
-            onClick={() => setActiveSection('userManagement')}
-          >
-            User Management
-          </Button>
-          <Button
-            className="w-full h-24 text-lg"
-            variant="outline"
-            onClick={() => setViewMode ? setViewMode('rlsTest') : setActiveSection('rlsTest')}
-          >
-            RLS Test Page
-          </Button>
-          {/* Future superadmin tools can be added here as more buttons */}
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          
+          {/* Project Information Section */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">📋 Project Information</h3>
+            
+            <div className="space-y-2">
+              <Button
+                className="w-full h-16 text-lg"
+                variant="outline"
+                onClick={() => handleCopySnapshot(generateEssentialInfo, 'Essential Info')}
+                disabled={copyLoading}
+              >
+                Info
+              </Button>
+              
+              <Button
+                className="w-full h-16 text-lg"
+                variant="outline"
+                onClick={() => handleCopySnapshot(generateDetailedKnowledge, 'Detailed Knowledge')}
+                disabled={copyLoading}
+              >
+                Detail
+              </Button>
+              
+              <Button
+                className="w-full h-16 text-lg"
+                variant="outline"
+                onClick={() => handleCopySnapshot(generateCompleteDocumentation, 'Complete Documentation')}
+                disabled={copyLoading}
+              >
+                Complete
+              </Button>
+            </div>
+          </div>
+
+          {/* Testing Section */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">🧪 Testing & Security</h3>
+            
+            <div className="space-y-2">
+              <Button
+                className="w-full h-24 text-lg"
+                variant="outline"
+                onClick={() => setViewMode ? setViewMode('rlsTestEnvironment') : setActiveSection('rlsTestEnvironment')}
+              >
+                RLS Test Environment
+              </Button>
+              
+              <Button
+                className="w-full h-24 text-lg"
+                variant="outline"
+                onClick={() => setViewMode ? setViewMode('rlsTest') : setActiveSection('rlsTest')}
+              >
+                RLS Test Page
+              </Button>
+            </div>
+          </div>
+
+          {/* User Management Section */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">👥 User Management</h3>
+            
+            <div className="space-y-2">
+              <Button
+                className="w-full h-24 text-lg"
+                variant="outline"
+                onClick={() => setActiveSection('userManagement')}
+              >
+                User Management
+              </Button>
+              
+              <Button
+                className="w-full h-24 text-lg"
+                variant="outline"
+                onClick={() => setViewMode ? setViewMode('backupManager') : setActiveSection('backupManager')}
+              >
+                Backup Manager
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     );
