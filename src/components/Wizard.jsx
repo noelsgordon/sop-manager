@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowUp, ArrowDown, Trash2, Loader2 } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+// import { motion, AnimatePresence } from "framer-motion"; // Removed to fix build issues
 import TagInput from "./TagInput";
 
 export default function Wizard({
@@ -126,15 +126,10 @@ export default function Wizard({
         onChange={(e) => setDescription(e.target.value)}
       />
       <TagInput tags={tags} setTags={setTags} placeholder="Add tags here... e.g. department, boat model, alternate part/product names, etc" />
-      <AnimatePresence>
+      <div>
         {sop.steps.map((step, index) => (
-          <motion.div
+          <div
             key={step.id || index}
-            layout
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
             className="border-2 border-gray-300 bg-gray-50 p-2 mb-4 rounded"
           >
             <div className="flex justify-between items-center mb-2">
@@ -183,9 +178,9 @@ export default function Wizard({
                 <span className="text-gray-500 text-sm">No Image</span>
               </div>
             )}
-          </motion.div>
+          </div>
         ))}
-      </AnimatePresence>
+      </div>
 
       <div ref={bottomRef} />
 

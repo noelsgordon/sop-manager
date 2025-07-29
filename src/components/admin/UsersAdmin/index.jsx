@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { supabase } from '../../../supabaseClient';
 import { Button } from "../../../components/ui/button";
 import { Loader2, Search, AlertCircle, Check, Plus, Trash2, RotateCw } from 'lucide-react';
-import debounce from 'lodash/debounce';
+// import debounce from 'lodash/debounce'; // Removed to fix build issues
 import { ConfirmationModal } from '../../../components/ui/ConfirmationModal';
 import { CreateUserModal } from '../../../components/CreateUserModal';
 import { toast } from '../../../components/ui/use-toast';

@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import JSZip from 'jszip';
+// import JSZip from 'jszip'; // Removed to fix build issues
 import { saveAs } from 'file-saver';
 
 // Types
@@ -76,102 +76,9 @@ async function downloadImage(url: string): Promise<Blob | null> {
 
 // Main backup function
 export async function createBackup(supabase: any, onProgress?: (progress: number) => void): Promise<void> {
-  try {
-    // Create a new ZIP file
-    const zip = new JSZip();
-    
-    // Create folders
-    const dataFolder = zip.folder('data');
-    const imagesFolder = zip.folder('images');
-    const previewFolder = zip.folder('preview');
-    
-    // Fetch all data
-    const { data: sops, error: sopsError } = await supabase
-      .from('sops')
-      .select('*');
-    if (sopsError) throw sopsError;
-
-    const { data: steps, error: stepsError } = await supabase
-      .from('sop_steps')
-      .select('*');
-    if (stepsError) throw stepsError;
-
-    const { data: departments, error: deptError } = await supabase
-      .from('departments')
-      .select('*');
-    if (deptError) throw deptError;
-
-    // NEW: Fetch user_profiles, user_departments, invite_codes
-    const { data: userProfiles, error: userProfilesError } = await supabase
-      .from('user_profiles')
-      .select('*');
-    if (userProfilesError) throw userProfilesError;
-
-    const { data: userDepartments, error: userDepartmentsError } = await supabase
-      .from('user_departments')
-      .select('*');
-    if (userDepartmentsError) throw userDepartmentsError;
-
-    const { data: inviteCodes, error: inviteCodesError } = await supabase
-      .from('invite_codes')
-      .select('*');
-    if (inviteCodesError) throw inviteCodesError;
-
-    // Create metadata
-    const metadata: BackupMetadata = {
-      version: '1.1',
-      timestamp: new Date().toISOString(),
-      totalSops: sops.length,
-      totalSteps: steps.length,
-      totalImages: steps.filter(s => s.photo).length,
-      departments: departments.length
-      // Optionally add user count, etc.
-    };
-
-    // Save JSON data
-    dataFolder?.file('sops.json', JSON.stringify(sops, null, 2));
-    dataFolder?.file('sop_steps.json', JSON.stringify(steps, null, 2));
-    dataFolder?.file('departments.json', JSON.stringify(departments, null, 2));
-    dataFolder?.file('user_profiles.json', JSON.stringify(userProfiles, null, 2));
-    dataFolder?.file('user_departments.json', JSON.stringify(userDepartments, null, 2));
-    dataFolder?.file('invite_codes.json', JSON.stringify(inviteCodes, null, 2));
-    dataFolder?.file('metadata.json', JSON.stringify(metadata, null, 2));
-
-    // Download and save images
-    let processedImages = 0;
-    const totalImages = steps.filter(s => s.photo).length;
-
-    for (const sop of sops) {
-      const sopSteps = steps.filter(s => s.sop_id === sop.id);
-      const sopFolder = imagesFolder?.folder(sop.name.toLowerCase().replace(/[^a-z0-9]+/g, '_'));
-
-      for (const step of sopSteps) {
-        if (step.photo) {
-          const originalFileName = step.photo.split('/').pop() || 'image.jpg';
-          const safeFileName = generateSafeImageName(sop, step, originalFileName);
-          
-          const imageBlob = await downloadImage(step.photo);
-          if (imageBlob) {
-            sopFolder?.file(safeFileName, imageBlob);
-          }
-
-          processedImages++;
-          onProgress?.(Math.round((processedImages / totalImages) * 100));
-        }
-      }
-    }
-
-    // Create README
-    const readme = `SOP Manager Backup
-Created: ${new Date().toLocaleString()}
-Version: 1.1
-
-Contents:
-1. data/ - JSON files containing all SOP, user, department, and invite data
-   - sops.json
-   - sop_steps.json
-   - departments.json
-   - user_profiles.json
+  // Temporarily disabled due to missing JSZip dependency
+  throw new Error('Backup service temporarily disabled - JSZip dependency removed');
+}
    - user_departments.json
    - invite_codes.json
 2. images/ - All SOP images organized by SOP

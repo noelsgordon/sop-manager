@@ -1,8 +1,8 @@
 {
-  "timestamp": "2025-07-29T06:52:48.983Z",
-  "status": "building",
+  "timestamp": "2025-07-29T07:37:48.582Z",
+  "status": "error",
   "startTime": "2025-07-29T05:52:24.585Z",
-  "duration": 3624398,
+  "duration": 6323997,
   "logs": [
     {
       "timestamp": "2025-07-29T05:52:25.019Z",
@@ -83,13 +83,98 @@
       "timestamp": "2025-07-29T06:52:48.983Z",
       "level": "info",
       "message": "\u001b[2m4:52:48 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mpage reload \u001b[39m\u001b[2msrc/supabaseClientNode.js\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T07:34:04.870Z",
+      "level": "info",
+      "message": "\u001b[2m5:34:04 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mpage reload \u001b[39m\u001b[2msrc/design-system/tokens.js\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T07:34:51.897Z",
+      "level": "info",
+      "message": "\u001b[2m5:34:51 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mhmr update \u001b[39m\u001b[2m/src/components/Wizard.jsx, /src/index.css\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T07:34:52.054Z",
+      "level": "info",
+      "message": "\u001b[2m5:34:52 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mhmr update \u001b[39m\u001b[2m/src/components/Wizard.jsx, /src/index.css\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T07:35:08.607Z",
+      "level": "info",
+      "message": "\u001b[2m5:35:08 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mhmr update \u001b[39m\u001b[2m/src/components/Wizard.jsx, /src/index.css\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T07:35:08.892Z",
+      "level": "error",
+      "message": "\u001b[2m5:35:08 pm\u001b[22m \u001b[31m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[31mInternal server error: E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\src\\components\\Wizard.jsx: Expected corresponding JSX closing tag for <div>. (181:10)\n\n\u001b[0m \u001b[90m 179 |\u001b[31m               \u001b[33m<\u001b[31m\u001b[33m/\u001b[31m\u001b[33mdiv\u001b[31m\u001b[33m>\u001b[31m\n \u001b[90m 180 |\u001b[31m             )}\n\u001b[31m\u001b[1m>\u001b[22m\u001b[31m\u001b[90m 181 |\u001b[31m           \u001b[33m<\u001b[31m\u001b[33m/\u001b[31m\u001b[33mmotion\u001b[31m\u001b[33m.\u001b[31mdiv\u001b[33m>\u001b[31m\n \u001b[90m     |\u001b[31m           \u001b[31m\u001b[1m^\u001b[22m\u001b[31m\n \u001b[90m 182 |\u001b[31m         ))}\n \u001b[90m 183 |\u001b[31m       \u001b[33m<\u001b[31m\u001b[33m/\u001b[31m\u001b[33mAnimatePresence\u001b[31m\u001b[33m>\u001b[31m\n \u001b[90m 184 |\u001b[31m\u001b[0m\u001b[39m\n  Plugin: \u001b[35mvite:react-babel\u001b[39m\n  File: \u001b[36mE:/Software/Sop Manager/SOP-Manager-Standalone/src/components/Wizard.jsx\u001b[39m:181:10\n\u001b[33m  187|        {error && <p className=\"text-red-600 font-medium mb-2\">{error}</p>}\n  188|  \n  189|        <button onClick={onAddStep} className=\"bg-gray-600 text-white px-3 py-1 rounded mr-2\">Add Step</button>\n     |                        ^\n  190|      </div>\n  191|    );\u001b[39m\n      at constructor (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:360:19)\n      at JSXParserMixin.raise (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:6613:19)\n      at JSXParserMixin.jsxParseElementAt (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:4733:16)\n      at JSXParserMixin.jsxParseElement (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:4755:17)\n      at JSXParserMixin.parseExprAtom (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:4765:19)\n      at JSXParserMixin.parseExprSubscripts (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10992:23)\n      at JSXParserMixin.parseUpdate (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10977:21)\n      at JSXParserMixin.parseMaybeUnary (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10957:23)\n      at JSXParserMixin.parseMaybeUnaryOrPrivate (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10810:61)\n      at JSXParserMixin.parseExprOps (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10815:23)\n      at JSXParserMixin.parseMaybeConditional (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10792:23)\n      at JSXParserMixin.parseMaybeAssign (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10745:21)\n      at E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10714:39\n      at JSXParserMixin.allowInAnd (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:12334:12)\n      at JSXParserMixin.parseMaybeAssignAllowIn (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10714:17)\n      at JSXParserMixin.parseParenAndDistinguishExpression (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:11591:28)\n      at JSXParserMixin.parseExprAtom (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:11242:23)\n      at JSXParserMixin.parseExprAtom (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:4770:20)\n      at JSXParserMixin.parseExprSubscripts (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10992:23)\n      at JSXParserMixin.parseUpdate (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10977:21)\n      at JSXParserMixin.parseMaybeUnary (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10957:23)\n      at JSXParserMixin.parseMaybeUnaryOrPrivate (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10810:61)\n      at JSXParserMixin.parseExprOps (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10815:23)\n      at JSXParserMixin.parseMaybeConditional (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10792:23)\n      at JSXParserMixin.parseMaybeAssign (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10745:21)\n      at JSXParserMixin.parseFunctionBody (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:12011:24)\n      at JSXParserMixin.parseArrowExpression (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:11993:10)\n      at JSXParserMixin.parseParenAndDistinguishExpression (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:11603:12)\n      at JSXParserMixin.parseExprAtom (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:11242:23)\n      at JSXParserMixin.parseExprAtom (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:4770:20)\n      at JSXParserMixin.parseExprSubscripts (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10992:23)\n      at JSXParserMixin.parseUpdate (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10977:21)\n      at JSXParserMixin.parseMaybeUnary (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10957:23)\n      at JSXParserMixin.parseMaybeUnaryOrPrivate (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10810:61)\n      at JSXParserMixin.parseExprOps (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10815:23)\n      at JSXParserMixin.parseMaybeConditional (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10792:23)\n      at JSXParserMixin.parseMaybeAssign (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10745:21)\n      at E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10714:39\n      at JSXParserMixin.allowInAnd (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:12334:12)\n      at JSXParserMixin.parseMaybeAssignAllowIn (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10714:17)\n      at JSXParserMixin.parseExprListItem (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:12093:18)\n      at JSXParserMixin.parseCallExpressionArguments (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:11163:22)\n      at JSXParserMixin.parseCoverCallAndAsyncArrowHead (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:11097:29)\n      at JSXParserMixin.parseSubscript (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:11031:19)\n      at JSXParserMixin.parseSubscripts (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:11005:19)\n      at JSXParserMixin.parseExprSubscripts (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10996:17)\n      at JSXParserMixin.parseUpdate (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10977:21)\n      at JSXParserMixin.parseMaybeUnary (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10957:23)\n      at JSXParserMixin.parseMaybeUnaryOrPrivate (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10810:61)\n      at JSXParserMixin.parseExprOps (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\@babel\\parser\\lib\\index.js:10815:23)"
+    },
+    {
+      "timestamp": "2025-07-29T07:35:15.672Z",
+      "level": "info",
+      "message": "\u001b[2m5:35:15 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mhmr update \u001b[39m\u001b[2m/src/components/Wizard.jsx, /src/index.css\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T07:35:32.946Z",
+      "level": "info",
+      "message": "\u001b[2m5:35:32 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mhmr update \u001b[39m\u001b[2m/src/components/admin/SuperAdminPanel.jsx, /src/index.css\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T07:35:54.487Z",
+      "level": "info",
+      "message": "\u001b[2m5:35:54 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mhmr update \u001b[39m\u001b[2m/src/components/admin/UsersAdmin/index.jsx, /src/index.css\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T07:36:15.899Z",
+      "level": "info",
+      "message": "\u001b[2m5:36:15 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mhmr update \u001b[39m\u001b[2m/src/components/admin/BackupManager/index.jsx, /src/index.css\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T07:36:16.115Z",
+      "level": "info",
+      "message": "\u001b[2m5:36:16 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mhmr update \u001b[39m\u001b[2m/src/components/admin/BackupManager/index.jsx, /src/index.css\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T07:36:23.311Z",
+      "level": "info",
+      "message": "\u001b[2m5:36:23 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mhmr update \u001b[39m\u001b[2m/src/components/admin/BackupManager/index.jsx, /src/index.css\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T07:36:49.395Z",
+      "level": "info",
+      "message": "\u001b[2m5:36:49 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mhmr update \u001b[39m\u001b[2m/src/components/admin/BackupManager/index.jsx, /src/index.css\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T07:37:11.330Z",
+      "level": "info",
+      "message": "\u001b[2m5:37:11 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mhmr update \u001b[39m\u001b[2m/src/components/admin/BackupManager/index.jsx, /src/index.css\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T07:37:18.671Z",
+      "level": "info",
+      "message": "\u001b[2m5:37:18 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mhmr update \u001b[39m\u001b[2m/src/components/admin/BackupManager/index.jsx, /src/index.css\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T07:37:48.253Z",
+      "level": "info",
+      "message": "\u001b[2m5:37:48 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mhmr update \u001b[39m\u001b[2m/src/components/admin/BackupManager/index.jsx, /src/index.css\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T07:37:48.569Z",
+      "level": "error",
+      "message": "Transform failed with 1 error:\nE:/Software/Sop Manager/SOP-Manager-Standalone/src/services/backup/backupService.ts:84:3: ERROR: Expected \";\" but found \"images\""
+    },
+    {
+      "timestamp": "2025-07-29T07:37:48.582Z",
+      "level": "error",
+      "message": "\u001b[2m5:37:48 pm\u001b[22m \u001b[31m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[31mInternal server error: Transform failed with 1 error:\nE:/Software/Sop Manager/SOP-Manager-Standalone/src/services/backup/backupService.ts:84:3: ERROR: Expected \";\" but found \"images\"\u001b[39m\n  Plugin: \u001b[35mvite:esbuild\u001b[39m\n  File: \u001b[36mE:/Software/Sop Manager/SOP-Manager-Standalone/src/services/backup/backupService.ts\u001b[39m:84:3\n\u001b[33m  \n  \u001b[33mExpected \";\" but found \"images\"\u001b[33m\n  82 |     - user_departments.json\n  83 |     - invite_codes.json\n  84 |  2. images/ - All SOP images organized by SOP\n     |     ^\n  85 |  3. preview/ - Double-click index.html to view SOPs in browser\n  86 |  \n  \u001b[39m\n      at failureErrorWithLog (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\esbuild\\lib\\main.js:1649:15)\n      at E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\esbuild\\lib\\main.js:847:29\n      at responseCallbacks.<computed> (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\esbuild\\lib\\main.js:703:9)\n      at handleIncomingPacket (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\esbuild\\lib\\main.js:762:9)\n      at Socket.readFromStdout (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\esbuild\\lib\\main.js:679:7)\n      at Socket.emit (node:events:518:28)\n      at addChunk (node:internal/streams/readable:561:12)\n      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n      at Readable.push (node:internal/streams/readable:392:5)\n      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)"
     }
   ],
   "summary": {
-    "totalLogs": 16,
-    "errors": 0,
+    "totalLogs": 33,
+    "errors": 3,
     "successes": 1,
-    "isHealthy": true,
+    "isHealthy": false,
     "hasCompiled": true
   }
 }

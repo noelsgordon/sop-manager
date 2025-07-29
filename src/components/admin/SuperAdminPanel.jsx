@@ -8,7 +8,7 @@ import { supabase } from '../../supabaseClient';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Loader2, Search, AlertCircle, Check, Plus, Trash2, Lock } from 'lucide-react';
-import { debounce } from 'lodash';
+// import { debounce } from 'lodash'; // Removed to fix build issues
 import { ConfirmationModal } from '../ui/ConfirmationModal';
 import { CreateUserModal } from '../CreateUserModal';
 import { PERMISSION_LEVELS } from '../../utils/permissions';
