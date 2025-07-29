@@ -1,8 +1,8 @@
 {
-  "timestamp": "2025-07-29T05:52:25.626Z",
-  "status": "success",
+  "timestamp": "2025-07-29T06:52:48.983Z",
+  "status": "building",
   "startTime": "2025-07-29T05:52:24.585Z",
-  "duration": 1041,
+  "duration": 3624398,
   "logs": [
     {
       "timestamp": "2025-07-29T05:52:25.019Z",
@@ -28,10 +28,65 @@
       "timestamp": "2025-07-29T05:52:25.626Z",
       "level": "info",
       "message": "\u001b[32m➜\u001b[39m  \u001b[1mLocal\u001b[22m:   \u001b[36mhttp://localhost:\u001b[1m5175\u001b[22m/\u001b[39m\n\u001b[2m  \u001b[32m➜\u001b[39m  \u001b[1mNetwork\u001b[22m\u001b[2m: use \u001b[22m\u001b[1m--host\u001b[22m\u001b[2m to expose\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T06:48:36.562Z",
+      "level": "info",
+      "message": "\u001b[2m4:48:36 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32m.env changed, restarting server...\u001b[39m"
+    },
+    {
+      "timestamp": "2025-07-29T06:48:36.711Z",
+      "level": "info",
+      "message": "\u001b[2m4:48:36 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32m.env changed, restarting server...\u001b[39m"
+    },
+    {
+      "timestamp": "2025-07-29T06:48:36.876Z",
+      "level": "info",
+      "message": "\u001b[2m4:48:36 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m server restarted."
+    },
+    {
+      "timestamp": "2025-07-29T06:48:36.883Z",
+      "level": "info",
+      "message": "\u001b[32m➜\u001b[39m  \u001b[1mLocal\u001b[22m:   \u001b[36mhttp://localhost:\u001b[1m5173\u001b[22m/\u001b[39m\n\u001b[2m  \u001b[32m➜\u001b[39m  \u001b[1mNetwork\u001b[22m\u001b[2m: use \u001b[22m\u001b[1m--host\u001b[22m\u001b[2m to expose\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T06:52:09.377Z",
+      "level": "info",
+      "message": "\u001b[2m4:52:09 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mhmr update \u001b[39m\u001b[2m/src/App.jsx, /src/index.css, /src/utils/supabaseContext.tsx, /src/components/Header.jsx, /src/components/ResetPassword.jsx, /src/components/DepartmentJoinOrCreateModal.jsx, /src/components/Login.jsx, /src/components/AdminPanel.jsx, /src/components/admin/RlsTestPage.jsx, /src/components/admin/UsersAdmin/index.jsx, /src/components/admin/RlsTestEnvironment.jsx, /src/components/admin/SuperAdminPanel.jsx, /src/components/CreateUserModal.jsx\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T06:52:17.079Z",
+      "level": "info",
+      "message": "\u001b[2m4:52:17 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mpage reload \u001b[39m\u001b[2msrc/fixRLSPoliciesNode.js\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T06:52:23.614Z",
+      "level": "info",
+      "message": "\u001b[2m4:52:23 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mpage reload \u001b[39m\u001b[2msrc/fixRLSPoliciesNode.js\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T06:52:29.343Z",
+      "level": "info",
+      "message": "\u001b[2m4:52:29 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mpage reload \u001b[39m\u001b[2msrc/fixRLSPoliciesNode.js\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T06:52:35.397Z",
+      "level": "info",
+      "message": "\u001b[2m4:52:35 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mpage reload \u001b[39m\u001b[2msrc/supabaseClientNode.js\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T06:52:35.569Z",
+      "level": "info",
+      "message": "\u001b[2m4:52:35 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mpage reload \u001b[39m\u001b[2msrc/supabaseClientNode.js\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T06:52:48.983Z",
+      "level": "info",
+      "message": "\u001b[2m4:52:48 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mpage reload \u001b[39m\u001b[2msrc/supabaseClientNode.js\u001b[22m"
     }
   ],
   "summary": {
-    "totalLogs": 5,
+    "totalLogs": 16,
     "errors": 0,
     "successes": 1,
     "isHealthy": true,

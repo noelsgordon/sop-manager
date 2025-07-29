@@ -85,7 +85,7 @@ For migration scripts and utilities, see [src/README.md](./src/README.md)
 ### Required Environment Variables
 ```bash
 VITE_SUPABASE_URL=https://your-project.supabase.co
-VITE_SUPABASE_ANON_KEY=your-anon-key
+VITE_SUPABASE_PUBLISHABLE_KEY=your-publishable-key
 ```
 
 ### Environment Variable Locations

@@ -21,7 +21,7 @@ function loadEnvFile() {
 // Load environment variables
 const env = loadEnvFile();
 const supabaseUrl = env.VITE_SUPABASE_URL;
-const supabaseAnonKey = env.VITE_SUPABASE_ANON_KEY;
+const supabasePublishableKey = env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
 console.log('Environment check:', {
   hasUrl: !!supabaseUrl,
@@ -32,13 +32,13 @@ console.log('Environment check:', {
 if (!supabaseUrl || !supabaseAnonKey) {
   console.error('Missing Supabase environment variables. Check your .env file:', {
     VITE_SUPABASE_URL: supabaseUrl ? 'present' : 'missing',
-    VITE_SUPABASE_ANON_KEY: supabaseAnonKey ? 'present' : 'missing'
+    VITE_SUPABASE_PUBLISHABLE_KEY: supabasePublishableKey ? 'present' : 'missing'
   });
   throw new Error('Missing required Supabase configuration. Check the console for more details.');
 }
 
 // Create Supabase client
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
+const supabase = createClient(supabaseUrl, supabasePublishableKey);
 
 async function fixRLSPolicies() {
   console.log('🔧 Starting RLS Policy Fix...');
