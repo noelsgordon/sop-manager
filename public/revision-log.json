@@ -1,5 +1,11 @@
 [
   {
+    "hash": "c65cf29",
+    "author": "Noel Gordon",
+    "date": "2025-07-24 16:58:34 +1000",
+    "message": "feat: backup now includes all core Supabase tables; bump to v2.6.0"
+  },
+  {
     "hash": "a509c5a",
     "author": "Noel Gordon",
     "date": "2025-07-24 16:27:59 +1000",

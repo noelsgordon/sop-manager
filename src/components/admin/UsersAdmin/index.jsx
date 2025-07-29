@@ -7,9 +7,9 @@ import { ConfirmationModal } from '../../../components/ui/ConfirmationModal';
 import { CreateUserModal } from '../../../components/CreateUserModal';
 import { toast } from '../../../components/ui/use-toast';
 import { useRoleBasedUI } from '../../../utils/hooks/useRoleBasedUI';
-import { FEATURE_PERMISSIONS } from '../../../utils/permissions';
+import { FEATURE_PERMISSIONS, PERMISSION_LEVELS } from '../../../utils/permissions';
 
-const PERMISSION_LEVELS = [
+const PERMISSION_LEVELS_UI = [
   { value: 'look', label: 'Look' },
   { value: 'tweak', label: 'Tweak' },
   { value: 'build', label: 'Build' },
@@ -50,9 +50,32 @@ export default function UsersAdmin({ currentUserId, userProfile }) {
     })();
   }, [currentUserId]);
 
-  const { canShowFeature, getFeatureProps, isSuper } = useRoleBasedUI(userProfile, null);
-  console.log('[UsersAdmin Debug] isSuper:', isSuper);
-  console.log('[UsersAdmin Debug] canShowFeature(MANAGE_USERS):', canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS));
+  // Determine the effective role for this admin
+  const effectiveRole = React.useMemo(() => {
+    if (!userProfile) return PERMISSION_LEVELS.LOOK;
+    
+    // If user is superadmin, they have full access
+    if (userProfile.is_superadmin) return PERMISSION_LEVELS.SUPERADMIN;
+    
+    // Check if user has 'manage' role in any department
+    const hasManageRole = Object.values(adminRoles).some(role => role === 'manage');
+    if (hasManageRole) return PERMISSION_LEVELS.MANAGE;
+    
+    // Default to highest role they have
+    const roles = Object.values(adminRoles);
+    if (roles.includes('build')) return PERMISSION_LEVELS.BUILD;
+    if (roles.includes('tweak')) return PERMISSION_LEVELS.TWEAK;
+    return PERMISSION_LEVELS.LOOK;
+  }, [userProfile, adminRoles]);
+
+  // Create a user object with the effective role for useRoleBasedUI
+  const userWithRole = React.useMemo(() => ({
+    ...userProfile,
+    role: effectiveRole,
+    is_superadmin: userProfile?.is_superadmin || false
+  }), [userProfile, effectiveRole]);
+
+  const { canShowFeature, getFeatureProps, isSuper } = useRoleBasedUI(userWithRole, null);
 
   useEffect(() => {
     fetchData();
@@ -116,10 +139,33 @@ export default function UsersAdmin({ currentUserId, userProfile }) {
 
   const handlePermissionChange = async (userId, departmentId, newRole) => {
     if (!canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS)) return;
+    
+    // Security validation
     if (userId === currentUserId) {
       toast({
         title: "Error",
         description: "You cannot modify your own permissions",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Check if admin can modify this user in this department
+    if (!canModifyUserInDepartment(userId, departmentId)) {
+      toast({
+        title: "Error",
+        description: "You can only modify users with lower security levels in your departments",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Validate new role is not higher than admin's level
+    const newRoleLevel = ROLE_HIERARCHY[newRole] || 0;
+    if (newRoleLevel >= adminRoleLevel) {
+      toast({
+        title: "Error",
+        description: "You cannot assign roles equal to or higher than your own level",
         variant: "destructive"
       });
       return;
@@ -172,10 +218,22 @@ export default function UsersAdmin({ currentUserId, userProfile }) {
 
   const handleAccessToggle = async (userId, departmentId, hasAccess) => {
     if (!canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS)) return;
+    
+    // Security validation
     if (userId === currentUserId) {
       toast({
         title: "Error",
         description: "You cannot modify your own permissions",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Check if admin can modify this user in this department
+    if (!canModifyUserInDepartment(userId, departmentId)) {
+      toast({
+        title: "Error",
+        description: "You can only modify users with lower security levels in your departments",
         variant: "destructive"
       });
       return;
@@ -340,14 +398,93 @@ export default function UsersAdmin({ currentUserId, userProfile }) {
   }, [departments, adminDepartments]);
 
   // --- Allowed roles for admins ---
-  const ALLOWED_ROLES = ['look', 'tweak', 'build'];
+  const ALLOWED_ROLES = PERMISSION_LEVELS_UI.map(level => level.value);
 
+  // Role hierarchy for security validation
+  const ROLE_HIERARCHY = {
+    'superadmin': 5,
+    'manage': 4,
+    'build': 3,
+    'tweak': 2,
+    'look': 1
+  };
+
+  // Get admin's highest role level
+  const adminRoleLevel = React.useMemo(() => {
+    // If user is superadmin, they have the highest level
+    if (userProfile?.is_superadmin) return ROLE_HIERARCHY.superadmin;
+    
+    // Otherwise, check their department roles
+    const adminRoleValues = Object.values(adminRoles);
+    if (adminRoleValues.includes('superadmin')) return ROLE_HIERARCHY.superadmin;
+    if (adminRoleValues.includes('manage')) return ROLE_HIERARCHY.manage;
+    if (adminRoleValues.includes('build')) return ROLE_HIERARCHY.build;
+    if (adminRoleValues.includes('tweak')) return ROLE_HIERARCHY.tweak;
+    return ROLE_HIERARCHY.look;
+  }, [adminRoles, userProfile?.is_superadmin]);
+
+  // Check if admin can modify a specific user in a specific department
+  const canModifyUserInDepartment = React.useCallback((userId, departmentId) => {
+    // Cannot modify self
+    if (userId === currentUserId) return false;
+    
+    // Get user's role in this department
+    const userRole = permissions[userId]?.[departmentId];
+    if (!userRole) return false; // User not in this department
+    
+    // Get user's role level
+    const userRoleLevel = ROLE_HIERARCHY[userRole] || 0;
+    
+    // Admin can only modify users with lower role levels
+    const canModify = userRoleLevel < adminRoleLevel;
+    
+    // Debug logging for troubleshooting
+    console.log(`[UsersAdmin Debug] canModifyUserInDepartment:`, {
+      userId,
+      departmentId,
+      userRole,
+      userRoleLevel,
+      adminRoleLevel,
+      canModify
+    });
+    
+    return canModify;
+  }, [currentUserId, permissions, adminRoleLevel]);
+
+  // Get allowed roles for assignment (only lower than admin's level)
+  const getAllowedRolesForAssignment = React.useCallback(() => {
+    return ALLOWED_ROLES.filter(role => ROLE_HIERARCHY[role] < adminRoleLevel);
+  }, [adminRoleLevel]);
+
+  // Debug role determination (after all variables are defined)
+  console.log('[UsersAdmin Debug] adminRoles:', adminRoles);
+  console.log('[UsersAdmin Debug] userProfile.is_superadmin:', userProfile?.is_superadmin);
+  console.log('[UsersAdmin Debug] effectiveRole:', effectiveRole);
+  console.log('[UsersAdmin Debug] adminRoleLevel:', adminRoleLevel);
+  console.log('[UsersAdmin Debug] ROLE_HIERARCHY:', ROLE_HIERARCHY);
+  console.log('[UsersAdmin Debug] isSuper:', isSuper);
+  console.log('[UsersAdmin Debug] canShowFeature(MANAGE_USERS):', canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS));
+  console.log('[UsersAdmin Debug] userWithRole:', userWithRole);
+  console.log('[UsersAdmin Debug] FEATURE_PERMISSIONS.MANAGE_USERS:', FEATURE_PERMISSIONS.MANAGE_USERS);
+  
+  // Debug a few sample users to see what's happening
+  if (users.length > 0) {
+    console.log('[UsersAdmin Debug] Sample user permissions:', users.slice(0, 3).map(user => ({
+      userId: user.user_id,
+      email: user.email,
+      permissions: permissions[user.user_id] || {}
+    })));
+  }
+
+  // Check if user has access to manage users
   if (!canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS)) {
     console.log('[UsersAdmin Debug] Access Denied: canShowFeature returned false');
     return (
       <div className="p-6 text-center">
         <h2 className="text-xl font-semibold text-red-600">Access Denied</h2>
         <p className="mt-2 text-gray-600">You do not have permission to manage users.</p>
+        <p className="mt-1 text-sm text-gray-500">Required role: Manage or Superadmin</p>
+        <p className="mt-1 text-sm text-gray-500">Your effective role: {effectiveRole}</p>
       </div>
     );
   }
@@ -420,10 +557,16 @@ export default function UsersAdmin({ currentUserId, userProfile }) {
                   const hasAccess = !!permissions[user.user_id]?.[dept.department_id];
                   const currentRole = permissions[user.user_id]?.[dept.department_id] || 'look';
                   const isSavingThis = savingStates[`${user.user_id}-${dept.department_id}`];
-                  // Only allow actions if admin manages this department
-                  const canEdit = adminRoles[dept.department_id] === 'manage';
+                  
+                  // Check if admin can modify this user in this department
+                  const canModify = canModifyUserInDepartment(user.user_id, dept.department_id);
+                  const canEdit = adminRoles[dept.department_id] === 'manage' && canModify;
+                  
+                  // Get allowed roles for assignment (only lower than admin's level)
+                  const allowedRoles = getAllowedRolesForAssignment();
+                  
                   return (
-                    <td key={dept.department_id} className="border p-2">
+                    <td key={dept.department_id} className={!canModify ? "border p-2 bg-gray-100 opacity-60" : "border p-2"}>
                       <div className="space-y-2">
                         <label className="flex items-center">
                           <input
@@ -437,7 +580,7 @@ export default function UsersAdmin({ currentUserId, userProfile }) {
                         </label>
                         {hasAccess && (
                           <div className="space-y-1">
-                            {ALLOWED_ROLES.map(role => (
+                            {allowedRoles.map(role => (
                               <label key={role} className="flex items-center text-sm">
                                 <input
                                   type="radio"

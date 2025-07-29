@@ -1,0 +1,67 @@
+{
+  "timestamp": "2025-07-29T05:52:24.146Z",
+  "status": "success",
+  "startTime": "2025-07-29T05:52:21.447Z",
+  "duration": 2699,
+  "logs": [
+    {
+      "timestamp": "2025-07-29T05:52:22.114Z",
+      "level": "error",
+      "message": "npm error Missing script: \"devv\"\nnpm error\nnpm error Did you mean this?\nnpm error   npm run dev # run the \"dev\" package script\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run"
+    },
+    {
+      "timestamp": "2025-07-29T05:52:22.122Z",
+      "level": "error",
+      "message": "npm error A complete log of this run can be found in: C:\\Users\\noelg\\AppData\\Local\\npm-cache\\_logs\\2025-07-29T05_52_21_929Z-debug-0.log"
+    },
+    {
+      "timestamp": "2025-07-29T05:52:22.137Z",
+      "level": "error",
+      "message": "Process exited with code 1"
+    },
+    {
+      "timestamp": "2025-07-29T05:52:23.622Z",
+      "level": "error",
+      "message": "q : The term 'q' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or"
+    },
+    {
+      "timestamp": "2025-07-29T05:52:23.627Z",
+      "level": "error",
+      "message": "if a path was included, verify that the path is correct and try again.\r\nAt line:1 char:1\r\n+ q\r\n+ ~\r\n    + CategoryInfo          : ObjectNotFound: (q:String) [], CommandNotFoundException\r\n    + FullyQualifiedErrorId : CommandNotFoundException"
+    },
+    {
+      "timestamp": "2025-07-29T05:52:23.651Z",
+      "level": "error",
+      "message": "Process exited with code 1"
+    },
+    {
+      "timestamp": "2025-07-29T05:52:23.690Z",
+      "level": "error",
+      "message": "'nonexistentcommand' is not recognized as an internal or external command,\r\noperable program or batch file."
+    },
+    {
+      "timestamp": "2025-07-29T05:52:23.695Z",
+      "level": "error",
+      "message": "Process exited with code 1"
+    },
+    {
+      "timestamp": "2025-07-29T05:52:24.117Z",
+      "level": "info",
+      "message": "10.9.2"
+    },
+    {
+      "timestamp": "2025-07-29T05:52:24.143Z",
+      "level": "success",
+      "message": "Process exited with code 0"
+    }
+  ],
+  "summary": {
+    "totalLogs": 10,
+    "errors": 8,
+    "successes": 1,
+    "warnings": 0,
+    "isHealthy": false,
+    "hasTerminalErrors": true,
+    "hasPowerShellErrors": true
+  }
+}

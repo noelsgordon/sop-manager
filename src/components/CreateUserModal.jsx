@@ -43,6 +43,7 @@ export function CreateUserModal({ departments, onClose, onSuccess }) {
     email: '',
     firstName: '',
     lastName: '',
+    password: '',
     permissionLevel: PERMISSION_LEVELS.LOOK,
     selectedDepartments: []
   });
@@ -63,6 +64,8 @@ export function CreateUserModal({ departments, onClose, onSuccess }) {
       if (!formData.email) validationErrors.email = 'Email is required';
       if (!formData.firstName) validationErrors.firstName = 'First name is required';
       if (!formData.lastName) validationErrors.lastName = 'Last name is required';
+      if (!formData.password) validationErrors.password = 'Password is required';
+      if (formData.password && formData.password.length < 6) validationErrors.password = 'Password must be at least 6 characters';
       if (!formData.selectedDepartments.length) validationErrors.departments = 'Select at least one department';
 
       if (Object.keys(validationErrors).length) {
@@ -73,7 +76,7 @@ export function CreateUserModal({ departments, onClose, onSuccess }) {
       // Create user in Auth
       const { data: authData, error: authError } = await supabase.auth.signUp({
         email: formData.email,
-        password: Math.random().toString(36).slice(-12), // Random password that will be reset
+        password: formData.password, // Use the password from form
         options: { emailRedirectTo: 'https://sop-manager.vercel.app/' }
       });
 
@@ -104,17 +107,9 @@ export function CreateUserModal({ departments, onClose, onSuccess }) {
 
       if (permError) throw permError;
 
-      // Send password reset email
-      const { error: resetError } = await supabase.auth.resetPasswordForEmail(
-        formData.email,
-        { redirectTo: `${window.location.origin}/reset-password` }
-      );
-
-      if (resetError) throw resetError;
-
       toast({
         title: "Success",
-        description: "User created successfully. They will receive an email to set their password.",
+        description: "User created successfully. They will receive a confirmation email to activate their account.",
       });
 
       onSuccess();
@@ -172,6 +167,19 @@ export function CreateUserModal({ departments, onClose, onSuccess }) {
               className={errors.lastName ? 'border-red-500' : ''}
             />
             {errors.lastName && <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>}
+          </div>
+
+          {/* Password */}
+          <div>
+            <label className="block text-sm font-medium mb-1">Password</label>
+            <Input
+              type="password"
+              value={formData.password}
+              onChange={(e) => setFormData(prev => ({ ...prev, password: e.target.value }))}
+              className={errors.password ? 'border-red-500' : ''}
+              placeholder="Minimum 6 characters"
+            />
+            {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
           </div>
 
           {/* Permission Level */}

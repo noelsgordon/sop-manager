@@ -34,6 +34,7 @@ import RlsTestPage from "./components/admin/RlsTestPage.jsx";
 import RlsTestEnvironment from "./components/admin/RlsTestEnvironment.jsx";
 import UsersAdmin from "./components/admin/UsersAdmin/index.jsx";
 
+
 function MainApp({ session, setSession }) {
   // 📄 Initialize all state first
   const [activePanel, setActivePanel] = useState("library");
@@ -52,12 +53,7 @@ function MainApp({ session, setSession }) {
   const [adminViewMode, setAdminViewMode] = useState(null);
   const [draftSop, setDraftSop] = useState(null);
   
-  // Debug admin view mode changes
-  useEffect(() => {
-    console.log('adminViewMode changed:', adminViewMode);
-  }, [adminViewMode]);
-
-  // 🔄 User State Management
+  // 🔄 User State Management (MUST come before navigation system)
   const {
     userProfile,
     departments,
@@ -74,6 +70,13 @@ function MainApp({ session, setSession }) {
     roleLoading,
     viewRole
   } = useUserState(session);
+  
+
+  
+  // Debug admin view mode changes
+  useEffect(() => {
+    console.log('adminViewMode changed:', adminViewMode);
+  }, [adminViewMode]);
 
   // Get role-based permissions at component level
   const { canShowFeature, FEATURE_PERMISSIONS } = useRoleBasedUI(
@@ -146,7 +149,7 @@ function MainApp({ session, setSession }) {
   //   setRenderCount(prev => prev + 1);
   // }, []);
 
-  // 🎯 View Mode Management
+  // 🎯 View Mode Management (Original Working Version)
   const setViewMode = useCallback((mode) => {
     try {
       logStateDebug('setViewMode Entry', {
@@ -168,34 +171,7 @@ function MainApp({ session, setSession }) {
         return;
       }
 
-      if (mode === "superadmin") {
-        if (!userIsSuperAdmin) {
-          logStateDebug('SuperAdmin Access Denied', {
-            reason: 'Not SuperAdmin',
-            userRole: getCurrentRole(),
-            stack: new Error().stack
-          }, 'error');
-          return;
-        }
-
-        logStateDebug('Setting SuperAdmin Panel', {
-          previousPanel: activePanel,
-          userRole: getCurrentRole(),
-          stack: new Error().stack
-        }, 'function');
-
-        setActivePanel("superadmin");
-        window.location.hash = "superadmin";
-        setActiveSop(null);
-        
-        logStateDebug('SuperAdmin Panel Set', {
-          newPanel: 'superadmin',
-          hash: window.location.hash
-        }, 'success');
-        return;
-      }
-
-      logStateDebug('Setting Regular Panel', {
+      logStateDebug('Setting Panel', {
         requestedMode: mode,
         previousPanel: activePanel,
         stack: new Error().stack
@@ -203,12 +179,14 @@ function MainApp({ session, setSession }) {
 
       setPrevPanel(activePanel);
       setActivePanel(mode);
-      window.location.hash = mode;
       setActiveSop(null);
+
+      // Update hash for backward compatibility
+      window.location.hash = `#${mode}`;
 
       logStateDebug('Panel Set Complete', {
         newPanel: mode,
-        hash: window.location.hash
+        stack: new Error().stack
       }, 'success');
     } catch (error) {
       logStateDebug('setViewMode Error', {
@@ -826,9 +804,9 @@ function MainApp({ session, setSession }) {
             showDeletedSOPs={showDeletedSOPs}
             setShowDeletedSOPs={setShowDeletedSOPs}
             activePanel={activePanel}
-              onNewSop={handleNewSop}
+            onNewSop={handleNewSop}
             canCreateSop={canShowFeature(FEATURE_PERMISSIONS.CREATE_SOP)}
-            />
+          />
         }
         topbar={null}
       >
@@ -1107,6 +1085,9 @@ function MainApp({ session, setSession }) {
             </pre>
           </div>
         )}
+
+        {/* Navigation Migration Test - REMOVED: System fully implemented and tested */}
+        {/* Simple Test - REMOVED: System fully implemented and tested */}
       </Layout>
       <Toaster />
     </SupabaseProvider>
@@ -1137,7 +1118,7 @@ export default function App() {
   // Replace all window.location.hash = ... with a console.log before setting
 
   return (
-    <Router>
+    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <Routes>
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route

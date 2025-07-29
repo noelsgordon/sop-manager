@@ -56,14 +56,7 @@ const Header = React.memo(({
   // Debug canShowFeature for CREATE_SOP
   // console.log('[Header Debug] canShowFeature CREATE_SOP:', canShowFeature(FEATURE_PERMISSIONS.CREATE_SOP));
 
-  // Navigation click handler
-  const handleNav = (key) => {
-    if (key === activePanel) return;
-    if (key === "superadmin" && !isSuperAdminProp) return;
-    if (key === "admin" && !canShowFeature(FEATURE_PERMISSIONS.VIEW_ADMIN_PANEL)) return;
-    setViewMode(key);
-    if (typeof onSidebarNav === 'function') onSidebarNav(); // <-- auto-hide sidebar on mobile
-  };
+
 
   // Role change handler
   const handleRoleChange = async (role) => {
@@ -106,26 +99,49 @@ const Header = React.memo(({
         </div>
         {/* Navigation */}
         <nav className="flex flex-col gap-2 mb-8">
+          {/* New SOP Button */}
+          {canShowFeature(FEATURE_PERMISSIONS.CREATE_SOP) && typeof onNewSop === 'function' && (
+            <button
+              onClick={onNewSop}
+              className="flex items-center gap-2 px-3 py-2 rounded transition hover:bg-green-100 text-green-700 font-semibold"
+            >
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" /></svg>
+              New SOP
+            </button>
+          )}
+          
+          {/* Original Working Navigation */}
           {NAV_ITEMS.map((item, idx) => {
-            // Insert New SOP button after Search
-            if (item.key === "search") {
-              const canCreate = canShowFeature(FEATURE_PERMISSIONS.CREATE_SOP);
-              // Only log once per mount
-              if (typeof onNewSop === 'function' && canCreate) {
-                return [
-                  <button
-                    key="new-sop"
-                    onClick={onNewSop}
-                    className="flex items-center gap-2 px-3 py-2 rounded transition hover:bg-green-100 text-green-700 font-semibold"
-                  >
-                    <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" /></svg>
-                    New SOP
-                  </button>,
-                  renderNavButton(item, idx, activePanel, isSuperAdminProp, canShowFeature, FEATURE_PERMISSIONS, handleNav)
-                ];
-              }
+            // Hide SuperAdmin panel when view role is not superadmin
+            if (item.key === "superadmin" && !isSuperAdminProp) return null;
+            
+            // Hide Admin panel when view role doesn't have admin access
+            if (item.key === "admin" && !canShowFeature(FEATURE_PERMISSIONS.VIEW_ADMIN_PANEL)) {
+              return (
+                <button key={item.key} className="flex items-center gap-2 px-3 py-2 rounded text-gray-400 bg-gray-100 cursor-not-allowed" disabled>
+                  <item.icon className="h-5 w-5" />
+                  {item.label}
+                </button>
+              );
             }
-            return renderNavButton(item, idx, activePanel, isSuperAdminProp, canShowFeature, FEATURE_PERMISSIONS, handleNav);
+            
+            return (
+              <button
+                key={item.key}
+                onClick={() => {
+                  if (item.key === activePanel) return;
+                  if (item.key === "superadmin" && !isSuperAdminProp) return;
+                  if (item.key === "admin" && !canShowFeature(FEATURE_PERMISSIONS.VIEW_ADMIN_PANEL)) return;
+                  setViewMode(item.key);
+                  if (typeof onSidebarNav === 'function') onSidebarNav();
+                }}
+                className={`flex items-center gap-2 px-3 py-2 rounded transition ${activePanel === item.key ? "bg-blue-100 text-blue-700 font-semibold" : "hover:bg-gray-100 text-gray-700"}`}
+                disabled={item.key === "admin" && !canShowFeature(FEATURE_PERMISSIONS.VIEW_ADMIN_PANEL)}
+              >
+                <item.icon className="h-5 w-5" />
+                {item.label}
+              </button>
+            );
           })}
         </nav>
         {/* Role Switcher & Toggles */}
@@ -173,31 +189,3 @@ const Header = React.memo(({
 Header.displayName = 'Header';
 
 export default Header;
-
-// Helper to render nav button
-function renderNavButton(item, idx, activePanel, isSuperAdminProp, canShowFeature, FEATURE_PERMISSIONS, handleNav) {
-  // Hide SuperAdmin panel when view role is not superadmin
-  if (item.key === "superadmin" && !isSuperAdminProp) return null;
-  
-  // Hide Admin panel when view role doesn't have admin access
-  if (item.key === "admin" && !canShowFeature(FEATURE_PERMISSIONS.VIEW_ADMIN_PANEL)) {
-    return (
-      <button key={item.key} className="flex items-center gap-2 px-3 py-2 rounded text-gray-400 bg-gray-100 cursor-not-allowed" disabled>
-        <item.icon className="h-5 w-5" />
-        {item.label}
-      </button>
-    );
-  }
-  
-  return (
-    <button
-      key={item.key}
-      onClick={() => handleNav(item.key)}
-      className={`flex items-center gap-2 px-3 py-2 rounded transition ${activePanel === item.key ? "bg-blue-100 text-blue-700 font-semibold" : "hover:bg-gray-100 text-gray-700"}`}
-      disabled={item.key === "admin" && !canShowFeature(FEATURE_PERMISSIONS.VIEW_ADMIN_PANEL)}
-    >
-      <item.icon className="h-5 w-5" />
-      {item.label}
-    </button>
-  );
-}

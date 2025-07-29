@@ -1,20 +1,20 @@
 {
-  "timestamp": "2025-07-24T06:56:55.000Z",
+  "timestamp": "2025-07-29T06:17:31.405Z",
   "versionCheck": {
-    "packageJson": "2.6.0",
-    "versionJson": "2.6.0",
+    "packageJson": "2.6.1",
+    "versionJson": "2.6.1",
     "otherFiles": [
       {
         "file": "src\\version.json",
-        "version": "2.6.0"
+        "version": "2.6.1"
       }
     ],
     "isConsistent": true,
     "inconsistencies": [],
     "allVersions": [
-      "2.6.0",
-      "2.6.0",
-      "2.6.0"
+      "2.6.1",
+      "2.6.1",
+      "2.6.1"
     ]
   },
   "duplicateFiles": [
@@ -42,319 +42,301 @@
         {
           "type": "TODO",
           "message": "Implement suggestion functionality",
-          "line": 729,
+          "line": 707,
           "context": "// TODO: Implement suggestion functionality"
         },
         {
           "type": "BUG",
-          "message": "admin view mode changes",
-          "line": 55,
-          "context": "// Debug admin view mode changes"
-        },
-        {
-          "type": "BUG",
           "message": "State,",
-          "line": 73,
+          "line": 69,
           "context": "getDebugState,"
         },
         {
           "type": "BUG",
+          "message": "admin view mode changes",
+          "line": 76,
+          "context": "// Debug admin view mode changes"
+        },
+        {
+          "type": "BUG",
           "message": "Logger",
-          "line": 88,
+          "line": 91,
           "context": "// Enhanced Debug Logger"
         },
         {
           "type": "BUG",
           "message": "= useCallback((location, data, type = 'info') => {",
-          "line": 89,
+          "line": 92,
           "context": "const logStateDebug = useCallback((location, data, type = 'info') => {"
         },
         {
           "type": "BUG",
           "message": "Info = {",
-          "line": 90,
+          "line": 93,
           "context": "const debugInfo = {"
         },
         {
           "type": "BUG",
           "message": "${location}]`, debugInfo);",
-          "line": 108,
+          "line": 111,
           "context": "console.log(`[App Debug ${location}]`, debugInfo);"
         },
         {
           "type": "BUG",
           "message": "History) {",
-          "line": 110,
+          "line": 113,
           "context": "if (!window._appDebugHistory) {"
         },
         {
           "type": "BUG",
           "message": "History = [];",
-          "line": 111,
+          "line": 114,
           "context": "window._appDebugHistory = [];"
         },
         {
           "type": "BUG",
           "message": "History.push(debugInfo);",
-          "line": 113,
+          "line": 116,
           "context": "window._appDebugHistory.push(debugInfo);"
         },
         {
           "type": "BUG",
           "message": "('setViewMode Entry', {",
-          "line": 152,
+          "line": 155,
           "context": "logStateDebug('setViewMode Entry', {"
         },
         {
           "type": "BUG",
           "message": "('Skipping transition - already in requested panel', {",
-          "line": 163,
+          "line": 166,
           "context": "logStateDebug('Skipping transition - already in requested panel', {"
         },
         {
           "type": "BUG",
-          "message": "('SuperAdmin Access Denied', {",
-          "line": 173,
-          "context": "logStateDebug('SuperAdmin Access Denied', {"
-        },
-        {
-          "type": "BUG",
-          "message": "('Setting SuperAdmin Panel', {",
-          "line": 181,
-          "context": "logStateDebug('Setting SuperAdmin Panel', {"
-        },
-        {
-          "type": "BUG",
-          "message": "('SuperAdmin Panel Set', {",
-          "line": 191,
-          "context": "logStateDebug('SuperAdmin Panel Set', {"
-        },
-        {
-          "type": "BUG",
-          "message": "('Setting Regular Panel', {",
-          "line": 198,
-          "context": "logStateDebug('Setting Regular Panel', {"
+          "message": "('Setting Panel', {",
+          "line": 174,
+          "context": "logStateDebug('Setting Panel', {"
         },
         {
           "type": "BUG",
           "message": "('Panel Set Complete', {",
-          "line": 209,
+          "line": 187,
           "context": "logStateDebug('Panel Set Complete', {"
         },
         {
           "type": "BUG",
           "message": "('setViewMode Error', {",
-          "line": 214,
+          "line": 192,
           "context": "logStateDebug('setViewMode Error', {"
         },
         {
           "type": "BUG",
           "message": "]);",
-          "line": 225,
+          "line": 203,
           "context": "logStateDebug"
         },
         {
           "type": "BUG",
           "message": "('Panel Change Effect', {",
-          "line": 231,
+          "line": 209,
           "context": "logStateDebug('Panel Change Effect', {"
         },
         {
           "type": "BUG",
           "message": "]);",
-          "line": 242,
+          "line": 220,
           "context": "}, [activePanel, getCurrentRole, viewRole, userIsSuperAdmin, logStateDebug]);"
         },
         {
           "type": "BUG",
           "message": "] handleNewSop called');",
-          "line": 277,
+          "line": 255,
           "context": "console.log('[App Debug] handleNewSop called');"
         },
         {
           "type": "BUG",
           "message": "] New SOP initialized:', newSop);",
-          "line": 301,
+          "line": 279,
           "context": "console.log('[App Debug] New SOP initialized:', newSop);"
         },
         {
           "type": "BUG",
           "message": "Mode Setup",
-          "line": 313,
+          "line": 291,
           "context": "// 🔄 Debug Mode Setup"
         },
         {
           "type": "BUG",
           "message": "State = () => {",
-          "line": 316,
+          "line": 294,
           "context": "window.debugState = () => {"
         },
         {
           "type": "BUG",
           "message": "State();",
-          "line": 317,
+          "line": 295,
           "context": "const state = getDebugState();"
         },
         {
           "type": "BUG",
           "message": "State();",
-          "line": 325,
+          "line": 303,
           "context": "return window.debugState();"
         },
         {
           "type": "BUG",
           "message": "State, changeRole]);",
-          "line": 336,
+          "line": 314,
           "context": "}, [getDebugState, changeRole]);"
         },
         {
           "type": "BUG",
           "message": "] handleSaveSop called');",
-          "line": 451,
+          "line": 429,
           "context": "console.log('[App Debug] handleSaveSop called');"
         },
         {
           "type": "BUG",
           "message": "] Saving SOP:', draftSop);",
-          "line": 457,
+          "line": 435,
           "context": "console.log('[App Debug] Saving SOP:', draftSop);"
         },
         {
           "type": "BUG",
           "message": "] Current user:', userProfile);",
-          "line": 458,
+          "line": 436,
           "context": "console.log('[App Debug] Current user:', userProfile);"
         },
         {
           "type": "BUG",
           "message": "] Current department:', selectedDepartmentId);",
-          "line": 459,
+          "line": 437,
           "context": "console.log('[App Debug] Current department:', selectedDepartmentId);"
         },
         {
           "type": "BUG",
           "message": "] Permissions:', userProfile?.permissions);",
-          "line": 460,
+          "line": 438,
           "context": "console.log('[App Debug] Permissions:', userProfile?.permissions);"
         },
         {
           "type": "BUG",
           "message": "] Error updating SOP:', updateError);",
-          "line": 481,
+          "line": 459,
           "context": "console.error('[App Debug] Error updating SOP:', updateError);"
         },
         {
           "type": "BUG",
           "message": "] Creating new SOP with id:', sopId);",
-          "line": 539,
+          "line": 517,
           "context": "console.log('[App Debug] Creating new SOP with id:', sopId);"
         },
         {
           "type": "BUG",
           "message": "] Error creating SOP:', sopError);",
-          "line": 552,
+          "line": 530,
           "context": "console.error('[App Debug] Error creating SOP:', sopError);"
         },
         {
           "type": "BUG",
           "message": "] SOP insert response:', sopInsertData);",
-          "line": 556,
+          "line": 534,
           "context": "console.log('[App Debug] SOP insert response:', sopInsertData);"
         },
         {
           "type": "BUG",
           "message": "] Error inserting step:', stepError);",
-          "line": 563,
+          "line": 541,
           "context": "console.error('[App Debug] Error inserting step:', stepError);"
         },
         {
           "type": "BUG",
           "message": "] Step insert response:', stepInsertData);",
-          "line": 567,
+          "line": 545,
           "context": "console.log('[App Debug] Step insert response:', stepInsertData);"
         },
         {
           "type": "BUG",
           "message": "] Exception in handleSaveSop:', error);",
-          "line": 583,
+          "line": 561,
           "context": "console.error('[App Debug] Exception in handleSaveSop:', error);"
         },
         {
           "type": "BUG",
           "message": "] handleSopSelect called for SOP:', sop);",
-          "line": 595,
+          "line": 573,
           "context": "console.log('[App Debug] handleSopSelect called for SOP:', sop);"
         },
         {
           "type": "BUG",
           "message": "] Error fetching SOP steps:', error);",
-          "line": 605,
+          "line": 583,
           "context": "console.error('[App Debug] Error fetching SOP steps:', error);"
         },
         {
           "type": "BUG",
           "message": "] Fetched SOP steps:', steps);",
-          "line": 607,
+          "line": 585,
           "context": "console.log('[App Debug] Fetched SOP steps:', steps);"
         },
         {
           "type": "BUG",
           "message": "] Exception in handleSopSelect:', err);",
-          "line": 611,
+          "line": 589,
           "context": "console.error('[App Debug] Exception in handleSopSelect:', err);"
         },
         {
           "type": "BUG",
           "message": "] Setting panel to detail');",
-          "line": 615,
+          "line": 593,
           "context": "console.log('[App Debug] Setting panel to detail');"
         },
         {
           "type": "BUG",
           "message": "] window.location.hash before:', window.location.hash);",
-          "line": 617,
+          "line": 595,
           "context": "console.log('[App Debug] window.location.hash before:', window.location.hash);"
         },
         {
           "type": "BUG",
           "message": "] window.location.hash after:', window.location.hash);",
-          "line": 619,
+          "line": 597,
           "context": "console.log('[App Debug] window.location.hash after:', window.location.hash);"
         },
         {
           "type": "BUG",
           "message": "Info - Only visible in development */}",
-          "line": 1097,
+          "line": 1075,
           "context": "{/* Debug Info - Only visible in development */}"
         },
         {
           "type": "BUG",
           "message": "log",
-          "line": 1130,
+          "line": 1111,
           "context": "// Wrap every setActivePanel call with a debug log"
         },
         {
           "type": "BUG",
           "message": "SetActivePanel = (panel) => {",
-          "line": 1131,
+          "line": 1112,
           "context": "const debugSetActivePanel = (panel) => {"
         },
         {
           "type": "BUG",
           "message": "setActivePanel] Setting panel to', panel, 'hash:', window.location.hash);",
-          "line": 1132,
+          "line": 1113,
           "context": "console.log('[App Debug setActivePanel] Setting panel to', panel, 'hash:', window.location.hash);"
         },
         {
           "type": "BUG",
           "message": "SetActivePanel(panel)",
-          "line": 1136,
+          "line": 1117,
           "context": "// Replace all setActivePanel(panel) with debugSetActivePanel(panel)"
         },
         {
           "type": "NOTE",
           "message": "This function is not used in the root App component",
-          "line": 1133,
+          "line": 1114,
           "context": "// Note: This function is not used in the root App component"
         }
       ]
@@ -480,20 +462,92 @@
         },
         {
           "type": "BUG",
+          "message": "logging for troubleshooting",
+          "line": 441,
+          "context": "// Debug logging for troubleshooting"
+        },
+        {
+          "type": "BUG",
+          "message": "] canModifyUserInDepartment:`, {",
+          "line": 442,
+          "context": "console.log(`[UsersAdmin Debug] canModifyUserInDepartment:`, {"
+        },
+        {
+          "type": "BUG",
+          "message": "role determination (after all variables are defined)",
+          "line": 459,
+          "context": "// Debug role determination (after all variables are defined)"
+        },
+        {
+          "type": "BUG",
+          "message": "] adminRoles:', adminRoles);",
+          "line": 460,
+          "context": "console.log('[UsersAdmin Debug] adminRoles:', adminRoles);"
+        },
+        {
+          "type": "BUG",
+          "message": "] userProfile.is_superadmin:', userProfile?.is_superadmin);",
+          "line": 461,
+          "context": "console.log('[UsersAdmin Debug] userProfile.is_superadmin:', userProfile?.is_superadmin);"
+        },
+        {
+          "type": "BUG",
+          "message": "] effectiveRole:', effectiveRole);",
+          "line": 462,
+          "context": "console.log('[UsersAdmin Debug] effectiveRole:', effectiveRole);"
+        },
+        {
+          "type": "BUG",
+          "message": "] adminRoleLevel:', adminRoleLevel);",
+          "line": 463,
+          "context": "console.log('[UsersAdmin Debug] adminRoleLevel:', adminRoleLevel);"
+        },
+        {
+          "type": "BUG",
+          "message": "] ROLE_HIERARCHY:', ROLE_HIERARCHY);",
+          "line": 464,
+          "context": "console.log('[UsersAdmin Debug] ROLE_HIERARCHY:', ROLE_HIERARCHY);"
+        },
+        {
+          "type": "BUG",
           "message": "] isSuper:', isSuper);",
-          "line": 54,
+          "line": 465,
           "context": "console.log('[UsersAdmin Debug] isSuper:', isSuper);"
         },
         {
           "type": "BUG",
           "message": "] canShowFeature(MANAGE_USERS):', canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS));",
-          "line": 55,
+          "line": 466,
           "context": "console.log('[UsersAdmin Debug] canShowFeature(MANAGE_USERS):', canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS));"
         },
         {
           "type": "BUG",
+          "message": "] userWithRole:', userWithRole);",
+          "line": 467,
+          "context": "console.log('[UsersAdmin Debug] userWithRole:', userWithRole);"
+        },
+        {
+          "type": "BUG",
+          "message": "] FEATURE_PERMISSIONS.MANAGE_USERS:', FEATURE_PERMISSIONS.MANAGE_USERS);",
+          "line": 468,
+          "context": "console.log('[UsersAdmin Debug] FEATURE_PERMISSIONS.MANAGE_USERS:', FEATURE_PERMISSIONS.MANAGE_USERS);"
+        },
+        {
+          "type": "BUG",
+          "message": "a few sample users to see what's happening",
+          "line": 470,
+          "context": "// Debug a few sample users to see what's happening"
+        },
+        {
+          "type": "BUG",
+          "message": "] Sample user permissions:', users.slice(0, 3).map(user => ({",
+          "line": 472,
+          "context": "console.log('[UsersAdmin Debug] Sample user permissions:', users.slice(0, 3).map(user => ({"
+        },
+        {
+          "type": "BUG",
           "message": "] Access Denied: canShowFeature returned false');",
-          "line": 346,
+          "line": 481,
           "context": "console.log('[UsersAdmin Debug] Access Denied: canShowFeature returned false');"
         }
       ]
@@ -846,6 +900,359 @@
           "message": "('Initial Setup Error', {",
           "line": 117,
           "context": "logDebug('Initial Setup Error', {"
+        }
+      ]
+    },
+    {
+      "file": "src\\components\\NavigationMigrationTest.jsx",
+      "todos": [
+        {
+          "type": "BUG",
+          "message": "Output, setDebugOutput] = useState([]);",
+          "line": 16,
+          "context": "const [debugOutput, setDebugOutput] = useState([]);"
+        },
+        {
+          "type": "BUG",
+          "message": "output with unique keys",
+          "line": 28,
+          "context": "// Add debug output with unique keys"
+        },
+        {
+          "type": "BUG",
+          "message": "Output = (message, type = 'info') => {",
+          "line": 29,
+          "context": "const addDebugOutput = (message, type = 'info') => {"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(prev => [newOutput, ...prev.slice(0, 9)]); // Keep last 10",
+          "line": 38,
+          "context": "setDebugOutput(prev => [newOutput, ...prev.slice(0, 9)]); // Keep last 10"
+        },
+        {
+          "type": "BUG",
+          "message": "OutputCount: debugOutput.length,",
+          "line": 71,
+          "context": "debugOutputCount: debugOutput.length,"
+        },
+        {
+          "type": "BUG",
+          "message": "Output('Diagnostic report copied to clipboard', 'success');",
+          "line": 93,
+          "context": "addDebugOutput('Diagnostic report copied to clipboard', 'success');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(`Failed to copy report: ${error.message}`, 'error');",
+          "line": 96,
+          "context": "addDebugOutput(`Failed to copy report: ${error.message}`, 'error');"
+        },
+        {
+          "type": "BUG",
+          "message": "navigation state",
+          "line": 101,
+          "context": "// Debug navigation state"
+        },
+        {
+          "type": "BUG",
+          "message": "State = () => {",
+          "line": 102,
+          "context": "const handleDebugState = () => {"
+        },
+        {
+          "type": "BUG",
+          "message": "State = {",
+          "line": 103,
+          "context": "const debugState = {"
+        },
+        {
+          "type": "BUG",
+          "message": "State:', debugState);",
+          "line": 115,
+          "context": "console.log('🔍 Navigation Debug State:', debugState);"
+        },
+        {
+          "type": "BUG",
+          "message": "Output('Debug state logged to console', 'success');",
+          "line": 116,
+          "context": "addDebugOutput('Debug state logged to console', 'success');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(`Current route: ${debugState.currentRoute}`, 'info');",
+          "line": 117,
+          "context": "addDebugOutput(`Current route: ${debugState.currentRoute}`, 'info');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(`Permissions: ${userPermissions.join(', ')}`, 'info');",
+          "line": 118,
+          "context": "addDebugOutput(`Permissions: ${userPermissions.join(', ')}`, 'info');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(`SuperAdmin: ${isSuperAdmin}`, 'info');",
+          "line": 119,
+          "context": "addDebugOutput(`SuperAdmin: ${isSuperAdmin}`, 'info');"
+        },
+        {
+          "type": "BUG",
+          "message": "State', 'PASS', debugState);",
+          "line": 122,
+          "context": "addDiagnosticLog('NAVIGATION', 'Debug State', 'PASS', debugState);"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(`Testing navigation to: ${routeKey}`, 'test');",
+          "line": 128,
+          "context": "addDebugOutput(`Testing navigation to: ${routeKey}`, 'test');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(`✅ Navigation to ${routeKey} would work`, 'success');",
+          "line": 132,
+          "context": "addDebugOutput(`✅ Navigation to ${routeKey} would work`, 'success');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output('Test button clicked successfully', 'success');",
+          "line": 150,
+          "context": "addDebugOutput('Test button clicked successfully', 'success');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output('Button event handling working correctly', 'info');",
+          "line": 151,
+          "context": "addDebugOutput('Button event handling working correctly', 'info');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output('Testing permission system...', 'info');",
+          "line": 159,
+          "context": "addDebugOutput('Testing permission system...', 'info');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(message, testPasses ? 'success' : 'warning');",
+          "line": 176,
+          "context": "addDebugOutput(message, testPasses ? 'success' : 'warning');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output('Testing SuperAdmin functionality...', 'info');",
+          "line": 190,
+          "context": "addDebugOutput('Testing SuperAdmin functionality...', 'info');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(`SuperAdmin Checkbox: ${checkboxWorking ? '✅' : '❌'}`, checkboxWorking ? 'success' : 'error');",
+          "line": 194,
+          "context": "addDebugOutput(`SuperAdmin Checkbox: ${checkboxWorking ? '✅' : '❌'}`, checkboxWorking ? 'success' : 'error');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(`SuperAdmin State Management: ${stateWorking ? '✅' : '❌'}`, stateWorking ? 'success' : 'error');",
+          "line": 203,
+          "context": "addDebugOutput(`SuperAdmin State Management: ${stateWorking ? '✅' : '❌'}`, stateWorking ? 'success' : 'error');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(`SuperAdmin Permission Integration: ${permissionIntegration ? '✅' : '❌'}`, permissionIntegration ? 'success' : 'error');",
+          "line": 212,
+          "context": "addDebugOutput(`SuperAdmin Permission Integration: ${permissionIntegration ? '✅' : '❌'}`, permissionIntegration ? 'success' : 'error');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(`SuperAdmin UI Responsiveness: ${uiResponsive ? '✅' : '❌'}`, uiResponsive ? 'success' : 'error');",
+          "line": 223,
+          "context": "addDebugOutput(`SuperAdmin UI Responsiveness: ${uiResponsive ? '✅' : '❌'}`, uiResponsive ? 'success' : 'error');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(`SuperAdmin Toggle Test: ${toggleTestWorking ? '✅' : '❌'}`, toggleTestWorking ? 'success' : 'error');",
+          "line": 232,
+          "context": "addDebugOutput(`SuperAdmin Toggle Test: ${toggleTestWorking ? '✅' : '❌'}`, toggleTestWorking ? 'success' : 'error');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(`SuperAdmin Current State Valid: ${currentStateValid ? '✅' : '❌'}`, currentStateValid ? 'success' : 'error');",
+          "line": 241,
+          "context": "addDebugOutput(`SuperAdmin Current State Valid: ${currentStateValid ? '✅' : '❌'}`, currentStateValid ? 'success' : 'error');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output('Testing SuperAdmin toggle...', 'info');",
+          "line": 252,
+          "context": "addDebugOutput('Testing SuperAdmin toggle...', 'info');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(`Toggling SuperAdmin from ${isSuperAdmin} to ${newState}`, 'info');",
+          "line": 256,
+          "context": "addDebugOutput(`Toggling SuperAdmin from ${isSuperAdmin} to ${newState}`, 'info');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(`SuperAdmin Toggle Working: ${toggleWorking ? '✅' : '❌'}`, toggleWorking ? 'success' : 'error');",
+          "line": 263,
+          "context": "addDebugOutput(`SuperAdmin Toggle Working: ${toggleWorking ? '✅' : '❌'}`, toggleWorking ? 'success' : 'error');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output(`SuperAdmin state after toggle: ${newState ? 'ENABLED' : 'DISABLED'}`, 'success');",
+          "line": 274,
+          "context": "addDebugOutput(`SuperAdmin state after toggle: ${newState ? 'ENABLED' : 'DISABLED'}`, 'success');"
+        },
+        {
+          "type": "BUG",
+          "message": "output",
+          "line": 283,
+          "context": "// Clear debug output"
+        },
+        {
+          "type": "BUG",
+          "message": "Output = () => {",
+          "line": 284,
+          "context": "const clearDebugOutput = () => {"
+        },
+        {
+          "type": "BUG",
+          "message": "Output([]);",
+          "line": 285,
+          "context": "setDebugOutput([]);"
+        },
+        {
+          "type": "BUG",
+          "message": "Output('Debug output cleared', 'info');",
+          "line": 289,
+          "context": "addDebugOutput('Debug output cleared', 'info');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output', 'testResults', 'diagnosticLog'] });",
+          "line": 290,
+          "context": "addDiagnosticLog('SYSTEM', 'Clear All Data', 'PASS', { clearedItems: ['debugOutput', 'testResults', 'diagnosticLog'] });"
+        },
+        {
+          "type": "BUG",
+          "message": "Output('Running comprehensive system validation...', 'info');",
+          "line": 295,
+          "context": "addDebugOutput('Running comprehensive system validation...', 'info');"
+        },
+        {
+          "type": "BUG",
+          "message": "Output('Comprehensive test completed', 'success');",
+          "line": 373,
+          "context": "addDebugOutput('Comprehensive test completed', 'success');"
+        },
+        {
+          "type": "BUG",
+          "message": "State}",
+          "line": 486,
+          "context": "onClick={handleDebugState}"
+        },
+        {
+          "type": "BUG",
+          "message": "State",
+          "line": 489,
+          "context": "Debug State"
+        },
+        {
+          "type": "BUG",
+          "message": "Output}",
+          "line": 534,
+          "context": "onClick={clearDebugOutput}"
+        },
+        {
+          "type": "BUG",
+          "message": "Output */}",
+          "line": 566,
+          "context": "{/* Debug Output */}"
+        },
+        {
+          "type": "BUG",
+          "message": "Output</h3>",
+          "line": 568,
+          "context": "<h3 className=\"font-semibold mb-3\">Debug Output</h3>"
+        },
+        {
+          "type": "BUG",
+          "message": "Output.length === 0 ? (",
+          "line": 570,
+          "context": "{debugOutput.length === 0 ? ("
+        },
+        {
+          "type": "BUG",
+          "message": "output yet. Click buttons above to see output.</div>",
+          "line": 571,
+          "context": "<div className=\"text-gray-500\">No debug output yet. Click buttons above to see output.</div>"
+        },
+        {
+          "type": "BUG",
+          "message": "Output.map(output => (",
+          "line": 573,
+          "context": "debugOutput.map(output => ("
+        },
+        {
+          "type": "NOTE",
+          "message": "testPasses ? 'Outcome matches expected outcome' : 'Outcome does not match expected outcome'",
+          "line": 183,
+          "context": "note: testPasses ? 'Outcome matches expected outcome' : 'Outcome does not match expected outcome'"
+        },
+        {
+          "type": "NOTE",
+          "message": "'Checkbox is a controlled React component'",
+          "line": 198,
+          "context": "note: 'Checkbox is a controlled React component'"
+        },
+        {
+          "type": "NOTE",
+          "message": "'Permission integration is working - state matches checkbox'",
+          "line": 218,
+          "context": "note: 'Permission integration is working - state matches checkbox'"
+        },
+        {
+          "type": "NOTE",
+          "message": "'UI elements should show/hide based on SuperAdmin status'",
+          "line": 227,
+          "context": "note: 'UI elements should show/hide based on SuperAdmin status'"
+        },
+        {
+          "type": "NOTE",
+          "message": "'Toggle functionality is implemented and working'",
+          "line": 236,
+          "context": "note: 'Toggle functionality is implemented and working'"
+        },
+        {
+          "type": "NOTE",
+          "message": "`Current SuperAdmin state: ${isSuperAdmin ? 'ENABLED' : 'DISABLED'}`",
+          "line": 246,
+          "context": "note: `Current SuperAdmin state: ${isSuperAdmin ? 'ENABLED' : 'DISABLED'}`"
+        },
+        {
+          "type": "NOTE",
+          "message": "'Should be running in development mode for testing'",
+          "line": 302,
+          "context": "note: 'Should be running in development mode for testing'"
+        },
+        {
+          "type": "NOTE",
+          "message": "'Permission checks, state validation, and access controls are working'",
+          "line": 354,
+          "context": "note: 'Permission checks, state validation, and access controls are working'"
+        },
+        {
+          "type": "NOTE",
+          "message": "'Navigation, permissions, state management, and UI are all integrated'",
+          "line": 362,
+          "context": "note: 'Navigation, permissions, state management, and UI are all integrated'"
+        },
+        {
+          "type": "NOTE",
+          "message": "'All critical functionality tested and working correctly'",
+          "line": 370,
+          "context": "note: 'All critical functionality tested and working correctly'"
         }
       ]
     },
@@ -1230,6 +1637,41 @@
       ]
     },
     {
+      "file": "src\\utils\\navigationBackup.js",
+      "todos": [
+        {
+          "type": "BUG",
+          "message": "UTILITIES",
+          "line": 319,
+          "context": "// DEBUG UTILITIES"
+        },
+        {
+          "type": "BUG",
+          "message": "navigation state",
+          "line": 323,
+          "context": "* Debug navigation state"
+        },
+        {
+          "type": "BUG",
+          "message": "NavigationState() {",
+          "line": 325,
+          "context": "export function debugNavigationState() {"
+        },
+        {
+          "type": "BUG",
+          "message": "State:', state);",
+          "line": 337,
+          "context": "console.log('🔍 Navigation Debug State:', state);"
+        },
+        {
+          "type": "BUG",
+          "message": "NavigationState,",
+          "line": 355,
+          "context": "debugNavigationState,"
+        }
+      ]
+    },
+    {
       "file": "src\\services\\backup\\backupImportService.ts",
       "todos": [
         {
@@ -1254,8 +1696,33 @@
   ],
   "buildWarnings": [
     {
+      "type": "BUILD_WARNING",
+      "message": "\u001b[33mwarnings when minifying css:",
+      "severity": "warning"
+    },
+    {
+      "type": "BUILD_ERROR",
+      "message": "▲ [WARNING] Expected \":\" [css-syntax-error]",
+      "severity": "error"
+    },
+    {
+      "type": "BUILD_ERROR",
+      "message": "▲ [WARNING] Expected \":\" [css-syntax-error]",
+      "severity": "error"
+    },
+    {
+      "type": "BUILD_ERROR",
+      "message": "▲ [WARNING] Expected \":\" [css-syntax-error]",
+      "severity": "error"
+    },
+    {
+      "type": "BUILD_ERROR",
+      "message": "▲ [WARNING] Expected \":\" [css-syntax-error]",
+      "severity": "error"
+    },
+    {
       "type": "BUNDLE_SIZE",
-      "message": "(!) Some chunks are larger than 500 kB after minification. Consider:",
+      "message": "(!) Some chunks are larger than 500 kBs after minification. Consider:",
       "severity": "warning"
     },
     {
@@ -1265,12 +1732,12 @@
     },
     {
       "type": "BUILD_STATUS",
-      "message": "Build successful",
-      "severity": "info"
+      "message": "Build failed",
+      "severity": "error"
     }
   ],
   "fileStructure": {
-    "totalFiles": 202,
+    "totalFiles": 213,
     "directories": {
       "name": "src",
       "path": "src",
@@ -1278,8 +1745,8 @@
       "files": [
         {
           "name": "App.jsx",
-          "size": 39927,
-          "modified": "2025-07-24T06:38:08.000Z",
+          "size": 39506,
+          "modified": "2025-07-29T05:48:18.000Z",
           "path": "src\\App.jsx"
         },
         {
@@ -1290,8 +1757,8 @@
         },
         {
           "name": "index.css",
-          "size": 62,
-          "modified": "2025-05-13T06:15:48.000Z",
+          "size": 15641,
+          "modified": "2025-07-29T03:35:42.000Z",
           "path": "src\\index.css"
         },
         {
@@ -1303,7 +1770,7 @@
         {
           "name": "version.json",
           "size": 24,
-          "modified": "2025-07-24T06:56:56.000Z",
+          "modified": "2025-07-29T06:17:32.000Z",
           "path": "src\\version.json"
         },
         {
@@ -2148,14 +2615,14 @@
         },
         {
           "name": "progress-snapshot.json",
-          "size": 169626,
-          "modified": "2025-07-24T06:27:32.000Z",
+          "size": 172632,
+          "modified": "2025-07-24T06:57:02.000Z",
           "path": "src\\progress-snapshot.json"
         },
         {
           "name": "audit-results.json",
-          "size": 156758,
-          "modified": "2025-07-24T06:27:32.000Z",
+          "size": 159777,
+          "modified": "2025-07-24T06:57:02.000Z",
           "path": "src\\audit-results.json"
         },
         {
@@ -2163,6 +2630,18 @@
           "size": 4937,
           "modified": "2025-07-24T06:22:42.000Z",
           "path": "src\\revision-log.json"
+        },
+        {
+          "name": "fix_user_profiles_rls_for_admin_creation.sql",
+          "size": 4108,
+          "modified": "2025-07-28T04:08:18.000Z",
+          "path": "src\\fix_user_profiles_rls_for_admin_creation.sql"
+        },
+        {
+          "name": "fix_rls_for_admin_user_creation.sql",
+          "size": 7227,
+          "modified": "2025-07-27T23:17:38.000Z",
+          "path": "src\\fix_rls_for_admin_user_creation.sql"
         }
       ],
       "subdirs": [
@@ -2173,8 +2652,8 @@
           "files": [
             {
               "name": "Header.jsx",
-              "size": 7606,
-              "modified": "2025-07-23T22:29:56.000Z",
+              "size": 7207,
+              "modified": "2025-07-29T04:40:58.000Z",
               "path": "src\\components\\Header.jsx"
             },
             {
@@ -2245,8 +2724,8 @@
             },
             {
               "name": "CreateUserModal.jsx",
-              "size": 9147,
-              "modified": "2025-07-23T05:25:16.000Z",
+              "size": 9666,
+              "modified": "2025-07-27T23:11:34.000Z",
               "path": "src\\components\\CreateUserModal.jsx"
             },
             {
@@ -2266,6 +2745,18 @@
               "size": 4398,
               "modified": "2025-07-22T20:28:48.000Z",
               "path": "src\\components\\SuperAdminPanel.tsx"
+            },
+            {
+              "name": "NavigationMigrationTest.jsx",
+              "size": 32566,
+              "modified": "2025-07-29T04:11:38.000Z",
+              "path": "src\\components\\NavigationMigrationTest.jsx"
+            },
+            {
+              "name": "SimpleTest.jsx",
+              "size": 346,
+              "modified": "2025-07-29T03:38:58.000Z",
+              "path": "src\\components\\SimpleTest.jsx"
             }
           ],
           "subdirs": [
@@ -2413,8 +2904,8 @@
                   "files": [
                     {
                       "name": "index.jsx",
-                      "size": 17946,
-                      "modified": "2025-07-24T06:39:00.000Z",
+                      "size": 23567,
+                      "modified": "2025-07-29T06:16:20.000Z",
                       "path": "src\\components\\admin\\UsersAdmin\\index.jsx"
                     }
                   ],
@@ -2482,6 +2973,18 @@
               "size": 22150,
               "modified": "2025-07-24T01:26:02.000Z",
               "path": "src\\utils\\projectAuditor.js"
+            },
+            {
+              "name": "navigation.jsx",
+              "size": 24120,
+              "modified": "2025-07-29T04:36:48.000Z",
+              "path": "src\\utils\\navigation.jsx"
+            },
+            {
+              "name": "navigationBackup.js",
+              "size": 9302,
+              "modified": "2025-07-29T04:19:10.000Z",
+              "path": "src\\utils\\navigationBackup.js"
             }
           ],
           "subdirs": [
@@ -2572,44 +3075,117 @@
               "subdirs": []
             }
           ]
+        },
+        {
+          "name": "design-system",
+          "path": "src\\design-system",
+          "depth": 1,
+          "files": [
+            {
+              "name": "tokens.js",
+              "size": 12304,
+              "modified": "2025-07-29T03:07:20.000Z",
+              "path": "src\\design-system\\tokens.js"
+            },
+            {
+              "name": "README.md",
+              "size": 9665,
+              "modified": "2025-07-29T03:08:30.000Z",
+              "path": "src\\design-system\\README.md"
+            },
+            {
+              "name": "export.js",
+              "size": 19304,
+              "modified": "2025-07-29T03:13:20.000Z",
+              "path": "src\\design-system\\export.js"
+            }
+          ],
+          "subdirs": [
+            {
+              "name": "platforms",
+              "path": "src\\design-system\\platforms",
+              "depth": 2,
+              "files": [
+                {
+                  "name": "index.js",
+                  "size": 11340,
+                  "modified": "2025-07-29T04:18:46.000Z",
+                  "path": "src\\design-system\\platforms\\index.js"
+                }
+              ],
+              "subdirs": []
+            },
+            {
+              "name": "hooks",
+              "path": "src\\design-system\\hooks",
+              "depth": 2,
+              "files": [
+                {
+                  "name": "useDesignTokens.js",
+                  "size": 9454,
+                  "modified": "2025-07-29T04:18:36.000Z",
+                  "path": "src\\design-system\\hooks\\useDesignTokens.js"
+                }
+              ],
+              "subdirs": []
+            }
+          ]
         }
       ]
     },
     "fileTypes": {
-      ".jsx": 31,
-      ".js": 73,
+      ".jsx": 34,
+      ".js": 78,
       ".css": 1,
       ".txt": 1,
       ".ts": 5,
       ".tsx": 5,
-      ".md": 3,
+      ".md": 4,
       ".json": 4,
-      ".sql": 79
+      ".sql": 81
     },
     "largestFiles": [
       {
         "name": "progress-snapshot.json",
         "path": "src\\progress-snapshot.json",
-        "size": 169626,
-        "sizeKB": 166
+        "size": 172632,
+        "sizeKB": 169
       },
       {
         "name": "audit-results.json",
         "path": "src\\audit-results.json",
-        "size": 156758,
-        "sizeKB": 153
+        "size": 159777,
+        "sizeKB": 156
       },
       {
         "name": "App.jsx",
         "path": "src\\App.jsx",
-        "size": 39927,
+        "size": 39506,
         "sizeKB": 39
+      },
+      {
+        "name": "NavigationMigrationTest.jsx",
+        "path": "src\\components\\NavigationMigrationTest.jsx",
+        "size": 32566,
+        "sizeKB": 32
       },
       {
         "name": "SuperAdminPanel.jsx",
         "path": "src\\components\\admin\\SuperAdminPanel.jsx",
         "size": 25744,
         "sizeKB": 25
+      },
+      {
+        "name": "navigation.jsx",
+        "path": "src\\utils\\navigation.jsx",
+        "size": 24120,
+        "sizeKB": 24
+      },
+      {
+        "name": "index.jsx",
+        "path": "src\\components\\admin\\UsersAdmin\\index.jsx",
+        "size": 23567,
+        "sizeKB": 23
       },
       {
         "name": "projectAuditor.js",
@@ -2628,76 +3204,58 @@
         "path": "src\\fix_all_rls_policies_final.sql",
         "size": 20940,
         "sizeKB": 20
-      },
-      {
-        "name": "fix_all_rls_policies_corrected.sql",
-        "path": "src\\fix_all_rls_policies_corrected.sql",
-        "size": 20900,
-        "sizeKB": 20
-      },
-      {
-        "name": "fix_all_rls_policies.sql",
-        "path": "src\\fix_all_rls_policies.sql",
-        "size": 20771,
-        "sizeKB": 20
-      },
-      {
-        "name": "fix_all_rls_policies_simple.sql",
-        "path": "src\\fix_all_rls_policies_simple.sql",
-        "size": 20768,
-        "sizeKB": 20
       }
     ],
     "recentChanges": [
       {
         "name": "version.json",
         "path": "src\\version.json",
-        "modified": "2025-07-24T06:56:56.000Z"
-      },
-      {
-        "name": "backupService.ts",
-        "path": "src\\services\\backup\\backupService.ts",
-        "modified": "2025-07-24T06:53:58.000Z"
+        "modified": "2025-07-29T06:17:32.000Z"
       },
       {
         "name": "index.jsx",
         "path": "src\\components\\admin\\UsersAdmin\\index.jsx",
-        "modified": "2025-07-24T06:39:00.000Z"
+        "modified": "2025-07-29T06:16:20.000Z"
       },
       {
         "name": "App.jsx",
         "path": "src\\App.jsx",
-        "modified": "2025-07-24T06:38:08.000Z"
+        "modified": "2025-07-29T05:48:18.000Z"
       },
       {
-        "name": "progress-snapshot.json",
-        "path": "src\\progress-snapshot.json",
-        "modified": "2025-07-24T06:27:32.000Z"
+        "name": "Header.jsx",
+        "path": "src\\components\\Header.jsx",
+        "modified": "2025-07-29T04:40:58.000Z"
       },
       {
-        "name": "audit-results.json",
-        "path": "src\\audit-results.json",
-        "modified": "2025-07-24T06:27:32.000Z"
+        "name": "navigation.jsx",
+        "path": "src\\utils\\navigation.jsx",
+        "modified": "2025-07-29T04:36:48.000Z"
       },
       {
-        "name": "SuperAdminPanel.jsx",
-        "path": "src\\components\\admin\\SuperAdminPanel.jsx",
-        "modified": "2025-07-24T06:26:28.000Z"
+        "name": "navigationBackup.js",
+        "path": "src\\utils\\navigationBackup.js",
+        "modified": "2025-07-29T04:19:10.000Z"
       },
       {
-        "name": "revision-log.json",
-        "path": "src\\revision-log.json",
-        "modified": "2025-07-24T06:22:42.000Z"
+        "name": "index.js",
+        "path": "src\\design-system\\platforms\\index.js",
+        "modified": "2025-07-29T04:18:46.000Z"
       },
       {
-        "name": "index.jsx",
-        "path": "src\\components\\admin\\BackupManager\\index.jsx",
-        "modified": "2025-07-24T06:05:06.000Z"
+        "name": "useDesignTokens.js",
+        "path": "src\\design-system\\hooks\\useDesignTokens.js",
+        "modified": "2025-07-29T04:18:36.000Z"
       },
       {
-        "name": "backupImportService.js",
-        "path": "src\\services\\backup\\backupImportService.js",
-        "modified": "2025-07-24T05:50:26.000Z"
+        "name": "NavigationMigrationTest.jsx",
+        "path": "src\\components\\NavigationMigrationTest.jsx",
+        "modified": "2025-07-29T04:11:38.000Z"
+      },
+      {
+        "name": "SimpleTest.jsx",
+        "path": "src\\components\\SimpleTest.jsx",
+        "modified": "2025-07-29T03:38:58.000Z"
       }
     ]
   },
@@ -2808,6 +3366,16 @@
       "suggestedAction": "Remove if unused or add proper imports"
     },
     {
+      "file": "src\\components\\NavigationMigrationTest.jsx",
+      "reason": "Not imported anywhere",
+      "suggestedAction": "Remove if unused or add proper imports"
+    },
+    {
+      "file": "src\\components\\SimpleTest.jsx",
+      "reason": "Not imported anywhere",
+      "suggestedAction": "Remove if unused or add proper imports"
+    },
+    {
       "file": "src\\utils\\imageCompression.js",
       "reason": "Not imported anywhere",
       "suggestedAction": "Remove if unused or add proper imports"
@@ -2819,6 +3387,16 @@
     },
     {
       "file": "src\\utils\\projectAuditor.js",
+      "reason": "Not imported anywhere",
+      "suggestedAction": "Remove if unused or add proper imports"
+    },
+    {
+      "file": "src\\utils\\navigation.jsx",
+      "reason": "Not imported anywhere",
+      "suggestedAction": "Remove if unused or add proper imports"
+    },
+    {
+      "file": "src\\utils\\navigationBackup.js",
       "reason": "Not imported anywhere",
       "suggestedAction": "Remove if unused or add proper imports"
     },
@@ -3136,13 +3714,28 @@
       "file": "src\\fix_test_record_creation.js",
       "reason": "Not imported anywhere",
       "suggestedAction": "Remove if unused or add proper imports"
+    },
+    {
+      "file": "src\\design-system\\tokens.js",
+      "reason": "Not imported anywhere",
+      "suggestedAction": "Remove if unused or add proper imports"
+    },
+    {
+      "file": "src\\design-system\\platforms\\index.js",
+      "reason": "Not imported anywhere",
+      "suggestedAction": "Remove if unused or add proper imports"
+    },
+    {
+      "file": "src\\design-system\\export.js",
+      "reason": "Not imported anywhere",
+      "suggestedAction": "Remove if unused or add proper imports"
     }
   ],
   "importAnalysis": {
     "unusedImports": [],
     "missingImports": [],
     "circularDependencies": [],
-    "totalImports": 287,
+    "totalImports": 301,
     "message": "Import analysis completed (simplified version)"
   },
   "issues": [
@@ -3173,7 +3766,7 @@
     {
       "severity": "MEDIUM",
       "category": "TODOS",
-      "message": "190 TODO items found across 15 files",
+      "message": "262 TODO items found across 17 files",
       "impact": "Incomplete features and technical debt",
       "details": [
         {
@@ -3182,319 +3775,301 @@
             {
               "type": "TODO",
               "message": "Implement suggestion functionality",
-              "line": 729,
+              "line": 707,
               "context": "// TODO: Implement suggestion functionality"
             },
             {
               "type": "BUG",
-              "message": "admin view mode changes",
-              "line": 55,
-              "context": "// Debug admin view mode changes"
-            },
-            {
-              "type": "BUG",
               "message": "State,",
-              "line": 73,
+              "line": 69,
               "context": "getDebugState,"
             },
             {
               "type": "BUG",
+              "message": "admin view mode changes",
+              "line": 76,
+              "context": "// Debug admin view mode changes"
+            },
+            {
+              "type": "BUG",
               "message": "Logger",
-              "line": 88,
+              "line": 91,
               "context": "// Enhanced Debug Logger"
             },
             {
               "type": "BUG",
               "message": "= useCallback((location, data, type = 'info') => {",
-              "line": 89,
+              "line": 92,
               "context": "const logStateDebug = useCallback((location, data, type = 'info') => {"
             },
             {
               "type": "BUG",
               "message": "Info = {",
-              "line": 90,
+              "line": 93,
               "context": "const debugInfo = {"
             },
             {
               "type": "BUG",
               "message": "${location}]`, debugInfo);",
-              "line": 108,
+              "line": 111,
               "context": "console.log(`[App Debug ${location}]`, debugInfo);"
             },
             {
               "type": "BUG",
               "message": "History) {",
-              "line": 110,
+              "line": 113,
               "context": "if (!window._appDebugHistory) {"
             },
             {
               "type": "BUG",
               "message": "History = [];",
-              "line": 111,
+              "line": 114,
               "context": "window._appDebugHistory = [];"
             },
             {
               "type": "BUG",
               "message": "History.push(debugInfo);",
-              "line": 113,
+              "line": 116,
               "context": "window._appDebugHistory.push(debugInfo);"
             },
             {
               "type": "BUG",
               "message": "('setViewMode Entry', {",
-              "line": 152,
+              "line": 155,
               "context": "logStateDebug('setViewMode Entry', {"
             },
             {
               "type": "BUG",
               "message": "('Skipping transition - already in requested panel', {",
-              "line": 163,
+              "line": 166,
               "context": "logStateDebug('Skipping transition - already in requested panel', {"
             },
             {
               "type": "BUG",
-              "message": "('SuperAdmin Access Denied', {",
-              "line": 173,
-              "context": "logStateDebug('SuperAdmin Access Denied', {"
-            },
-            {
-              "type": "BUG",
-              "message": "('Setting SuperAdmin Panel', {",
-              "line": 181,
-              "context": "logStateDebug('Setting SuperAdmin Panel', {"
-            },
-            {
-              "type": "BUG",
-              "message": "('SuperAdmin Panel Set', {",
-              "line": 191,
-              "context": "logStateDebug('SuperAdmin Panel Set', {"
-            },
-            {
-              "type": "BUG",
-              "message": "('Setting Regular Panel', {",
-              "line": 198,
-              "context": "logStateDebug('Setting Regular Panel', {"
+              "message": "('Setting Panel', {",
+              "line": 174,
+              "context": "logStateDebug('Setting Panel', {"
             },
             {
               "type": "BUG",
               "message": "('Panel Set Complete', {",
-              "line": 209,
+              "line": 187,
               "context": "logStateDebug('Panel Set Complete', {"
             },
             {
               "type": "BUG",
               "message": "('setViewMode Error', {",
-              "line": 214,
+              "line": 192,
               "context": "logStateDebug('setViewMode Error', {"
             },
             {
               "type": "BUG",
               "message": "]);",
-              "line": 225,
+              "line": 203,
               "context": "logStateDebug"
             },
             {
               "type": "BUG",
               "message": "('Panel Change Effect', {",
-              "line": 231,
+              "line": 209,
               "context": "logStateDebug('Panel Change Effect', {"
             },
             {
               "type": "BUG",
               "message": "]);",
-              "line": 242,
+              "line": 220,
               "context": "}, [activePanel, getCurrentRole, viewRole, userIsSuperAdmin, logStateDebug]);"
             },
             {
               "type": "BUG",
               "message": "] handleNewSop called');",
-              "line": 277,
+              "line": 255,
               "context": "console.log('[App Debug] handleNewSop called');"
             },
             {
               "type": "BUG",
               "message": "] New SOP initialized:', newSop);",
-              "line": 301,
+              "line": 279,
               "context": "console.log('[App Debug] New SOP initialized:', newSop);"
             },
             {
               "type": "BUG",
               "message": "Mode Setup",
-              "line": 313,
+              "line": 291,
               "context": "// 🔄 Debug Mode Setup"
             },
             {
               "type": "BUG",
               "message": "State = () => {",
-              "line": 316,
+              "line": 294,
               "context": "window.debugState = () => {"
             },
             {
               "type": "BUG",
               "message": "State();",
-              "line": 317,
+              "line": 295,
               "context": "const state = getDebugState();"
             },
             {
               "type": "BUG",
               "message": "State();",
-              "line": 325,
+              "line": 303,
               "context": "return window.debugState();"
             },
             {
               "type": "BUG",
               "message": "State, changeRole]);",
-              "line": 336,
+              "line": 314,
               "context": "}, [getDebugState, changeRole]);"
             },
             {
               "type": "BUG",
               "message": "] handleSaveSop called');",
-              "line": 451,
+              "line": 429,
               "context": "console.log('[App Debug] handleSaveSop called');"
             },
             {
               "type": "BUG",
               "message": "] Saving SOP:', draftSop);",
-              "line": 457,
+              "line": 435,
               "context": "console.log('[App Debug] Saving SOP:', draftSop);"
             },
             {
               "type": "BUG",
               "message": "] Current user:', userProfile);",
-              "line": 458,
+              "line": 436,
               "context": "console.log('[App Debug] Current user:', userProfile);"
             },
             {
               "type": "BUG",
               "message": "] Current department:', selectedDepartmentId);",
-              "line": 459,
+              "line": 437,
               "context": "console.log('[App Debug] Current department:', selectedDepartmentId);"
             },
             {
               "type": "BUG",
               "message": "] Permissions:', userProfile?.permissions);",
-              "line": 460,
+              "line": 438,
               "context": "console.log('[App Debug] Permissions:', userProfile?.permissions);"
             },
             {
               "type": "BUG",
               "message": "] Error updating SOP:', updateError);",
-              "line": 481,
+              "line": 459,
               "context": "console.error('[App Debug] Error updating SOP:', updateError);"
             },
             {
               "type": "BUG",
               "message": "] Creating new SOP with id:', sopId);",
-              "line": 539,
+              "line": 517,
               "context": "console.log('[App Debug] Creating new SOP with id:', sopId);"
             },
             {
               "type": "BUG",
               "message": "] Error creating SOP:', sopError);",
-              "line": 552,
+              "line": 530,
               "context": "console.error('[App Debug] Error creating SOP:', sopError);"
             },
             {
               "type": "BUG",
               "message": "] SOP insert response:', sopInsertData);",
-              "line": 556,
+              "line": 534,
               "context": "console.log('[App Debug] SOP insert response:', sopInsertData);"
             },
             {
               "type": "BUG",
               "message": "] Error inserting step:', stepError);",
-              "line": 563,
+              "line": 541,
               "context": "console.error('[App Debug] Error inserting step:', stepError);"
             },
             {
               "type": "BUG",
               "message": "] Step insert response:', stepInsertData);",
-              "line": 567,
+              "line": 545,
               "context": "console.log('[App Debug] Step insert response:', stepInsertData);"
             },
             {
               "type": "BUG",
               "message": "] Exception in handleSaveSop:', error);",
-              "line": 583,
+              "line": 561,
               "context": "console.error('[App Debug] Exception in handleSaveSop:', error);"
             },
             {
               "type": "BUG",
               "message": "] handleSopSelect called for SOP:', sop);",
-              "line": 595,
+              "line": 573,
               "context": "console.log('[App Debug] handleSopSelect called for SOP:', sop);"
             },
             {
               "type": "BUG",
               "message": "] Error fetching SOP steps:', error);",
-              "line": 605,
+              "line": 583,
               "context": "console.error('[App Debug] Error fetching SOP steps:', error);"
             },
             {
               "type": "BUG",
               "message": "] Fetched SOP steps:', steps);",
-              "line": 607,
+              "line": 585,
               "context": "console.log('[App Debug] Fetched SOP steps:', steps);"
             },
             {
               "type": "BUG",
               "message": "] Exception in handleSopSelect:', err);",
-              "line": 611,
+              "line": 589,
               "context": "console.error('[App Debug] Exception in handleSopSelect:', err);"
             },
             {
               "type": "BUG",
               "message": "] Setting panel to detail');",
-              "line": 615,
+              "line": 593,
               "context": "console.log('[App Debug] Setting panel to detail');"
             },
             {
               "type": "BUG",
               "message": "] window.location.hash before:', window.location.hash);",
-              "line": 617,
+              "line": 595,
               "context": "console.log('[App Debug] window.location.hash before:', window.location.hash);"
             },
             {
               "type": "BUG",
               "message": "] window.location.hash after:', window.location.hash);",
-              "line": 619,
+              "line": 597,
               "context": "console.log('[App Debug] window.location.hash after:', window.location.hash);"
             },
             {
               "type": "BUG",
               "message": "Info - Only visible in development */}",
-              "line": 1097,
+              "line": 1075,
               "context": "{/* Debug Info - Only visible in development */}"
             },
             {
               "type": "BUG",
               "message": "log",
-              "line": 1130,
+              "line": 1111,
               "context": "// Wrap every setActivePanel call with a debug log"
             },
             {
               "type": "BUG",
               "message": "SetActivePanel = (panel) => {",
-              "line": 1131,
+              "line": 1112,
               "context": "const debugSetActivePanel = (panel) => {"
             },
             {
               "type": "BUG",
               "message": "setActivePanel] Setting panel to', panel, 'hash:', window.location.hash);",
-              "line": 1132,
+              "line": 1113,
               "context": "console.log('[App Debug setActivePanel] Setting panel to', panel, 'hash:', window.location.hash);"
             },
             {
               "type": "BUG",
               "message": "SetActivePanel(panel)",
-              "line": 1136,
+              "line": 1117,
               "context": "// Replace all setActivePanel(panel) with debugSetActivePanel(panel)"
             },
             {
               "type": "NOTE",
               "message": "This function is not used in the root App component",
-              "line": 1133,
+              "line": 1114,
               "context": "// Note: This function is not used in the root App component"
             }
           ]
@@ -3620,20 +4195,92 @@
             },
             {
               "type": "BUG",
+              "message": "logging for troubleshooting",
+              "line": 441,
+              "context": "// Debug logging for troubleshooting"
+            },
+            {
+              "type": "BUG",
+              "message": "] canModifyUserInDepartment:`, {",
+              "line": 442,
+              "context": "console.log(`[UsersAdmin Debug] canModifyUserInDepartment:`, {"
+            },
+            {
+              "type": "BUG",
+              "message": "role determination (after all variables are defined)",
+              "line": 459,
+              "context": "// Debug role determination (after all variables are defined)"
+            },
+            {
+              "type": "BUG",
+              "message": "] adminRoles:', adminRoles);",
+              "line": 460,
+              "context": "console.log('[UsersAdmin Debug] adminRoles:', adminRoles);"
+            },
+            {
+              "type": "BUG",
+              "message": "] userProfile.is_superadmin:', userProfile?.is_superadmin);",
+              "line": 461,
+              "context": "console.log('[UsersAdmin Debug] userProfile.is_superadmin:', userProfile?.is_superadmin);"
+            },
+            {
+              "type": "BUG",
+              "message": "] effectiveRole:', effectiveRole);",
+              "line": 462,
+              "context": "console.log('[UsersAdmin Debug] effectiveRole:', effectiveRole);"
+            },
+            {
+              "type": "BUG",
+              "message": "] adminRoleLevel:', adminRoleLevel);",
+              "line": 463,
+              "context": "console.log('[UsersAdmin Debug] adminRoleLevel:', adminRoleLevel);"
+            },
+            {
+              "type": "BUG",
+              "message": "] ROLE_HIERARCHY:', ROLE_HIERARCHY);",
+              "line": 464,
+              "context": "console.log('[UsersAdmin Debug] ROLE_HIERARCHY:', ROLE_HIERARCHY);"
+            },
+            {
+              "type": "BUG",
               "message": "] isSuper:', isSuper);",
-              "line": 54,
+              "line": 465,
               "context": "console.log('[UsersAdmin Debug] isSuper:', isSuper);"
             },
             {
               "type": "BUG",
               "message": "] canShowFeature(MANAGE_USERS):', canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS));",
-              "line": 55,
+              "line": 466,
               "context": "console.log('[UsersAdmin Debug] canShowFeature(MANAGE_USERS):', canShowFeature(FEATURE_PERMISSIONS.MANAGE_USERS));"
             },
             {
               "type": "BUG",
+              "message": "] userWithRole:', userWithRole);",
+              "line": 467,
+              "context": "console.log('[UsersAdmin Debug] userWithRole:', userWithRole);"
+            },
+            {
+              "type": "BUG",
+              "message": "] FEATURE_PERMISSIONS.MANAGE_USERS:', FEATURE_PERMISSIONS.MANAGE_USERS);",
+              "line": 468,
+              "context": "console.log('[UsersAdmin Debug] FEATURE_PERMISSIONS.MANAGE_USERS:', FEATURE_PERMISSIONS.MANAGE_USERS);"
+            },
+            {
+              "type": "BUG",
+              "message": "a few sample users to see what's happening",
+              "line": 470,
+              "context": "// Debug a few sample users to see what's happening"
+            },
+            {
+              "type": "BUG",
+              "message": "] Sample user permissions:', users.slice(0, 3).map(user => ({",
+              "line": 472,
+              "context": "console.log('[UsersAdmin Debug] Sample user permissions:', users.slice(0, 3).map(user => ({"
+            },
+            {
+              "type": "BUG",
               "message": "] Access Denied: canShowFeature returned false');",
-              "line": 346,
+              "line": 481,
               "context": "console.log('[UsersAdmin Debug] Access Denied: canShowFeature returned false');"
             }
           ]
@@ -3986,6 +4633,359 @@
               "message": "('Initial Setup Error', {",
               "line": 117,
               "context": "logDebug('Initial Setup Error', {"
+            }
+          ]
+        },
+        {
+          "file": "src\\components\\NavigationMigrationTest.jsx",
+          "todos": [
+            {
+              "type": "BUG",
+              "message": "Output, setDebugOutput] = useState([]);",
+              "line": 16,
+              "context": "const [debugOutput, setDebugOutput] = useState([]);"
+            },
+            {
+              "type": "BUG",
+              "message": "output with unique keys",
+              "line": 28,
+              "context": "// Add debug output with unique keys"
+            },
+            {
+              "type": "BUG",
+              "message": "Output = (message, type = 'info') => {",
+              "line": 29,
+              "context": "const addDebugOutput = (message, type = 'info') => {"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(prev => [newOutput, ...prev.slice(0, 9)]); // Keep last 10",
+              "line": 38,
+              "context": "setDebugOutput(prev => [newOutput, ...prev.slice(0, 9)]); // Keep last 10"
+            },
+            {
+              "type": "BUG",
+              "message": "OutputCount: debugOutput.length,",
+              "line": 71,
+              "context": "debugOutputCount: debugOutput.length,"
+            },
+            {
+              "type": "BUG",
+              "message": "Output('Diagnostic report copied to clipboard', 'success');",
+              "line": 93,
+              "context": "addDebugOutput('Diagnostic report copied to clipboard', 'success');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(`Failed to copy report: ${error.message}`, 'error');",
+              "line": 96,
+              "context": "addDebugOutput(`Failed to copy report: ${error.message}`, 'error');"
+            },
+            {
+              "type": "BUG",
+              "message": "navigation state",
+              "line": 101,
+              "context": "// Debug navigation state"
+            },
+            {
+              "type": "BUG",
+              "message": "State = () => {",
+              "line": 102,
+              "context": "const handleDebugState = () => {"
+            },
+            {
+              "type": "BUG",
+              "message": "State = {",
+              "line": 103,
+              "context": "const debugState = {"
+            },
+            {
+              "type": "BUG",
+              "message": "State:', debugState);",
+              "line": 115,
+              "context": "console.log('🔍 Navigation Debug State:', debugState);"
+            },
+            {
+              "type": "BUG",
+              "message": "Output('Debug state logged to console', 'success');",
+              "line": 116,
+              "context": "addDebugOutput('Debug state logged to console', 'success');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(`Current route: ${debugState.currentRoute}`, 'info');",
+              "line": 117,
+              "context": "addDebugOutput(`Current route: ${debugState.currentRoute}`, 'info');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(`Permissions: ${userPermissions.join(', ')}`, 'info');",
+              "line": 118,
+              "context": "addDebugOutput(`Permissions: ${userPermissions.join(', ')}`, 'info');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(`SuperAdmin: ${isSuperAdmin}`, 'info');",
+              "line": 119,
+              "context": "addDebugOutput(`SuperAdmin: ${isSuperAdmin}`, 'info');"
+            },
+            {
+              "type": "BUG",
+              "message": "State', 'PASS', debugState);",
+              "line": 122,
+              "context": "addDiagnosticLog('NAVIGATION', 'Debug State', 'PASS', debugState);"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(`Testing navigation to: ${routeKey}`, 'test');",
+              "line": 128,
+              "context": "addDebugOutput(`Testing navigation to: ${routeKey}`, 'test');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(`✅ Navigation to ${routeKey} would work`, 'success');",
+              "line": 132,
+              "context": "addDebugOutput(`✅ Navigation to ${routeKey} would work`, 'success');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output('Test button clicked successfully', 'success');",
+              "line": 150,
+              "context": "addDebugOutput('Test button clicked successfully', 'success');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output('Button event handling working correctly', 'info');",
+              "line": 151,
+              "context": "addDebugOutput('Button event handling working correctly', 'info');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output('Testing permission system...', 'info');",
+              "line": 159,
+              "context": "addDebugOutput('Testing permission system...', 'info');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(message, testPasses ? 'success' : 'warning');",
+              "line": 176,
+              "context": "addDebugOutput(message, testPasses ? 'success' : 'warning');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output('Testing SuperAdmin functionality...', 'info');",
+              "line": 190,
+              "context": "addDebugOutput('Testing SuperAdmin functionality...', 'info');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(`SuperAdmin Checkbox: ${checkboxWorking ? '✅' : '❌'}`, checkboxWorking ? 'success' : 'error');",
+              "line": 194,
+              "context": "addDebugOutput(`SuperAdmin Checkbox: ${checkboxWorking ? '✅' : '❌'}`, checkboxWorking ? 'success' : 'error');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(`SuperAdmin State Management: ${stateWorking ? '✅' : '❌'}`, stateWorking ? 'success' : 'error');",
+              "line": 203,
+              "context": "addDebugOutput(`SuperAdmin State Management: ${stateWorking ? '✅' : '❌'}`, stateWorking ? 'success' : 'error');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(`SuperAdmin Permission Integration: ${permissionIntegration ? '✅' : '❌'}`, permissionIntegration ? 'success' : 'error');",
+              "line": 212,
+              "context": "addDebugOutput(`SuperAdmin Permission Integration: ${permissionIntegration ? '✅' : '❌'}`, permissionIntegration ? 'success' : 'error');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(`SuperAdmin UI Responsiveness: ${uiResponsive ? '✅' : '❌'}`, uiResponsive ? 'success' : 'error');",
+              "line": 223,
+              "context": "addDebugOutput(`SuperAdmin UI Responsiveness: ${uiResponsive ? '✅' : '❌'}`, uiResponsive ? 'success' : 'error');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(`SuperAdmin Toggle Test: ${toggleTestWorking ? '✅' : '❌'}`, toggleTestWorking ? 'success' : 'error');",
+              "line": 232,
+              "context": "addDebugOutput(`SuperAdmin Toggle Test: ${toggleTestWorking ? '✅' : '❌'}`, toggleTestWorking ? 'success' : 'error');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(`SuperAdmin Current State Valid: ${currentStateValid ? '✅' : '❌'}`, currentStateValid ? 'success' : 'error');",
+              "line": 241,
+              "context": "addDebugOutput(`SuperAdmin Current State Valid: ${currentStateValid ? '✅' : '❌'}`, currentStateValid ? 'success' : 'error');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output('Testing SuperAdmin toggle...', 'info');",
+              "line": 252,
+              "context": "addDebugOutput('Testing SuperAdmin toggle...', 'info');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(`Toggling SuperAdmin from ${isSuperAdmin} to ${newState}`, 'info');",
+              "line": 256,
+              "context": "addDebugOutput(`Toggling SuperAdmin from ${isSuperAdmin} to ${newState}`, 'info');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(`SuperAdmin Toggle Working: ${toggleWorking ? '✅' : '❌'}`, toggleWorking ? 'success' : 'error');",
+              "line": 263,
+              "context": "addDebugOutput(`SuperAdmin Toggle Working: ${toggleWorking ? '✅' : '❌'}`, toggleWorking ? 'success' : 'error');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output(`SuperAdmin state after toggle: ${newState ? 'ENABLED' : 'DISABLED'}`, 'success');",
+              "line": 274,
+              "context": "addDebugOutput(`SuperAdmin state after toggle: ${newState ? 'ENABLED' : 'DISABLED'}`, 'success');"
+            },
+            {
+              "type": "BUG",
+              "message": "output",
+              "line": 283,
+              "context": "// Clear debug output"
+            },
+            {
+              "type": "BUG",
+              "message": "Output = () => {",
+              "line": 284,
+              "context": "const clearDebugOutput = () => {"
+            },
+            {
+              "type": "BUG",
+              "message": "Output([]);",
+              "line": 285,
+              "context": "setDebugOutput([]);"
+            },
+            {
+              "type": "BUG",
+              "message": "Output('Debug output cleared', 'info');",
+              "line": 289,
+              "context": "addDebugOutput('Debug output cleared', 'info');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output', 'testResults', 'diagnosticLog'] });",
+              "line": 290,
+              "context": "addDiagnosticLog('SYSTEM', 'Clear All Data', 'PASS', { clearedItems: ['debugOutput', 'testResults', 'diagnosticLog'] });"
+            },
+            {
+              "type": "BUG",
+              "message": "Output('Running comprehensive system validation...', 'info');",
+              "line": 295,
+              "context": "addDebugOutput('Running comprehensive system validation...', 'info');"
+            },
+            {
+              "type": "BUG",
+              "message": "Output('Comprehensive test completed', 'success');",
+              "line": 373,
+              "context": "addDebugOutput('Comprehensive test completed', 'success');"
+            },
+            {
+              "type": "BUG",
+              "message": "State}",
+              "line": 486,
+              "context": "onClick={handleDebugState}"
+            },
+            {
+              "type": "BUG",
+              "message": "State",
+              "line": 489,
+              "context": "Debug State"
+            },
+            {
+              "type": "BUG",
+              "message": "Output}",
+              "line": 534,
+              "context": "onClick={clearDebugOutput}"
+            },
+            {
+              "type": "BUG",
+              "message": "Output */}",
+              "line": 566,
+              "context": "{/* Debug Output */}"
+            },
+            {
+              "type": "BUG",
+              "message": "Output</h3>",
+              "line": 568,
+              "context": "<h3 className=\"font-semibold mb-3\">Debug Output</h3>"
+            },
+            {
+              "type": "BUG",
+              "message": "Output.length === 0 ? (",
+              "line": 570,
+              "context": "{debugOutput.length === 0 ? ("
+            },
+            {
+              "type": "BUG",
+              "message": "output yet. Click buttons above to see output.</div>",
+              "line": 571,
+              "context": "<div className=\"text-gray-500\">No debug output yet. Click buttons above to see output.</div>"
+            },
+            {
+              "type": "BUG",
+              "message": "Output.map(output => (",
+              "line": 573,
+              "context": "debugOutput.map(output => ("
+            },
+            {
+              "type": "NOTE",
+              "message": "testPasses ? 'Outcome matches expected outcome' : 'Outcome does not match expected outcome'",
+              "line": 183,
+              "context": "note: testPasses ? 'Outcome matches expected outcome' : 'Outcome does not match expected outcome'"
+            },
+            {
+              "type": "NOTE",
+              "message": "'Checkbox is a controlled React component'",
+              "line": 198,
+              "context": "note: 'Checkbox is a controlled React component'"
+            },
+            {
+              "type": "NOTE",
+              "message": "'Permission integration is working - state matches checkbox'",
+              "line": 218,
+              "context": "note: 'Permission integration is working - state matches checkbox'"
+            },
+            {
+              "type": "NOTE",
+              "message": "'UI elements should show/hide based on SuperAdmin status'",
+              "line": 227,
+              "context": "note: 'UI elements should show/hide based on SuperAdmin status'"
+            },
+            {
+              "type": "NOTE",
+              "message": "'Toggle functionality is implemented and working'",
+              "line": 236,
+              "context": "note: 'Toggle functionality is implemented and working'"
+            },
+            {
+              "type": "NOTE",
+              "message": "`Current SuperAdmin state: ${isSuperAdmin ? 'ENABLED' : 'DISABLED'}`",
+              "line": 246,
+              "context": "note: `Current SuperAdmin state: ${isSuperAdmin ? 'ENABLED' : 'DISABLED'}`"
+            },
+            {
+              "type": "NOTE",
+              "message": "'Should be running in development mode for testing'",
+              "line": 302,
+              "context": "note: 'Should be running in development mode for testing'"
+            },
+            {
+              "type": "NOTE",
+              "message": "'Permission checks, state validation, and access controls are working'",
+              "line": 354,
+              "context": "note: 'Permission checks, state validation, and access controls are working'"
+            },
+            {
+              "type": "NOTE",
+              "message": "'Navigation, permissions, state management, and UI are all integrated'",
+              "line": 362,
+              "context": "note: 'Navigation, permissions, state management, and UI are all integrated'"
+            },
+            {
+              "type": "NOTE",
+              "message": "'All critical functionality tested and working correctly'",
+              "line": 370,
+              "context": "note: 'All critical functionality tested and working correctly'"
             }
           ]
         },
@@ -4370,6 +5370,41 @@
           ]
         },
         {
+          "file": "src\\utils\\navigationBackup.js",
+          "todos": [
+            {
+              "type": "BUG",
+              "message": "UTILITIES",
+              "line": 319,
+              "context": "// DEBUG UTILITIES"
+            },
+            {
+              "type": "BUG",
+              "message": "navigation state",
+              "line": 323,
+              "context": "* Debug navigation state"
+            },
+            {
+              "type": "BUG",
+              "message": "NavigationState() {",
+              "line": 325,
+              "context": "export function debugNavigationState() {"
+            },
+            {
+              "type": "BUG",
+              "message": "State:', state);",
+              "line": 337,
+              "context": "console.log('🔍 Navigation Debug State:', state);"
+            },
+            {
+              "type": "BUG",
+              "message": "NavigationState,",
+              "line": 355,
+              "context": "debugNavigationState,"
+            }
+          ]
+        },
+        {
           "file": "src\\services\\backup\\backupImportService.ts",
           "todos": [
             {
@@ -4394,14 +5429,52 @@
       ]
     },
     {
+      "severity": "HIGH",
+      "category": "BUILD",
+      "message": "5 build errors found",
+      "impact": "Application may not build or deploy",
+      "details": [
+        {
+          "type": "BUILD_ERROR",
+          "message": "▲ [WARNING] Expected \":\" [css-syntax-error]",
+          "severity": "error"
+        },
+        {
+          "type": "BUILD_ERROR",
+          "message": "▲ [WARNING] Expected \":\" [css-syntax-error]",
+          "severity": "error"
+        },
+        {
+          "type": "BUILD_ERROR",
+          "message": "▲ [WARNING] Expected \":\" [css-syntax-error]",
+          "severity": "error"
+        },
+        {
+          "type": "BUILD_ERROR",
+          "message": "▲ [WARNING] Expected \":\" [css-syntax-error]",
+          "severity": "error"
+        },
+        {
+          "type": "BUILD_STATUS",
+          "message": "Build failed",
+          "severity": "error"
+        }
+      ]
+    },
+    {
       "severity": "LOW",
       "category": "BUILD",
-      "message": "2 build warnings found",
+      "message": "3 build warnings found",
       "impact": "Performance or compatibility issues",
       "details": [
         {
+          "type": "BUILD_WARNING",
+          "message": "\u001b[33mwarnings when minifying css:",
+          "severity": "warning"
+        },
+        {
           "type": "BUNDLE_SIZE",
-          "message": "(!) Some chunks are larger than 500 kB after minification. Consider:",
+          "message": "(!) Some chunks are larger than 500 kBs after minification. Consider:",
           "severity": "warning"
         },
         {
@@ -4414,7 +5487,7 @@
     {
       "severity": "LOW",
       "category": "ORPHANED",
-      "message": "87 orphaned files found",
+      "message": "94 orphaned files found",
       "impact": "Code bloat and confusion",
       "details": [
         {
@@ -4523,6 +5596,16 @@
           "suggestedAction": "Remove if unused or add proper imports"
         },
         {
+          "file": "src\\components\\NavigationMigrationTest.jsx",
+          "reason": "Not imported anywhere",
+          "suggestedAction": "Remove if unused or add proper imports"
+        },
+        {
+          "file": "src\\components\\SimpleTest.jsx",
+          "reason": "Not imported anywhere",
+          "suggestedAction": "Remove if unused or add proper imports"
+        },
+        {
           "file": "src\\utils\\imageCompression.js",
           "reason": "Not imported anywhere",
           "suggestedAction": "Remove if unused or add proper imports"
@@ -4534,6 +5617,16 @@
         },
         {
           "file": "src\\utils\\projectAuditor.js",
+          "reason": "Not imported anywhere",
+          "suggestedAction": "Remove if unused or add proper imports"
+        },
+        {
+          "file": "src\\utils\\navigation.jsx",
+          "reason": "Not imported anywhere",
+          "suggestedAction": "Remove if unused or add proper imports"
+        },
+        {
+          "file": "src\\utils\\navigationBackup.js",
           "reason": "Not imported anywhere",
           "suggestedAction": "Remove if unused or add proper imports"
         },
@@ -4851,6 +5944,21 @@
           "file": "src\\fix_test_record_creation.js",
           "reason": "Not imported anywhere",
           "suggestedAction": "Remove if unused or add proper imports"
+        },
+        {
+          "file": "src\\design-system\\tokens.js",
+          "reason": "Not imported anywhere",
+          "suggestedAction": "Remove if unused or add proper imports"
+        },
+        {
+          "file": "src\\design-system\\platforms\\index.js",
+          "reason": "Not imported anywhere",
+          "suggestedAction": "Remove if unused or add proper imports"
+        },
+        {
+          "file": "src\\design-system\\export.js",
+          "reason": "Not imported anywhere",
+          "suggestedAction": "Remove if unused or add proper imports"
         }
       ]
     }
@@ -4868,7 +5976,14 @@
       "category": "TODOS",
       "action": "Address TODO items",
       "command": "Review and complete TODO items",
-      "description": "Complete 190 TODO items or document why they remain"
+      "description": "Complete 262 TODO items or document why they remain"
+    },
+    {
+      "priority": "HIGH",
+      "category": "BUILD",
+      "action": "Fix build errors",
+      "command": "npm run build",
+      "description": "Resolve build errors before deployment"
     },
     {
       "priority": "LOW",

@@ -1,0 +1,120 @@
+{
+  "timestamp": "2025-07-29T05:52:43.553Z",
+  "status": "success",
+  "startTime": "2025-07-29T05:52:29.912Z",
+  "duration": 13641,
+  "url": "http://localhost:5173",
+  "logs": [
+    {
+      "timestamp": "2025-07-29T05:52:31.648Z",
+      "type": "console",
+      "level": "debug",
+      "message": "[vite] connecting...",
+      "details": {
+        "location": {
+          "url": "http://localhost:5173/@vite/client",
+          "lineNumber": 228,
+          "columnNumber": 8
+        },
+        "args": [
+          "JSHandle:[vite] connecting..."
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-07-29T05:52:31.663Z",
+      "type": "console",
+      "level": "debug",
+      "message": "[vite] connected.",
+      "details": {
+        "location": {
+          "url": "http://localhost:5173/@vite/client",
+          "lineNumber": 324,
+          "columnNumber": 20
+        },
+        "args": [
+          "JSHandle:[vite] connected."
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-07-29T05:52:32.100Z",
+      "type": "console",
+      "level": "info",
+      "message": "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold",
+      "details": {
+        "location": {
+          "url": "http://localhost:5173/node_modules/.vite/deps/chunk-PXNEZY3C.js?v=6075fa0b",
+          "lineNumber": 21579,
+          "columnNumber": 24
+        },
+        "args": [
+          "JSHandle:%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools",
+          "JSHandle:font-weight:bold"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-07-29T05:52:32.105Z",
+      "type": "console",
+      "level": "log",
+      "message": "Environment check: JSHandle@object",
+      "details": {
+        "location": {
+          "url": "http://localhost:5173/src/supabaseClient.js",
+          "lineNumber": 6,
+          "columnNumber": 8
+        },
+        "args": [
+          "JSHandle:Environment check:",
+          "JSHandle@object"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-07-29T05:52:32.143Z",
+      "type": "console",
+      "level": "log",
+      "message": "BackupManager component file loaded",
+      "details": {
+        "location": {
+          "url": "http://localhost:5173/src/components/admin/BackupManager/index.jsx",
+          "lineNumber": 17,
+          "columnNumber": 8
+        },
+        "args": [
+          "JSHandle:BackupManager component file loaded"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-07-29T05:52:32.271Z",
+      "type": "console",
+      "level": "verbose",
+      "message": "[DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o",
+      "details": {
+        "location": {
+          "url": "http://localhost:5173/"
+        },
+        "args": []
+      }
+    },
+    {
+      "timestamp": "2025-07-29T05:52:33.180Z",
+      "type": "page-load",
+      "level": "success",
+      "message": "Page successfully loaded",
+      "details": {}
+    }
+  ],
+  "summary": {
+    "totalLogs": 7,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "networkErrors": 0,
+    "totalErrors": 0,
+    "hasFatalErrors": false,
+    "isAccessible": true,
+    "isHealthy": true
+  }
+}

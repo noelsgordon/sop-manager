@@ -1,0 +1,40 @@
+{
+  "timestamp": "2025-07-29T05:52:25.626Z",
+  "status": "success",
+  "startTime": "2025-07-29T05:52:24.585Z",
+  "duration": 1041,
+  "logs": [
+    {
+      "timestamp": "2025-07-29T05:52:25.019Z",
+      "level": "info",
+      "message": "> sop-manager-standalone@1.12 dev\n> vite"
+    },
+    {
+      "timestamp": "2025-07-29T05:52:25.555Z",
+      "level": "info",
+      "message": "Port 5173 is in use, trying another one..."
+    },
+    {
+      "timestamp": "2025-07-29T05:52:25.588Z",
+      "level": "info",
+      "message": "Port 5174 is in use, trying another one..."
+    },
+    {
+      "timestamp": "2025-07-29T05:52:25.615Z",
+      "level": "info",
+      "message": "\u001b[32m\u001b[1mVITE\u001b[22m v4.5.14\u001b[39m  \u001b[2mready in \u001b[0m\u001b[1m459\u001b[22m\u001b[2m\u001b[0m ms\u001b[22m"
+    },
+    {
+      "timestamp": "2025-07-29T05:52:25.626Z",
+      "level": "info",
+      "message": "\u001b[32m➜\u001b[39m  \u001b[1mLocal\u001b[22m:   \u001b[36mhttp://localhost:\u001b[1m5175\u001b[22m/\u001b[39m\n\u001b[2m  \u001b[32m➜\u001b[39m  \u001b[1mNetwork\u001b[22m\u001b[2m: use \u001b[22m\u001b[1m--host\u001b[22m\u001b[2m to expose\u001b[22m"
+    }
+  ],
+  "summary": {
+    "totalLogs": 5,
+    "errors": 0,
+    "successes": 1,
+    "isHealthy": true,
+    "hasCompiled": true
+  }
+}
