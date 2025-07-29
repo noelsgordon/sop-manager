@@ -1,8 +1,8 @@
 {
-  "timestamp": "2025-07-29T07:37:48.582Z",
+  "timestamp": "2025-07-29T07:39:42.412Z",
   "status": "error",
   "startTime": "2025-07-29T05:52:24.585Z",
-  "duration": 6323997,
+  "duration": 6437827,
   "logs": [
     {
       "timestamp": "2025-07-29T05:52:25.019Z",
@@ -168,10 +168,15 @@
       "timestamp": "2025-07-29T07:37:48.582Z",
       "level": "error",
       "message": "\u001b[2m5:37:48 pm\u001b[22m \u001b[31m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[31mInternal server error: Transform failed with 1 error:\nE:/Software/Sop Manager/SOP-Manager-Standalone/src/services/backup/backupService.ts:84:3: ERROR: Expected \";\" but found \"images\"\u001b[39m\n  Plugin: \u001b[35mvite:esbuild\u001b[39m\n  File: \u001b[36mE:/Software/Sop Manager/SOP-Manager-Standalone/src/services/backup/backupService.ts\u001b[39m:84:3\n\u001b[33m  \n  \u001b[33mExpected \";\" but found \"images\"\u001b[33m\n  82 |     - user_departments.json\n  83 |     - invite_codes.json\n  84 |  2. images/ - All SOP images organized by SOP\n     |     ^\n  85 |  3. preview/ - Double-click index.html to view SOPs in browser\n  86 |  \n  \u001b[39m\n      at failureErrorWithLog (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\esbuild\\lib\\main.js:1649:15)\n      at E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\esbuild\\lib\\main.js:847:29\n      at responseCallbacks.<computed> (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\esbuild\\lib\\main.js:703:9)\n      at handleIncomingPacket (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\esbuild\\lib\\main.js:762:9)\n      at Socket.readFromStdout (E:\\Software\\Sop Manager\\SOP-Manager-Standalone\\node_modules\\esbuild\\lib\\main.js:679:7)\n      at Socket.emit (node:events:518:28)\n      at addChunk (node:internal/streams/readable:561:12)\n      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n      at Readable.push (node:internal/streams/readable:392:5)\n      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)"
+    },
+    {
+      "timestamp": "2025-07-29T07:39:42.412Z",
+      "level": "info",
+      "message": "\u001b[2m5:39:42 pm\u001b[22m \u001b[36m\u001b[1m[vite]\u001b[22m\u001b[39m \u001b[32mhmr update \u001b[39m\u001b[2m/src/components/admin/BackupManager/index.jsx, /src/index.css\u001b[22m"
     }
   ],
   "summary": {
-    "totalLogs": 33,
+    "totalLogs": 34,
     "errors": 3,
     "successes": 1,
     "isHealthy": false,

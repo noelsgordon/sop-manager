@@ -78,35 +78,4 @@ async function downloadImage(url: string): Promise<Blob | null> {
 export async function createBackup(supabase: any, onProgress?: (progress: number) => void): Promise<void> {
   // Temporarily disabled due to missing JSZip dependency
   throw new Error('Backup service temporarily disabled - JSZip dependency removed');
-}
-   - user_departments.json
-   - invite_codes.json
-2. images/ - All SOP images organized by SOP
-3. preview/ - Double-click index.html to view SOPs in browser
-
-To view the backup:
-1. Extract the ZIP file
-2. Open "preview/index.html" in any web browser
-3. Browse through your SOPs and images
-
-Backup Statistics:
-- Total SOPs: ${metadata.totalSops}
-- Total Steps: ${metadata.totalSteps}
-- Total Images: ${metadata.totalImages}
-- Departments: ${metadata.departments}
-- User Profiles: ${userProfiles.length}
-- User Departments: ${userDepartments.length}
-- Invite Codes: ${inviteCodes.length}`;
-
-    zip.file('README.txt', readme);
-
-    // Generate and save ZIP file
-    const zipBlob = await zip.generateAsync({ type: 'blob' });
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    saveAs(zipBlob, `sop_backup_${timestamp}.zip`);
-
-  } catch (error) {
-    console.error('Backup creation failed:', error);
-    throw error;
-  }
 } 
