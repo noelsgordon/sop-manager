@@ -3,8 +3,9 @@
 A comprehensive SOP (Standard Operating Procedure) management system with Supabase integration, Excel export capabilities, and advanced image management.
 
 <!-- Latest deployment fix: Added browser-image-compression dependency -->
+<!-- Force deployment: Update to latest commit with API key fixes -->
 
-## 🚀 Features
+## �� Features
 
 ## 🎯 **Project Status: COMPLETED & OPERATIONAL** ✅
 
