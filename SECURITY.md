@@ -1,145 +1,87 @@
 # Security Policy
 
-## 🔒 Authentication & Authorization
+## Supported Versions
 
-### Authentication
-- Email/Password authentication via Supabase
-- Secure session management
-- Rate limiting on authentication endpoints
-- SuperAdmin account verification
+| Version | Supported          |
+| ------- | ------------------ |
+| 2.6.x   | :white_check_mark: |
+| < 2.6   | :x:                |
 
-### Authorization
-- Role-based access control (RBAC)
-- Department-scoped permissions
-- SuperAdmin system-wide access
-- Role hierarchy:
-  1. SuperAdmin (system-wide)
-  2. Super (department-wide)
-  3. Manage
-  4. Build
-  5. Tweak
-  6. Look (lowest)
+## Security Measures
 
-## 🛡️ Data Security
+### 1. Secret Management
+- ✅ All Supabase service keys have been removed from the repository
+- ✅ Python scripts containing secrets have been deleted
+- ✅ Comprehensive `.gitignore` prevents future secret exposure
+- ✅ Environment variables are used for sensitive configuration
 
-### Database Security
-- Row Level Security (RLS) policies
-- Department-scoped data access
-- User profile protection
-- Department access control
-- Encrypted data at rest
-- Regular backups
+### 2. Access Control
+- ✅ Role-based access control (RBAC) implemented
+- ✅ Hierarchical security levels enforced
+- ✅ Department-based access restrictions
+- ✅ Superadmin privileges properly isolated
 
-### RLS Policies
-1. User Profiles
-   - All authenticated users can view profiles
-   - Users can only update their own profiles
-   - SuperAdmins can manage all profiles
+### 3. Data Protection
+- ✅ Row Level Security (RLS) policies in place
+- ✅ User authentication via Supabase Auth
+- ✅ Encrypted data transmission (HTTPS)
+- ✅ Secure session management
 
-2. User Departments
-   - Users can view their own department assignments
-   - SuperAdmins can manage all department assignments
-   - Department owners can manage their department's users
+## Reporting a Vulnerability
 
-3. SOPs
-   - Department-scoped access
-   - Role-based modifications
-   - Version control tracking
+If you discover a security vulnerability, please:
 
-### Environment Variables
-- Secure storage in Vercel dashboard
-- Local development using `.env` (gitignored)
-- CI/CD secrets in GitHub Actions
-- Supabase connection security
+1. **DO NOT** create a public GitHub issue
+2. **DO** email security@your-domain.com with details
+3. **DO** include "SECURITY VULNERABILITY" in the subject line
+4. **DO** provide detailed steps to reproduce the issue
 
-## 🔐 Access Control
+## Incident Response
 
-### SuperAdmin Controls
-- System-wide user management
-- Department access control
-- Role assignment capabilities
-- User activity monitoring
-- Security policy enforcement
+### Immediate Actions
+1. Assess the severity and scope of the vulnerability
+2. Implement temporary mitigations if necessary
+3. Notify affected users if required
+4. Develop and test a permanent fix
 
-### Department Management
-- Role-based permissions
-- Access control lists
-- Department ownership tracking
-- Member management controls
+### Communication
+- Security advisories will be posted to the repository
+- Users will be notified via email for critical issues
+- Version updates will include security notes
 
-### Invite System
-- Department-scoped invite codes
-- Role-restricted invitations
-- Time-limited invite codes
-- Secure code generation
-- Email verification
+## Security Best Practices
 
-### Session Management
-- Automatic session expiration
-- Secure session storage
-- Cross-tab session sync
-- Role-based session control
+### For Developers
+- Never commit secrets or API keys
+- Use environment variables for configuration
+- Regularly update dependencies
+- Follow secure coding practices
+- Review code for security issues
 
-## 📝 Audit & Logging
+### For Users
+- Keep your login credentials secure
+- Use strong, unique passwords
+- Enable two-factor authentication if available
+- Report suspicious activity immediately
+- Keep your browser and system updated
 
-### Activity Logging
-- User actions logged
-- Department-level changes tracked
-- SOP modifications recorded
-- Access attempts monitored
-- SuperAdmin actions tracked
+## Recent Security Updates
 
-### Security Monitoring
-- Failed login attempts
-- Permission changes
-- Role modifications
-- Department access changes
-- User profile updates
+### Version 2.6.1 (December 2024)
+- ✅ Removed all exposed Supabase service keys
+- ✅ Deleted Python scripts containing secrets
+- ✅ Added comprehensive `.gitignore` file
+- ✅ Fixed Vercel deployment issues
+- ✅ Updated security documentation
 
-### Compliance
-- Data retention policies
-- Access logs maintained
-- Regular security audits
-- Permission reviews
-- Role audits
+## Contact
 
-## 🚨 Reporting Security Issues
-
-### Responsible Disclosure
-1. Email security concerns to [security contact]
-2. Do not disclose publicly
-3. Allow time for assessment and fixes
-4. Receive acknowledgment within 48 hours
-
-### Security Updates
-- Regular security patches
-- Dependency updates
-- Vulnerability scanning
-- Policy reviews
-- Access control updates
-
-## 🔧 Development Guidelines
-
-### Code Security
-- Input validation
-- Output sanitization
-- SQL injection prevention
-- XSS protection
-- CSRF prevention
-
-### RLS Implementation
-- Policy separation
-- Efficient checks
-- Proper role validation
-- Error handling
-- Access logging
-
-### Deployment Security
-- Secure build process
-- Environment separation
-- Production safeguards
-- Policy deployment
-- Role verification
+For security-related questions or concerns:
+- Email: security@your-domain.com
+- GitHub: Create a private security advisory
+- Response Time: Within 24 hours for critical issues
 
 ---
-*Last updated: Version 1.6 - March 2024* 
+
+**Last Updated**: December 2024  
+**Version**: 2.6.1 
