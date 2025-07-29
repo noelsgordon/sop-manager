@@ -10,9 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "audit": "node scripts/runAudit.mjs",
     "bump": "node scripts/bumpVersion.mjs",
-    "image-sync": "python COMPLETE_SOLUTION.py",
-    "check-status": "python check_table_status.py",
-    "test-excel": "python test_excel_integration.py",
+
     "design:export": "node src/design-system/export.js",
     "design:export:all": "node src/design-system/export.js all",
     "design:export:json": "node src/design-system/export.js json",
@@ -96,7 +94,7 @@
   "homepage": "https://your-sop-manager.vercel.app",
   "projectStatus": {
     "status": "COMPLETED_AND_OPERATIONAL",
-    "version": "1.12",
+    "version": "2.6.1",
     "lastUpdated": "December 2024",
     "features": {
       "sopManagement": "✅ Complete",
