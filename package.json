@@ -10,7 +10,6 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "audit": "node scripts/runAudit.mjs",
     "bump": "node scripts/bumpVersion.mjs",
-
     "design:export": "node src/design-system/export.js",
     "design:export:all": "node src/design-system/export.js all",
     "design:export:json": "node src/design-system/export.js json",
@@ -38,6 +37,7 @@
     "@radix-ui/react-checkbox": "^1.3.2",
     "@radix-ui/react-toast": "^1.2.14",
     "@supabase/supabase-js": "^2.38.4",
+    "browser-image-compression": "^2.0.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.0.0",
     "file-saver": "^2.0.5",
